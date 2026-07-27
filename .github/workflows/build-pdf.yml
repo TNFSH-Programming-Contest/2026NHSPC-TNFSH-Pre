@@ -27,7 +27,8 @@ on:
 jobs:
   run:
     if: ${{ github.repository != 'TNFSH-Programming-Contest/tps-starter' }}
-    uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/build-pdf.yml@main
+    uses: tobiichi3227/tps-actions/.github/workflows/build-pdf.yml@dev
     with:
       problems: ${{ inputs.problems }}
       merge: ${{ inputs.merge && fromJson(inputs.merge) || false }}
+      runs-on: 'self-hosted'
