@@ -1,16 +1,15 @@
 #include "testlib.h"
+#include <vector>
 using namespace std;
-
-const int MAXN = 1000;
-
-int main(int argc, char* argv[]) {
+signed main(int argc, char* argv[]) {
 	registerValidation(argc, argv);
-	// about testlib, see https://codeforces.com/blog/entry/18426
-
-	// TODO
-	inf.readInt(1, MAXN, "n");
+    const int N = atoi(argv[1]);
+	int n = inf.readInt(1, N, "n");
 	inf.readEoln();
+    vector<int> A = inf.readInts(2*n, 0, n-1, "A_i");
+    inf.readEoln();
+    vector<int> cnt(n);
+    for(auto &d : A) cnt[d]++;
+    for(int i = 0; i < n; i++) ensure(cnt[i] == 2);
 	inf.readEof();
-
-	return 0;
 }

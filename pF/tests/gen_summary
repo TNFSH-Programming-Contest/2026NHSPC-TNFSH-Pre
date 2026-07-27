@@ -1,0 +1,6 @@
+# test_name gen_line_number gen_line_content
+0-01	  2	manual example-1.in
+0-02	  3	manual example-2.in
+1-01	  6	gen 100
+2-01	  9	gen 2000
+3-01	 12	gen 1000000

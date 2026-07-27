@@ -1,6 +1,6 @@
 {
     "global_validators": [
-        "validator.cpp"
+        "validator.cpp 1000000"
     ],
     "subtasks": {
         "samples": {
@@ -13,13 +13,13 @@
             "index": 1,
             "score": 14,
             "text": "$1 \\le n \\le 100$",
-            "validators": []
+            "validators": ["validator.cpp 100"]
         },
         "n2": {
             "index": 2,
             "score": 25,
             "text": "$1 \\le n \\le 2000$",
-            "validators": []
+            "validators": ["validator.cpp 2000"]
         },
         "full": {
             "index": 3,
