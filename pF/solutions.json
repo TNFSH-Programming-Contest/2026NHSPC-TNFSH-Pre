@@ -1,5 +1,12 @@
 {
-	"correct.cpp": {
+	"sol.cpp": {
 		"verdict": "model_solution"
+	},
+	"brute.cpp": {
+		"verdict": "runtime_error",
+        "except": {
+            "samples": "correct",
+            "n3": "correct"
+        }
 	}
 }
