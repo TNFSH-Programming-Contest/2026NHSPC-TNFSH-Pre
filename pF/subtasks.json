@@ -9,9 +9,21 @@
             "text": "範例輸入輸出",
             "validators": []
         },
-        "full": {
+        "n3": {
             "index": 1,
-            "score": 100,
+            "score": 14,
+            "text": "$1 \\le n \\le 100$",
+            "validators": []
+        },
+        "n2": {
+            "index": 2,
+            "score": 25,
+            "text": "$1 \\le n \\le 2000$",
+            "validators": []
+        },
+        "full": {
+            "index": 3,
+            "score": 61,
             "text": "無額外限制",
             "validators": []
         }

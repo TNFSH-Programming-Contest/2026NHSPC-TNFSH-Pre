@@ -1,31 +1,54 @@
-# TODO: 題目名稱
+# 種馬拉車
 
-<!-- \begin{figure}[h]
+\begin{figure}[h]
 \centering
-\includegraphics[width=2in]{TODO.jpg}
-\caption{TODO: 圖片說明}
-\end{figure} -->
+\includegraphics[width=2in]{mambo.jpg}
+\end{figure}
 
-TODO: 題目敘述
+曼波，曼波。哈基米曼波~
+
+賽馬娘待兼詩歌劇 (Matikanetannhauser) 是一位性格非常認真且充滿正能量的馬娘。
+
+在中京賽馬場草地 1700 米新馬戰中，雖然詩歌劇展現了出色實力並獲得了第二人氣，但最終的賽果卻讓她不甚滿意。為了能在下一場比賽大放異彩，她決定在賽後進行嚴格的自我檢討!
+
+詩歌劇仔細研究了賽道後發現，中京草地賽場可以抽象化為一個長度為 $2n$ 的陣列 $A$。主辦方為了賽道的生態平衡，在場地上均勻地種植了 $n$ 種作物，編號分別為 $0 \sim n - 1$，且每種作物\textbf{恰好出現 2 次}。
+
+詩歌劇發現，當她跑過某個連續區間 $[l, r]$（$1 \le l \le r \le 2n$）時：
+
+ - 令子陣列 $B = [A_l, A_{l+1}, \dots, A_r]$。
+ - 若 $B$ 為一個迴文序列（即 $B$ 與其倒序 $B'$ 完全相同），則詩歌劇在此區間可以獲得 $\max(A_l, A_{l+1}, \dots, A_r)$ 的 \textbf{「前進 Mambo 魔力」}。
+ - 若 $B$ 不是迴文序列，則獲得的魔力為 $0$。
+
+詩歌劇迫切想知道，到底是自己當天發揮失常，還是場地限制了她的 Mambo 魔力?請身為臺南賽區種馬選手的你，幫詩歌劇計算出陣列 $A$ 中所有可能子區間 $[l, r]$ 的前進 Mambo 魔力總和吧!
 
 \clearpage
 
 ## 輸入
-TODO: 輸入說明
+第一行輸入一正整數 $n$
+
+第二行輸入 $2n$ 個正整數 $A_1, A_2, \ldots, A_{2n}$
 
 ## 輸出
-TODO: 輸出說明
+輸出一整數，代表著答案。
 
 ## 輸入限制
- - TODO: 輸入限制
+ - $1 \le n \le 10^6$
+ - $0 \le A_i \le n-1, (1 \le i \le 2n)$
+ - $\sum^{2n}_{i=1} [A_i == j] = 2, (0 \le j \le n-1)$
 
 ## 子任務
 \subtasks
 
 \clearpage
 
-## 範例輸入
+## 範例輸入 1
 \testfile{0-01.in}
 
-## 範例輸出
+## 範例輸出 1
 \testfile{0-01.out}
+
+## 範例輸入 2
+\testfile{0-02.in}
+
+## 範例輸出 2
+\testfile{0-02.out}
