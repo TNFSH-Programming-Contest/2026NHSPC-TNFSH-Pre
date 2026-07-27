@@ -1,0 +1,32 @@
+name: Build tests
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - '*/gen/**'
+      - '*/solution/**'
+      - '*/validator/**'
+      - '*/problem.json'
+      - '*/solutions.json'
+      - '*/subtasks.json'
+  workflow_dispatch:
+    inputs:
+      input:
+        description: 'Problem labels to build inputs'
+        default: ''
+      output:
+        description: 'Problem labels to build outputs'
+        default: ''
+      solutions:
+        description: 'Problem labels to run solutions'
+        default: ''
+
+jobs:
+  run:
+    uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/build-tests.yml@main
+    with:
+      input: ${{ github.event.inputs.input }}
+      output: ${{ github.event.inputs.output }}
+      solutions: ${{ github.event.inputs.solutions }}

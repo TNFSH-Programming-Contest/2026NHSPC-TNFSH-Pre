@@ -1,0 +1,33 @@
+name: Build pdf
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - '*/scripts/statement.sh'
+      - '*/statement/*.jpg'
+      - '*/statement/DISABLE_AUTO_BUILD'
+      - '*/statement/index.md'
+      - '*/problem.json'
+      - '*/subtasks.json'
+      - 'appendix.tex'
+      - 'cover.tex'
+      - 'template.tex'
+  workflow_dispatch:
+    inputs:
+      problems:
+        description: 'Problem labels to build (A-Z)'
+        default: ''
+      merge:
+        description: 'Merge pdfs?'
+        default: false
+        type: boolean
+
+jobs:
+  run:
+    if: ${{ github.repository != 'TNFSH-Programming-Contest/tps-starter' }}
+    uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/build-pdf.yml@main
+    with:
+      problems: ${{ inputs.problems }}
+      merge: ${{ inputs.merge && fromJson(inputs.merge) || false }}

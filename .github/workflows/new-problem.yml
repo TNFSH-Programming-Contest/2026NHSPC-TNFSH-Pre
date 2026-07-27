@@ -1,0 +1,13 @@
+name: New problem
+
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        description: 'How many problems in this contest?'
+
+jobs:
+  run:
+    uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/new-problem.yml@main
+    with:
+      count: ${{ fromJson(github.event.inputs.count) }}

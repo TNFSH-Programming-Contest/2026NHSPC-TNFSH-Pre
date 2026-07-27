@@ -1,0 +1,18 @@
+name: TPS verify
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - 'p*/**'
+  workflow_dispatch:
+    inputs:
+      problems:
+        description: 'Problem labels to verify'
+
+jobs:
+  run:
+    uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/tps-verify.yml@main
+    with:
+      problems: ${{ github.event.inputs.problems }}
