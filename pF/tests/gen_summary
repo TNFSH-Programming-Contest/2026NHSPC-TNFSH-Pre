@@ -1,6 +1,18 @@
 # test_name gen_line_number gen_line_content
 0-01	  2	manual example-1.in
 0-02	  3	manual example-2.in
-1-01	  6	gen 100
-2-01	  9	gen 2000
-3-01	 12	gen 1000000
+1-01	  6	gen 1 pairs
+1-02	  7	gen 2 even-up
+1-03	  8	gen 100 random
+1-04	  9	gen 100 even-down
+1-05	 10	gen 100 mixed
+2-01	 13	gen 2000 random
+2-02	 14	gen 2000 pairs
+2-03	 15	gen 2000 odd-up
+2-04	 16	gen 2000 mixed
+3-01	 19	gen 1000000 random
+3-02	 20	gen 1000000 pairs
+3-03	 21	gen 1000000 even-up
+3-04	 22	gen 1000000 even-down
+3-05	 23	gen 1000000 odd-down
+3-06	 24	gen 1000000 mixed

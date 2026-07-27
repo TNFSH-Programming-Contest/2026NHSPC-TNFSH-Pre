@@ -3,10 +3,22 @@ manual example-1.in
 manual example-2.in
 
 @subtask n3
-gen 100
+gen 1 pairs
+gen 2 even-up
+gen 100 random
+gen 100 even-down
+gen 100 mixed
 
 @subtask n2
-gen 2000
+gen 2000 random
+gen 2000 pairs
+gen 2000 odd-up
+gen 2000 mixed
 
 @subtask full
-gen 1000000
+gen 1000000 random
+gen 1000000 pairs
+gen 1000000 even-up
+gen 1000000 even-down
+gen 1000000 odd-down
+gen 1000000 mixed
