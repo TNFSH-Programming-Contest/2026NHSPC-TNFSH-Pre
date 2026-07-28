@@ -1,5 +1,30 @@
 {
 	"correct.cpp": {
 		"verdict": "model_solution"
+	},
+	"tisame.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"tisame": "correct"
+		}
+	},
+	"n2.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"n2": "correct"
+		}
+	},
+	"n8.cpp": {
+		"verdict": "correct",
+		"except": {
+			"n2000": "time_limit",
+			"full": "time_limit"
+		}
+	},
+	"n2000.cpp": {
+		"verdict": "correct",
+		"except": {
+			"full": "time_limit"
+		}
 	}
 }

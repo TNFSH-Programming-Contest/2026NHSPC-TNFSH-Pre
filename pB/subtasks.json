@@ -1,6 +1,6 @@
 {
     "global_validators": [
-        "validator.cpp"
+        ""
     ],
     "subtasks": {
         "samples": {
@@ -9,9 +9,33 @@
             "text": "範例輸入輸出",
             "validators": []
         },
-        "full": {
+        "tisame": {
             "index": 1,
-            "score": 100,
+            "score": 5,
+            "text": "所有 $t_i$ 相同",
+            "validators": []
+        },
+        "n2": {
+            "index": 2,
+            "score": 5,
+            "text": "$n = 2$",
+            "validators": []
+        },
+        "n8": {
+            "index": 3,
+            "score": 15,
+            "text": "$n \\le 8$",
+            "validators": []
+        },
+        "n2000": {
+            "index": 4,
+            "score": 20,
+            "text": "$n \\le 2000$",
+            "validators": []
+        },
+        "full": {
+            "index": 5,
+            "score": 55,
             "text": "無額外限制",
             "validators": []
         }

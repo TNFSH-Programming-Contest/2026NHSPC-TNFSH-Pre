@@ -1,8 +1,9 @@
 # see https://github.com/ioi-2017/tps/blob/master/docs/README.md#gendata
 # TODO
 @subtask samples
+manual example-0.in
 manual example-1.in
+manual example-2.in
 
 @subtask full
-gen	20
-gen	30
+@include samples
