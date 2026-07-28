@@ -1,37 +1,37 @@
 {
     "global_validators": [
-        ""
+        "validator.cpp 200000 0"
     ],
     "subtasks": {
         "samples": {
             "index": 0,
             "score": 0,
             "text": "範例輸入輸出",
-            "validators": []
+            "validators": ["validator.cpp 200000 0"]
         },
         "tisame": {
             "index": 1,
             "score": 5,
             "text": "所有 $t_i$ 相同",
-            "validators": []
+            "validators": ["validator.cpp 200000 1"]
         },
         "n2": {
             "index": 2,
             "score": 5,
             "text": "$n = 2$",
-            "validators": []
+            "validators": ["validator.cpp 2 0"]
         },
         "n8": {
             "index": 3,
             "score": 15,
             "text": "$n \\le 8$",
-            "validators": []
+            "validators": ["validator.cpp 8 0"]
         },
         "n2000": {
             "index": 4,
             "score": 20,
             "text": "$n \\le 2000$",
-            "validators": []
+            "validators": ["validator.cpp 2000 0"]
         },
         "full": {
             "index": 5,
