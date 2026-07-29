@@ -17,7 +17,6 @@
 	"n8.cpp": {
 		"verdict": "correct",
 		"except": {
-			"n2000": "time_limit",
 			"full": "time_limit"
 		}
 	},
@@ -25,6 +24,25 @@
 		"verdict": "correct",
 		"except": {
 			"full": "time_limit"
+		}
+	},
+	"int_overflow.cpp": {
+		"verdict": "correct",
+		"except": {
+			"full": "incorrect"
+		}
+	},
+	"no_wrap.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"tisame": "correct"
+		}
+	},
+	"bidirectional.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"tisame": "correct",
+			"n2": "correct"
 		}
 	}
 }

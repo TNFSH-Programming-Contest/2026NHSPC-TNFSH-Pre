@@ -16,7 +16,8 @@ int main(void) {
     int t1, t2;
     scanf("%d %d", &t1, &t2);
 
-    printf("%d\n", min(abs(t1 - t2), t1 + 43200 - t2));
+    int difference = abs(t1 - t2);
+    printf("%d\n", min(difference, 43200 - difference));
 
     return 0;
 }

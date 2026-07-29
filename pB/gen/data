@@ -1,9 +1,54 @@
 # see https://github.com/ioi-2017/tps/blob/master/docs/README.md#gendata
-# TODO
+
 @subtask samples
 manual example-0.in
 manual example-1.in
 manual example-2.in
 
+@subtask tisame
+gen 1 same 0
+gen 200000 same 12345
+
+@subtask n2
+gen 2 pair 0 0
+gen 2 pair 0 1
+gen 2 pair 1 0
+gen 2 pair 0 21600
+gen 2 pair 0 21601
+gen 2 pair 0 43199
+gen 2 pair 43199 0
+gen 2 pair 40000 1000
+gen 2 pair 1000 40000
+gen 2 uniform 0 43199
+
+@subtask n8
+gen 1 same 31415
+gen 3 groups 3 43199 1 2 1 5 1
+gen 4 groups 4 0 1 100 1 200 1 40000 1
+gen 5 progression 43198 1
+gen 6 choice 5 0 1 21600 43198 43199
+gen 7 cluster 0 3
+gen 8 progression 100 5399
+gen 8 groups 4 0 3 1 1 21600 3 43199 1
+gen 8 uniform 0 43199
+
+@subtask n2000
+gen 9 uniform 0 43199
+gen 31 progression 43190 7
+gen 100 cluster 0 100
+gen 511 choice 6 0 1 100 21600 43198 43199
+gen 1999 progression 0 37
+gen 2000 groups 4 0 499 1 501 21600 499 43199 501
+gen 2000 uniform 0 43199
+
 @subtask full
-@include samples
+@include n2 n8 n2000 samples
+gen 2001 uniform 0 43199
+gen 10000 cluster 0 1000
+gen 50000 choice 7 0 1 2 21599 21600 43198 43199
+gen 100000 groups 5 0 19999 1 20001 12345 19999 21600 20001 43199 20000
+gen 200000 same 0
+gen 200000 cluster 43199 25
+gen 200000 progression 0 1
+gen 200000 progression 43199 7919
+gen 200000 uniform 0 43199
