@@ -2,6 +2,9 @@
 	"correct.cpp": {
 		"verdict": "model_solution"
 	},
+	"n.cpp": {
+		"verdict": "correct"
+	},
 	"tisame.cpp": {
 		"verdict": "incorrect",
 		"except": {
