@@ -9,9 +9,27 @@
             "text": "範例輸入輸出",
             "validators": []
         },
+        "brute": {
+            "index": 1,
+            "score": 7,
+            "text": "$1 \\le N, M \\le 10,1 \\le Q \\le 10$",
+            "validators": []
+        },
+        "straight": {
+            "index": 2,
+            "score": 8,
+            "text": "$1 \\le N, M \\le 1000, 1 \\le Q \\le 100$，輸入的字元僅包含 `.`",
+            "validators": []
+        },
+        "brute2": {
+            "index": 3,
+            "score": 18,
+            "text": "$1 \\le N, M \\le 200, 1 \\le Q \\le 1000$",
+            "validators": []
+        },
         "full": {
             "index": 1,
-            "score": 100,
+            "score": 67,
             "text": "無額外限制",
             "validators": []
         }
