@@ -1,0 +1,504 @@
+correct.cpp
+solution            compile[OK]
+0-01                sol[OK]    0.010     check[OK]        1  [Correct]               
+1-01                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-02                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-04                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-05                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-06                sol[OK]    0.010     check[OK]        1  [Correct]               
+1-07                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-08                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-09                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-10                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-11                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-12                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-13                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-14                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-15                sol[OK]    0.010     check[OK]        1  [Correct]               
+2-01                sol[OK]    0.011     check[OK]        1  [Correct]               
+2-02                sol[OK]    0.010     check[OK]        1  [Correct]               
+2-03                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-04                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-05                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-06                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-07                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-08                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-09                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-10                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-11                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-12                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-13                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-14                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-15                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-16                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-17                sol[OK]    0.010     check[OK]        1  [Correct]               
+2-18                sol[OK]    0.010     check[OK]        1  [Correct]               
+2-19                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-20                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-21                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-22                sol[OK]    0.010     check[OK]        1  [Correct]               
+2-23                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-24                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-25                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-26                sol[OK]    0.010     check[OK]        1  [Correct]               
+2-27                sol[OK]    0.010     check[OK]        1  [Correct]               
+3-01                sol[OK]    0.010     check[OK]        1  [Correct]               
+3-02                sol[OK]    0.009     check[OK]        1  [Correct]               
+3-03                sol[OK]    0.009     check[OK]        1  [Correct]               
+3-04                sol[OK]    0.010     check[OK]        1  [Correct]               
+3-05                sol[OK]    0.010     check[OK]        1  [Correct]               
+3-06                sol[OK]    0.010     check[OK]        1  [Correct]               
+3-07                sol[OK]    0.010     check[OK]        1  [Correct]               
+3-08                sol[OK]    0.010     check[OK]        1  [Correct]               
+3-09                sol[OK]    0.011     check[OK]        1  [Correct]               
+3-10                sol[OK]    0.012     check[OK]        1  [Correct]               
+3-11                sol[OK]    0.014     check[OK]        1  [Correct]               
+3-12                sol[OK]    0.014     check[OK]        1  [Correct]               
+3-13                sol[OK]    0.016     check[OK]        1  [Correct]               
+3-14                sol[OK]    0.018     check[OK]        1  [Correct]               
+3-15                sol[OK]    0.018     check[OK]        1  [Correct]               
+3-16                sol[OK]    0.018     check[OK]        1  [Correct]               
+3-17                sol[OK]    0.018     check[OK]        1  [Correct]               
+samples             [1/1 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
+brute               [15/15 tests]  [Correct]             [8/8 pts]      [match with expected]             1-01
+brute2              [27/27 tests]  [Correct]             [51/51 pts]    [match with expected]             2-01
+full                [17/17 tests]  [Correct]             [41/41 pts]    [match with expected]             3-01
+
+Subtask summary
+100/100 pts
+
+Finished.
+
+brute_factorial.cpp
+solution            compile[OK]
+0-01                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-01                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-02                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-04                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-05                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-06                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-07                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-08                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-09                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-10                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-11                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-12                sol[OK]    0.010     check[OK]        1  [Correct]               
+1-13                sol[OK]    0.011     check[OK]        1  [Correct]               
+1-14                sol[OK]    0.012     check[OK]        1  [Correct]               
+1-15                sol[OK]    0.018     check[OK]        1  [Correct]               
+2-01                sol[OK]    0.010     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-02                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-03                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-04                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-05                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-06                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-07                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-08                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-09                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-10                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-11                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-12                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-13                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-14                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-15                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-16                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-17                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-18                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-19                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-20                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-21                sol[OK]    0.010     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-22                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-23                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-24                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-25                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-26                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-27                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-01                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-02                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-03                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-04                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-05                sol[OK]    0.010     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-06                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-07                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-08                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-09                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-10                sol[OK]    0.010     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-11                sol[OK]    0.010     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-12                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-13                sol[OK]    0.010     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-14                sol[OK]    0.011     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-15                sol[OK]    0.011     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-16                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-17                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+samples             [1/1 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
+brute               [15/15 tests]  [Correct]             [8/8 pts]      [match with expected]             1-01
+brute2              [27/27 tests]  [Wrong Answer]        [0/51 pts]     [match with expected]             2-01
+full                [17/17 tests]  [Wrong Answer]        [0/41 pts]     [match with expected]             3-01
+
+Subtask summary
+8/100 pts
+
+Finished.
+
+max_1000.cpp
+solution            compile[OK]
+0-01                sol[OK]    0.010     check[OK]        1  [Correct]               
+1-01                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-02                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-04                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-05                sol[OK]    0.010     check[OK]        1  [Correct]               
+1-06                sol[OK]    0.010     check[OK]        1  [Correct]               
+1-07                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-08                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-09                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-10                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-11                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-12                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-13                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-14                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-15                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-01                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-02                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-03                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-04                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-05                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-06                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-07                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-08                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-09                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-10                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-11                sol[OK]    0.011     check[OK]        1  [Correct]               
+2-12                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-13                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-14                sol[OK]    0.010     check[OK]        1  [Correct]               
+2-15                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-16                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-17                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-18                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-19                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-20                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-21                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-22                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-23                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-24                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-25                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-26                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-27                sol[OK]    0.009     check[OK]        1  [Correct]               
+3-01                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-02                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-03                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-04                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-05                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-06                sol[OK]    0.010     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-07                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-08                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-09                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-10                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-11                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-12                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-13                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-14                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-15                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-16                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-17                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+samples             [1/1 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
+brute               [15/15 tests]  [Correct]             [8/8 pts]      [match with expected]             1-01
+brute2              [27/27 tests]  [Correct]             [51/51 pts]    [match with expected]             2-01
+full                [17/17 tests]  [Wrong Answer]        [0/41 pts]     [match with expected]             3-01
+
+Subtask summary
+59/100 pts
+
+Finished.
+
+number_divisors.cpp
+solution            compile[OK]
+0-01                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-01                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-02                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-04                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-05                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-06                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-07                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-08                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-09                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-10                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-11                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-12                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-13                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-14                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-15                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-01                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-02                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-03                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-04                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-05                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-06                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-07                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-08                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-09                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-10                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-11                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-12                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-13                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-14                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-15                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-16                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-17                sol[OK]    0.011     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-18                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-19                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-20                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-21                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-22                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-23                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-24                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-25                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-26                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-27                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-01                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-02                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-03                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-04                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-05                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-06                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-07                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-08                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-09                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-10                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-11                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-12                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-13                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-14                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-15                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-16                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-17                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+samples             [1/1 tests]    [Wrong Answer]        [0/0 pts]      [match with expected]             0-01
+brute               [15/15 tests]  [Wrong Answer]        [0/8 pts]      [match with expected]             1-03
+brute2              [27/27 tests]  [Wrong Answer]        [0/51 pts]     [match with expected]             2-01
+full                [17/17 tests]  [Wrong Answer]        [0/41 pts]     [match with expected]             3-01
+
+Subtask summary
+0/100 pts
+
+Finished.
+
+missing_powers.cpp
+solution            compile[OK]
+0-01                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-01                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-02                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-04                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-05                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-06                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-07                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-08                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-09                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-10                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-11                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-12                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-13                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-14                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+1-15                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-01                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-02                sol[OK]    0.010     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-03                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-04                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-05                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-06                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-07                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-08                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-09                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-10                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-11                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-12                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-13                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-14                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-15                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-16                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-17                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-18                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-19                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-20                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-21                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-22                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-23                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-24                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-25                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-26                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-27                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-01                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-02                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-03                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-04                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-05                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-06                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-07                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-08                sol[OK]    0.010     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-09                sol[OK]    0.010     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-10                sol[OK]    0.011     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-11                sol[OK]    0.012     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-12                sol[OK]    0.012     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-13                sol[OK]    0.014     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-14                sol[OK]    0.015     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-15                sol[OK]    0.015     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-16                sol[OK]    0.015     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-17                sol[OK]    0.015     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+samples             [1/1 tests]    [Wrong Answer]        [0/0 pts]      [match with expected]             0-01
+brute               [15/15 tests]  [Wrong Answer]        [0/8 pts]      [match with expected]             1-04
+brute2              [27/27 tests]  [Wrong Answer]        [0/51 pts]     [match with expected]             2-01
+full                [17/17 tests]  [Wrong Answer]        [0/41 pts]     [match with expected]             3-01
+
+Subtask summary
+0/100 pts
+
+Finished.
+
+wrong_mod.cpp
+solution            compile[OK]
+0-01                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-01                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-02                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-04                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-05                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-06                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-07                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-08                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-09                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-10                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-11                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-12                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-13                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-14                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-15                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-01                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-02                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-03                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-04                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-05                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-06                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-07                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-08                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-09                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-10                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-11                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-12                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-13                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-14                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-15                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-16                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-17                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-18                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-19                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-20                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-21                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-22                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-23                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-24                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-25                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-26                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+2-27                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-01                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-02                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-03                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-04                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-05                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-06                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-07                sol[OK]    0.009     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-08                sol[OK]    0.010     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-09                sol[OK]    0.010     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-10                sol[OK]    0.012     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-11                sol[OK]    0.013     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-12                sol[OK]    0.014     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-13                sol[OK]    0.015     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-14                sol[OK]    0.018     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-15                sol[OK]    0.018     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-16                sol[OK]    0.018     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-17                sol[OK]    0.018     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+samples             [1/1 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
+brute               [15/15 tests]  [Correct]             [8/8 pts]      [match with expected]             1-01
+brute2              [27/27 tests]  [Wrong Answer]        [0/51 pts]     [match with expected]             2-09
+full                [17/17 tests]  [Wrong Answer]        [0/41 pts]     [match with expected]             3-01
+
+Subtask summary
+8/100 pts
+
+Finished.
+
+int_overflow.cpp
+solution            compile[OK]
+0-01                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-01                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-02                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-04                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-05                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-06                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-07                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-08                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-09                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-10                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-11                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-12                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-13                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-14                sol[OK]    0.009     check[OK]        1  [Correct]               
+1-15                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-01                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-02                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-03                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-04                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-05                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-06                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-07                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-08                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-09                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-10                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-11                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-12                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-13                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-14                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-15                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-16                sol[OK]    0.010     check[OK]        1  [Correct]               
+2-17                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-18                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-19                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-20                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-21                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-22                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-23                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-24                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-25                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-26                sol[OK]    0.009     check[OK]        1  [Correct]               
+2-27                sol[OK]    0.009     check[OK]        1  [Correct]               
+3-01                sol[OK]    0.009     check[OK]        1  [Correct]               
+3-02                sol[OK]    0.009     check[OK]        1  [Correct]               
+3-03                sol[OK]    0.009     check[OK]        1  [Correct]               
+3-04                sol[OK]    0.009     check[OK]        1  [Correct]               
+3-05                sol[OK]    0.009     check[OK]        1  [Correct]               
+3-06                sol[OK]    0.009     check[OK]        1  [Correct]               
+3-07                sol[OK]    0.009     check[OK]        1  [Correct]               
+3-08                sol[OK]    0.010     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-09                sol[OK]    0.010     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-10                sol[OK]    0.012     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-11                sol[OK]    0.014     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-12                sol[OK]    0.014     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-13                sol[OK]    0.016     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-14                sol[OK]    0.018     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-15                sol[OK]    0.019     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-16                sol[OK]    0.019     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+3-17                sol[OK]    0.019     check[OK]        0  [Wrong Answer]          The output differs from the correct answer.
+samples             [1/1 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
+brute               [15/15 tests]  [Correct]             [8/8 pts]      [match with expected]             1-01
+brute2              [27/27 tests]  [Correct]             [51/51 pts]    [match with expected]             2-01
+full                [17/17 tests]  [Wrong Answer]        [0/41 pts]     [match with expected]             3-08
+
+Subtask summary
+59/100 pts
+
+Finished.
+
