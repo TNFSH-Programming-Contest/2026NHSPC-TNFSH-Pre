@@ -1,4 +1,4 @@
-# TODO: 題目名稱
+# 1145141
 
 <!-- \begin{figure}[h]
 \centering
@@ -6,18 +6,18 @@
 \caption{TODO: 圖片說明}
 \end{figure} -->
 
-TODO: 題目敘述
+給一正整數 $n$，求有多少個正整數整除 $n!$。
 
 \clearpage
 
 ## 輸入
-TODO: 輸入說明
+第一行輸入一正整數 $n$
 
 ## 輸出
-TODO: 輸出說明
+答案有可能很大，所以輸出答案除上 $1145141$ 的餘數。
 
 ## 輸入限制
- - TODO: 輸入限制
+ - $1 \le n \le 10^6$
 
 ## 子任務
 \subtasks

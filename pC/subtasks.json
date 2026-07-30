@@ -9,9 +9,21 @@
             "text": "範例輸入輸出",
             "validators": []
         },
+        "brute": {
+            "index": 1,
+            "score": 8,
+            "text": "$1 \\le n \\le 15$",
+            "validators": []
+        },
+        "brute2": {
+            "index": 2,
+            "score": 51,
+            "text": "$1 \\le n \\le 10^3$",
+            "validators": []
+        },
         "full": {
             "index": 1,
-            "score": 100,
+            "score": 61,
             "text": "無額外限制",
             "validators": []
         }
