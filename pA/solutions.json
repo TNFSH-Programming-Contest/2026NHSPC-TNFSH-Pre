@@ -1,5 +1,23 @@
 {
 	"correct.cpp": {
 		"verdict": "model_solution"
+	},
+	"int32.cpp": {
+		"verdict": "correct",
+		"except": {
+			"full": "incorrect"
+		}
+	},
+	"zero_indexed.cpp": {
+		"verdict": "incorrect"
+	},
+	"unsorted.cpp": {
+		"verdict": "incorrect"
+	},
+	"distinct.cpp": {
+		"verdict": "incorrect"
+	},
+	"bubble_sort.cpp": {
+		"verdict": "correct"
 	}
 }

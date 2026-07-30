@@ -8,9 +8,17 @@ int main() {
 
     int n, k;
     std::cin >> n >> k;
+
     std::vector<long long> values(n);
     for (long long& value : values) std::cin >> value;
 
-    std::nth_element(values.begin(), values.begin() + (k - 1), values.end());
+    for (int last = n - 1; last > 0; --last) {
+        for (int i = 0; i < last; ++i) {
+            if (values[i] > values[i + 1]) {
+                std::swap(values[i], values[i + 1]);
+            }
+        }
+    }
+
     std::cout << values[k - 1] << '\n';
 }

@@ -3,14 +3,12 @@
 #include <vector>
 
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
-
     int n, k;
     std::cin >> n >> k;
     std::vector<long long> values(n);
     for (long long& value : values) std::cin >> value;
+    std::sort(values.begin(), values.end());
 
-    std::nth_element(values.begin(), values.begin() + (k - 1), values.end());
-    std::cout << values[k - 1] << '\n';
+    const int wrongIndex = std::min(k, n - 1);
+    std::cout << values[wrongIndex] << '\n';
 }
