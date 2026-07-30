@@ -9,19 +9,19 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | problem.json syntax | [:white_check_mark:](pA/problem.json) | [:white_check_mark:](pB/problem.json) | [:white_check_mark:](pC/problem.json) | [:white_check_mark:](pD/problem.json) | [:white_check_mark:](pE/problem.json) | [:white_check_mark:](pF/problem.json) |
 | subtasks.json syntax | [:white_check_mark:](pA/subtasks.json) | [:white_check_mark:](pB/subtasks.json) | [:white_check_mark:](pC/subtasks.json) | [:white_check_mark:](pD/subtasks.json) | [:white_check_mark:](pE/subtasks.json) | [:white_check_mark:](pF/subtasks.json) |
-| contest_name |  [:white_check_mark:](pA/problem.json)<br>115 學年度資訊學科能力競賽臺南一中校內初選 | [:white_check_mark:](pB/problem.json)<br>115 學年度資訊學科能力競賽臺南一中校內初選 | [:white_check_mark:](pC/problem.json)<br>115 學年度資訊學科能力競賽臺南一中校內初選 | [:warning:](pD/problem.json)<br>115學年度資訊學科能力競賽臺南一中校內初選 | [:x:](pE/problem.json) | [:white_check_mark:](pF/problem.json)<br>115 學年度資訊學科能力競賽臺南一中校內初選 |
+| contest_name |  [:white_check_mark:](pA/problem.json)<br>115 學年度資訊學科能力競賽臺南一中校內初選 | [:white_check_mark:](pB/problem.json)<br>115 學年度資訊學科能力競賽臺南一中校內初選 | [:white_check_mark:](pC/problem.json)<br>115 學年度資訊學科能力競賽臺南一中校內初選 | [:white_check_mark:](pD/problem.json)<br>115 學年度資訊學科能力競賽臺南一中校內初選 | [:x:](pE/problem.json) | [:white_check_mark:](pF/problem.json)<br>115 學年度資訊學科能力競賽臺南一中校內初選 |
 | problem_label |  [:white_check_mark:](pA/problem.json) | [:white_check_mark:](pB/problem.json) | [:white_check_mark:](pC/problem.json) | [:white_check_mark:](pD/problem.json) | [:white_check_mark:](pE/problem.json) | [:white_check_mark:](pF/problem.json) |
 | name |  [:white_check_mark:](pA/problem.json)<br>Kth_Order_Statistic | [:white_check_mark:](pB/problem.json)<br>Many_Watches | [:white_check_mark:](pC/problem.json)<br>1145141 | [:white_check_mark:](pD/problem.json)<br>Pool_Ball | [:x:](pE/problem.json) | [:white_check_mark:](pF/problem.json)<br>Seed_Manacher |
 | title |  [:white_check_mark:](pA/problem.json)<br>K 分位數 | [:white_check_mark:](pB/problem.json)<br>好多手錶 | [:white_check_mark:](pC/problem.json)<br>1145141 | [:white_check_mark:](pD/problem.json)<br>撞球 | [:x:](pE/problem.json) | [:white_check_mark:](pF/problem.json)<br>種馬拉車 |
 | memory_limit |  512 | 512 | 512 | 512 | 512 | 512 |
 | time_limit |  1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 |
 | has_checker |  False | False | False | False | False | False |
-| gen | [:white_check_mark:](pA/gen) | [:white_check_mark:](pB/gen) | [:white_check_mark:](pC/gen) | [:x:](pD/gen)<br>[data](pD/gen/data)<br>[gen.cpp](pD/gen/gen.cpp) | [:x:](pE/gen)<br>[data](pE/gen/data)<br>[gen.cpp](pE/gen/gen.cpp) | [:x:](pF/gen)<br>[testlib.h](pF/gen/testlib.h) |
-| solution | [:white_check_mark:](pA/solution) | [:white_check_mark:](pB/solution) | [:white_check_mark:](pC/solution) | [:x:](pD/solution)<br>[correct.cpp](pD/solution/correct.cpp) | [:x:](pE/solution)<br>[correct.cpp](pE/solution/correct.cpp) | [:white_check_mark:](pF/solution) |
-| validator | [:white_check_mark:](pA/validator) | [:white_check_mark:](pB/validator) | [:white_check_mark:](pC/validator) | [:x:](pD/validator)<br>[validator.cpp](pD/validator/validator.cpp) | [:x:](pE/validator)<br>[validator.cpp](pE/validator/validator.cpp) | [:white_check_mark:](pF/validator) |
+| gen | [:white_check_mark:](pA/gen) | [:white_check_mark:](pB/gen) | [:white_check_mark:](pC/gen) | [:white_check_mark:](pD/gen) | [:x:](pE/gen)<br>[data](pE/gen/data)<br>[gen.cpp](pE/gen/gen.cpp) | [:x:](pF/gen)<br>[testlib.h](pF/gen/testlib.h) |
+| solution | [:white_check_mark:](pA/solution) | [:white_check_mark:](pB/solution) | [:white_check_mark:](pC/solution) | [:white_check_mark:](pD/solution) | [:x:](pE/solution)<br>[correct.cpp](pE/solution/correct.cpp) | [:white_check_mark:](pF/solution) |
+| validator | [:white_check_mark:](pA/validator) | [:white_check_mark:](pB/validator) | [:white_check_mark:](pC/validator) | [:white_check_mark:](pD/validator) | [:x:](pE/validator)<br>[validator.cpp](pE/validator/validator.cpp) | [:white_check_mark:](pF/validator) |
 | subtasks.json<br>global_validators / subtask_sensitive_validators |  [:white_check_mark:](pA/subtasks.json) | [:white_check_mark:](pB/subtasks.json) | [:white_check_mark:](pC/subtasks.json) | [:white_check_mark:](pD/subtasks.json) | [:white_check_mark:](pE/subtasks.json) | [:white_check_mark:](pF/subtasks.json) |
 | tests | [:x:](pA/tests)<br>[Auto build disabled](pA/gen/DISABLE_AUTO_BUILD) | [:white_check_mark:](pB/tests) | [:white_check_mark:](pC/tests) | [:x:](pD/tests)<br>[Auto build disabled](pD/gen/DISABLE_AUTO_BUILD) | [:x:](pE/tests)<br>[Auto build disabled](pE/gen/DISABLE_AUTO_BUILD) | [:white_check_mark:](pF/tests) |
-| statement/index.md | [:x:](pA/statement/index.md) | [:x:](pB/statement/index.md) | [:white_check_mark:](pC/statement/index.md) | [:x:](pD/statement/index.md) | [:x:](pE/statement/index.md) | [:white_check_mark:](pF/statement/index.md) |
+| statement/index.md | [:x:](pA/statement/index.md) | [:x:](pB/statement/index.md) | [:white_check_mark:](pC/statement/index.md) | [:white_check_mark:](pD/statement/index.md) | [:x:](pE/statement/index.md) | [:white_check_mark:](pF/statement/index.md) |
 | statement/index.pdf | [:x:](pA/statement/index.pdf)<br>[Auto build disabled](pA/statement/DISABLE_AUTO_BUILD) | [:white_check_mark:](pB/statement/index.pdf) | [:white_check_mark:](pC/statement/index.pdf) | [:white_check_mark:](pD/statement/index.pdf)<br>[Auto build disabled](pD/statement/DISABLE_AUTO_BUILD) | [:x:](pE/statement/index.pdf)<br>[Auto build disabled](pE/statement/DISABLE_AUTO_BUILD) | [:white_check_mark:](pF/statement/index.pdf) |
 
 <!-- progress end -->
@@ -34,7 +34,7 @@
 | A | 67<br>$0 \le A_i \le 10^9$ | 33<br>無額外限制 |
 | B | 5<br>所有 $t_i$ 相同 | 5<br>$n = 2$ | 15<br>$n \le 8$ | 20<br>$n \le 2000$ | 55<br>無額外限制 |
 | C | 8<br>$1 \le n \le 15$ | 51<br>$1 \le n \le 10^3$ | 41<br>無額外限制 |
-| D | 7<br>$1 \le N, M \le 10,1 \le Q \le 10$ | 67<br>無額外限制 | 8<br>$1 \le N, M \le 1000, 1 \le Q \le 100$，輸入的字元僅包含 `.` | 18<br>$1 \le N, M \le 200, 1 \le Q \le 1000$ |
+| D | 7<br>$1 \le N, M \le 10, 1 \le Q \le 10$ | 8<br>$1 \le N, M \le 1000, 1 \le Q \le 100$，輸入的字元僅包含 `.` | 18<br>$1 \le N, M \le 200, 1 \le Q \le 1000$ | 67<br>無額外限制 |
 | E | 100<br>無額外限制 |
 | F | 14<br>$1 \le n \le 100$ | 25<br>$1 \le n \le 2000$ | 61<br>無額外限制 |
 
