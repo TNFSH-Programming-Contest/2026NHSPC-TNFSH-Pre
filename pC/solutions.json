@@ -1,5 +1,41 @@
 {
 	"correct.cpp": {
 		"verdict": "model_solution"
+	},
+	"brute_factorial.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"samples": "correct",
+			"brute": "correct"
+		}
+	},
+	"max_1000.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"samples": "correct",
+			"brute": "correct",
+			"brute2": "correct"
+		}
+	},
+	"number_divisors.cpp": {
+		"verdict": "incorrect"
+	},
+	"missing_powers.cpp": {
+		"verdict": "incorrect"
+	},
+	"wrong_mod.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"samples": "correct",
+			"brute": "correct"
+		}
+	},
+	"int_overflow.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"samples": "correct",
+			"brute": "correct",
+			"brute2": "correct"
+		}
 	}
 }

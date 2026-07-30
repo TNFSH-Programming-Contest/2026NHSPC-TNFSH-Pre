@@ -1,12 +1,6 @@
 #include <iostream>
 #include <vector>
 
-namespace {
-
-constexpr long long MOD = 1145141;
-
-}  // namespace
-
 int main() {
     std::ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
@@ -14,8 +8,8 @@ int main() {
     int n;
     std::cin >> n;
 
-    std::vector<int> primes;
     std::vector<bool> composite(n + 1, false);
+    std::vector<int> primes;
     for (int value = 2; value <= n; ++value) {
         if (!composite[value]) primes.push_back(value);
         for (int prime : primes) {
@@ -25,16 +19,14 @@ int main() {
         }
     }
 
-    long long answer = 1;
+    int answer = 1;
     for (int prime : primes) {
-        long long exponent = 0;
-        long long power = prime;
-        while (power <= n) {
+        int exponent = 0;
+        for (long long power = prime; power <= n; power *= prime) {
             exponent += n / power;
             if (power > n / prime) break;
-            power *= prime;
         }
-        answer = answer * (exponent + 1) % MOD;
+        answer = answer * (exponent + 1) % 1145141;
     }
 
     std::cout << answer << '\n';

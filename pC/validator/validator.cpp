@@ -1,16 +1,13 @@
 #include "testlib.h"
-using namespace std;
-
-const int MAXN = 1000;
 
 int main(int argc, char* argv[]) {
-	registerValidation(argc, argv);
-	// about testlib, see https://codeforces.com/blog/entry/18426
+    registerValidation(argc, argv);
 
-	// TODO
-	inf.readInt(1, MAXN, "n");
-	inf.readEoln();
-	inf.readEof();
+    ensuref(argc >= 2, "validator requires the maximum n as argv[1]");
+    const int maxN = std::stoi(argv[1]);
+    ensuref(1 <= maxN && maxN <= 1000000, "maximum n must be in [1, 1000000]");
 
-	return 0;
+    inf.readInt(1, maxN, "n");
+    inf.readEoln();
+    inf.readEof();
 }

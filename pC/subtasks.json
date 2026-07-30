@@ -1,29 +1,29 @@
 {
     "global_validators": [
-        "validator.cpp"
+        "validator.cpp 1000000"
     ],
     "subtasks": {
         "samples": {
             "index": 0,
             "score": 0,
             "text": "範例輸入輸出",
-            "validators": []
+            "validators": ["validator.cpp 1000000"]
         },
         "brute": {
             "index": 1,
             "score": 8,
             "text": "$1 \\le n \\le 15$",
-            "validators": []
+            "validators": ["validator.cpp 15"]
         },
         "brute2": {
             "index": 2,
             "score": 51,
             "text": "$1 \\le n \\le 10^3$",
-            "validators": []
+            "validators": ["validator.cpp 1000"]
         },
         "full": {
             "index": 3,
-            "score": 61,
+            "score": 41,
             "text": "無額外限制",
             "validators": []
         }
