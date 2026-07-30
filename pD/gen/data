@@ -1,8 +1,47 @@
-# see https://github.com/ioi-2017/tps/blob/master/docs/README.md#gendata
-# TODO
 @subtask samples
 manual example-1.in
 
+@subtask brute
+gen 1 1 4 dots cycle
+gen 1 1 4 slash cycle
+gen 1 1 4 backslash cycle
+gen 1 5 10 checker cycle
+gen 5 1 10 checker reverse
+gen 2 2 8 checker cycle
+gen 3 4 10 random random 1 1 1
+gen 4 3 10 random corners 3 2 2
+gen 10 10 10 blocks corners 2
+gen 9 10 10 random cycle 4 3 3
+
+@subtask straight
+gen 1 1 4 dots cycle
+gen 1 1000 100 dots cycle
+gen 1000 1 100 dots reverse
+gen 2 3 10 dots corners
+gen 1000 1000 100 dots random
+gen 999 997 100 dots reverse
+gen 512 1000 100 dots same 1
+gen 1000 777 100 dots corners
+
+@subtask brute2
+gen 1 200 402 checker cycle
+gen 200 1 402 checker reverse
+gen 200 200 800 checker cycle
+gen 200 200 1000 random random 1 1 1
+gen 200 200 1000 slash cycle
+gen 200 200 1000 backslash reverse
+gen 199 200 1000 blocks corners 7
+gen 200 199 1000 random cycle 5 3 2
+gen 127 193 640 random random 1 4 4
+gen 200 200 1000 blocks reverse 1
+
 @subtask full
-gen	20
-gen	30
+gen 2000 2000 200000 dots same 1
+gen 2000 2000 8000 checker cycle
+gen 2000 2000 8000 random reverse 1 1 1
+gen 2000 1999 200000 random random 4 3 3
+gen 1999 2000 200000 blocks cycle 17
+gen 1 2000 200000 checker same 1
+gen 2000 1 200000 checker random
+gen 1379 1999 200000 random corners 6 2 2
+gen 2000 2000 200000 slash random
