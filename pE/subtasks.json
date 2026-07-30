@@ -9,9 +9,21 @@
             "text": "範例輸入輸出",
             "validators": []
         },
-        "full": {
+        "range-dp": {
             "index": 1,
-            "score": 100,
+            "score": 27,
+            "text": "$2 \\le n \\le 50, 1 \\le Q \\le 1000$",
+            "validators": []
+        },
+        "knuth": {
+            "index": 2,
+            "score": 59,
+            "text": "$2 \\le n \\le 800$",
+            "validators": []
+        },
+        "full": {
+            "index": 3,
+            "score": 14,
             "text": "無額外限制",
             "validators": []
         }
