@@ -6,7 +6,11 @@
 
 set -euo pipefail
 
-sandbox=$(dirname "$0")
+sandbox_root=$(dirname "$0")
+sandbox=$(mktemp -d "${sandbox_root}/communication.XXXXXX")
+problem_name=PROBLEM_NAME_PLACE_HOLDER
+solution_executable="${sandbox}/${problem_name}.exe"
+manager_executable="${sandbox}/manager.exe"
 manager_in="${sandbox}/manager.in"
 manager_out="${sandbox}/manager.out"
 manager_err="${sandbox}/manager.err"
@@ -36,17 +40,28 @@ else
 fi
 
 
+solution_pid=()
+manager_pid=""
+manager_ret_value=0
+
 function signal_handler {
 	local -r sig="$1"; shift
-	for ((i=0; i<NUM_SOL_PROCESSES; i++)); do
-		kill "${sig}" "-${solution_pid[$i]}" &> "/dev/null" || true
+	trap - EXIT SIGTERM
+	for pid in "${solution_pid[@]}"; do
+		kill "${sig}" "${pid}" &> "/dev/null" || true
 	done
-	kill "${sig}" "${manager_pid}" &> "/dev/null" || true
-	echo "${manager_ret_value}" > "${manager_ret}"
+	if [ -n "${manager_pid}" ]; then
+		kill "${sig}" "${manager_pid}" &> "/dev/null" || true
+	fi
+	echo "${manager_ret_value}" > "${manager_ret}" || true
+	rm -rf -- "${sandbox}"
 }
 
 trap "signal_handler -9" SIGKILL
 trap "signal_handler -1" SIGTERM EXIT
+
+cp "${sandbox_root}/${problem_name}.exe" "${solution_executable}"
+cp "${sandbox_root}/manager.exe" "${manager_executable}"
 
 for ((i=0; i<NUM_SOL_PROCESSES; i++)); do
 	rm -f "${pipe_sol2mgr[$i]}" "${pipe_mgr2sol[$i]}"
@@ -61,18 +76,14 @@ done
 manager_args+=("${manager_log}")
 
 cat > "${manager_in}"
-"${sandbox}/manager.exe" "${manager_args[@]}" < "${manager_in}" > "${manager_out}" 2> "${manager_err}" &
+"${manager_executable}" "${manager_args[@]}" < "${manager_in}" > "${manager_out}" 2> "${manager_err}" &
 manager_pid=$!
 
-solution_pid=()
 for ((i=0; i<NUM_SOL_PROCESSES; i++)); do
-	set -m
-	bash "${sandbox}/exec.sh" "${pipe_mgr2sol[$i]}" "${pipe_sol2mgr[$i]}" "$i" < "${solution_in[$i]}" > "${solution_out[$i]}" 2> "${solution_err[$i]}" &
+	"${solution_executable}" "${pipe_mgr2sol[$i]}" "${pipe_sol2mgr[$i]}" "$i" < "${solution_in[$i]}" > "${solution_out[$i]}" 2> "${solution_err[$i]}" &
 	solution_pid+=($!)
-	set +m
 done
 
-manager_ret_value=0
 wait "${manager_pid}" || manager_ret_value=$?
 echo "${manager_ret_value}" > "${manager_ret}"
 
@@ -84,10 +95,19 @@ for ((i=0; i<NUM_SOL_PROCESSES; i++)); do
 	solution_ret_value+=("${s}")
 done
 
+# Every child has been reaped. Do not signal stale PIDs from the EXIT trap;
+# a following testcase may reuse them immediately.
+trap - EXIT SIGTERM
+
 cat "${manager_out}"
 1>&2 cat "${manager_err}"
 
-[ "${manager_ret_value}" -eq 0 ] || exit "${manager_ret_value}"
+final_ret_value="${manager_ret_value}"
 for ((i=0; i<NUM_SOL_PROCESSES; i++)); do
-	[ "${solution_ret_value[$i]}" -eq 0 ] || exit "${solution_ret_value[$i]}"
+	if [ "${final_ret_value}" -eq 0 ] && [ "${solution_ret_value[$i]}" -ne 0 ]; then
+		final_ret_value="${solution_ret_value[$i]}"
+	fi
 done
+
+rm -rf -- "${sandbox}"
+exit "${final_ret_value}"

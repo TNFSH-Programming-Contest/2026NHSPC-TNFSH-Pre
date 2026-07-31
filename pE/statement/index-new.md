@@ -9,18 +9,24 @@
 舉例來說，如果選擇在位置 $k$ 切開 $[l,r]$，這次完整切分所產生的總衝動值為
 
 $$
-w_{l,r}+\operatorname{cost}(l,k)+\operatorname{cost}(k+1,r),
+w_{l,r}
++\operatorname{cost}(l,k)
++\operatorname{cost}(k+1,r),
 $$
 
 其中 $\operatorname{cost}(x,y)$ 代表將區間 $[x,y]$ 徹底切分所需的最小總衝動值。
 
 費用表 $w$ 保證具有以下性質。對任意 $0\le a\le b\le c\le d<n$：
 
-$$w_{b,c}\le w_{a,d},$$
+$$
+w_{b,c}\le w_{a,d},
+$$
 
 以及
 
-$$w_{a,c}+w_{b,d}\le w_{a,d}+w_{b,c}.$$
+$$
+w_{a,c}+w_{b,d}\le w_{a,d}+w_{b,c}.
+$$
 
 柳棲有著預知未來的能力，他知道完整的費用表 $w$。但是，在派對上實際負責切蛋糕的巴漆並不知道任何 $w_{l,r}$。
 
@@ -45,7 +51,10 @@ $$w_{a,c}+w_{b,d}\le w_{a,d}+w_{b,c}.$$
 第一個程序會呼叫：
 
 ```cpp
-std::string encode(int n, std::vector<std::vector<long long>> w);
+std::string encode(
+    int n,
+    std::vector<std::vector<long long>> w
+);
 ```
 
 - `n` 是蛋糕的總段數。
@@ -54,7 +63,7 @@ std::string encode(int n, std::vector<std::vector<long long>> w);
 - 當 $l>r$ 時，`w[l][r]` 的內容沒有意義，請勿使用。
 - 你必須回傳一個只包含字元 `0` 與 `1`、長度不超過 $B$ 的字串。
 
-### 階段二：巴漆的解碼與處理詢問
+### 階段二：巴漆的解碼
 
 評測程式會將 `encode` 的回傳值傳給第二個程序，並先呼叫一次：
 
@@ -65,6 +74,8 @@ void decode(int n, std::string S);
 - `n` 是蛋糕的總段數。
 - `S` 是第一個程序中 `encode` 回傳的二進位字串。
 - 第二個程序不會取得費用表 $w$。
+
+### 階段三：處理詢問
 
 接著，評測程式會呼叫 $Q$ 次：
 
@@ -84,7 +95,7 @@ int query(int l, int r);
 
 如果 `encode` 回傳的字串包含 `0`、`1` 以外的字元，或長度超過 $B$，你會得到 **Wrong Answer (1)**。
 
-如果 `query` 回傳的切點不滿足 $l \le k < r$，你會得到 **Wrong Answer (2)**。
+如果 `query` 回傳的切點不滿足 $l\le k<r$，你會得到 **Wrong Answer (2)**。
 
 如果 `query` 回傳的切點不是最佳切點，你會得到 **Wrong Answer (3)**。
 
@@ -108,18 +119,16 @@ int query(int l, int r);
 
 ## 呼叫範例
 
-假設 $n=4$，且柳棲得到的矩陣上三角為
+假設 $n=4$，費用表的有效部分如下：
 
-$$
-w=\begin{pmatrix}
-0&1&3&19\\
- &0&2&18\\
- & &0&16\\
- & & &0
-\end{pmatrix}.
-$$
+| $w_{l,r}$ | $r=0$ | $r=1$ | $r=2$ | $r=3$ |
+|:--:|--:|--:|--:|--:|
+| $l=0$ | $0$ | $1$ | $3$ | $19$ |
+| $l=1$ |  | $0$ | $2$ | $18$ |
+| $l=2$ |  |  | $0$ | $16$ |
+| $l=3$ |  |  |  | $0$ |
 
-若詢問依序為 $[0,3]$、$[0,1]$、$[1,3]$，`query` 可以依序回傳 `2`、`0`、`2`。`encode` 實際回傳的二進位字串則由你的實作決定。
+詢問依序為 $[0,3]$、$[0,1]$、$[1,3]$ 時，`query` 可以依序回傳 `2`、`0`、`2`。`encode` 實際回傳的二進位字串則由你的實作決定。
 
 <!--
 內部／本機測試方式（此段不顯示於正式題面）：

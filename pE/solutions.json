@@ -1,5 +1,52 @@
 {
-	"correct.cpp": {
-		"verdict": "model_solution"
-	}
+    "correct.cpp": {
+        "verdict": "model_solution"
+    },
+    "encode_values.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "samples": "correct",
+            "range-dp": "correct",
+            "knuth": "correct"
+        }
+    },
+    "fixed_width.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "samples": "correct",
+            "range-dp": "correct",
+            "knuth": "correct"
+        }
+    },
+    "int_overflow.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "samples": "correct"
+        }
+    },
+    "middle.cpp": {
+        "verdict": "incorrect"
+    },
+    "first_cut.cpp": {
+        "verdict": "incorrect"
+    },
+    "invalid_cut.cpp": {
+        "verdict": "incorrect"
+    },
+    "too_long.cpp": {
+        "verdict": "incorrect"
+    },
+    "non_binary.cpp": {
+        "verdict": "incorrect"
+    },
+    "shared_global.cpp": {
+        "verdict": "incorrect"
+    },
+    "range_dp.cpp": {
+        "verdict": "time_limit",
+        "except": {
+            "samples": "correct",
+            "range-dp": "correct"
+        }
+    }
 }

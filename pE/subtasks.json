@@ -1,25 +1,25 @@
 {
     "global_validators": [
-        "validator.cpp"
+        "validator.cpp 2000 100000"
     ],
     "subtasks": {
         "samples": {
             "index": 0,
             "score": 0,
             "text": "範例輸入輸出",
-            "validators": []
+            "validators": ["validator.cpp 2000 100000"]
         },
         "range-dp": {
             "index": 1,
             "score": 27,
             "text": "$2 \\le n \\le 50, 1 \\le Q \\le 1000$",
-            "validators": []
+            "validators": ["validator.cpp 50 1000"]
         },
         "knuth": {
             "index": 2,
             "score": 59,
             "text": "$2 \\le n \\le 800$",
-            "validators": []
+            "validators": ["validator.cpp 800 100000"]
         },
         "full": {
             "index": 3,
