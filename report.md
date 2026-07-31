@@ -16,12 +16,12 @@
 | memory_limit |  512 | 512 | 512 | 512 | 512 | 512 |
 | time_limit |  1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 |
 | has_checker |  False | False | False | False | False | False |
-| gen | [:white_check_mark:](pA/gen) | [:white_check_mark:](pB/gen) | [:white_check_mark:](pC/gen) | [:white_check_mark:](pD/gen) | [:x:](pE/gen)<br>[data](pE/gen/data)<br>[gen.cpp](pE/gen/gen.cpp) | [:x:](pF/gen)<br>[testlib.h](pF/gen/testlib.h) |
-| solution | [:white_check_mark:](pA/solution) | [:white_check_mark:](pB/solution) | [:white_check_mark:](pC/solution) | [:white_check_mark:](pD/solution) | [:x:](pE/solution)<br>[correct.cpp](pE/solution/correct.cpp) | [:white_check_mark:](pF/solution) |
-| validator | [:white_check_mark:](pA/validator) | [:white_check_mark:](pB/validator) | [:white_check_mark:](pC/validator) | [:white_check_mark:](pD/validator) | [:x:](pE/validator)<br>[validator.cpp](pE/validator/validator.cpp) | [:white_check_mark:](pF/validator) |
+| gen | [:white_check_mark:](pA/gen) | [:white_check_mark:](pB/gen) | [:white_check_mark:](pC/gen) | [:white_check_mark:](pD/gen) | [:white_check_mark:](pE/gen) | [:x:](pF/gen)<br>[testlib.h](pF/gen/testlib.h) |
+| solution | [:white_check_mark:](pA/solution) | [:white_check_mark:](pB/solution) | [:white_check_mark:](pC/solution) | [:white_check_mark:](pD/solution) | [:white_check_mark:](pE/solution) | [:white_check_mark:](pF/solution) |
+| validator | [:white_check_mark:](pA/validator) | [:white_check_mark:](pB/validator) | [:white_check_mark:](pC/validator) | [:white_check_mark:](pD/validator) | [:white_check_mark:](pE/validator) | [:white_check_mark:](pF/validator) |
 | subtasks.json<br>global_validators / subtask_sensitive_validators |  [:white_check_mark:](pA/subtasks.json) | [:white_check_mark:](pB/subtasks.json) | [:white_check_mark:](pC/subtasks.json) | [:white_check_mark:](pD/subtasks.json) | [:white_check_mark:](pE/subtasks.json) | [:white_check_mark:](pF/subtasks.json) |
 | tests | [:x:](pA/tests)<br>[Auto build disabled](pA/gen/DISABLE_AUTO_BUILD) | [:white_check_mark:](pB/tests) | [:white_check_mark:](pC/tests) | [:x:](pD/tests)<br>[Auto build disabled](pD/gen/DISABLE_AUTO_BUILD) | [:x:](pE/tests)<br>[Auto build disabled](pE/gen/DISABLE_AUTO_BUILD) | [:white_check_mark:](pF/tests) |
-| statement/index.md | [:x:](pA/statement/index.md) | [:x:](pB/statement/index.md) | [:white_check_mark:](pC/statement/index.md) | [:white_check_mark:](pD/statement/index.md) | [:x:](pE/statement/index.md) | [:white_check_mark:](pF/statement/index.md) |
+| statement/index.md | [:x:](pA/statement/index.md) | [:x:](pB/statement/index.md) | [:white_check_mark:](pC/statement/index.md) | [:white_check_mark:](pD/statement/index.md) | [:white_check_mark:](pE/statement/index.md) | [:white_check_mark:](pF/statement/index.md) |
 | statement/index.pdf | [:x:](pA/statement/index.pdf)<br>[Auto build disabled](pA/statement/DISABLE_AUTO_BUILD) | [:white_check_mark:](pB/statement/index.pdf) | [:white_check_mark:](pC/statement/index.pdf) | [:white_check_mark:](pD/statement/index.pdf) | [:white_check_mark:](pE/statement/index.pdf)<br>[Auto build disabled](pE/statement/DISABLE_AUTO_BUILD) | [:white_check_mark:](pF/statement/index.pdf) |
 
 <!-- progress end -->
