@@ -15,14 +15,20 @@
             "text": "$2 \\le n \\le 50, 1 \\le Q \\le 1000$",
             "validators": ["validator.cpp 50 1000"]
         },
-        "knuth": {
+        "cubic": {
             "index": 2,
-            "score": 59,
+            "score": 18,
+            "text": "$2 \\le n \\le 200$",
+            "validators": ["validator.cpp 200 100000"]
+        },
+        "knuth": {
+            "index": 3,
+            "score": 41,
             "text": "$2 \\le n \\le 800$",
             "validators": ["validator.cpp 800 100000"]
         },
         "full": {
-            "index": 3,
+            "index": 4,
             "score": 14,
             "text": "無額外限制",
             "validators": []
