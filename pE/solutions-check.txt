@@ -1,0 +1,473 @@
+correct.cpp
+solution            compile[OK]
+0-01                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-01                sol[OK]    0.022     check[OK]        1  [Correct]               
+1-02                sol[OK]    0.022     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-04                sol[OK]    0.025     check[OK]        1  [Correct]               
+1-05                sol[OK]    0.024     check[OK]        1  [Correct]               
+1-06                sol[OK]    0.024     check[OK]        1  [Correct]               
+1-07                sol[OK]    0.029     check[OK]        1  [Correct]               
+1-08                sol[OK]    0.027     check[OK]        1  [Correct]               
+1-09                sol[OK]    0.024     check[OK]        1  [Correct]               
+1-10                sol[OK]    0.029     check[OK]        1  [Correct]               
+2-01                sol[OK]    0.027     check[OK]        1  [Correct]               
+2-02                sol[OK]    0.025     check[OK]        1  [Correct]               
+2-03                sol[OK]    0.026     check[OK]        1  [Correct]               
+2-04                sol[OK]    0.030     check[OK]        1  [Correct]               
+2-05                sol[OK]    0.066     check[OK]        1  [Correct]               
+2-06                sol[OK]    0.062     check[OK]        1  [Correct]               
+3-01                sol[OK]    0.066     check[OK]        1  [Correct]               
+3-02                sol[OK]    0.085     check[OK]        1  [Correct]               
+3-03                sol[OK]    0.093     check[OK]        1  [Correct]               
+3-04                sol[OK]    0.106     check[OK]        1  [Correct]               
+3-05                sol[OK]    0.126     check[OK]        1  [Correct]               
+3-06                sol[OK]    0.145     check[OK]        1  [Correct]               
+4-01                sol[OK]    0.148     check[OK]        1  [Correct]               
+4-02                sol[OK]    0.181     check[OK]        1  [Correct]               
+4-03                sol[OK]    0.315     check[OK]        1  [Correct]               
+4-04                sol[OK]    0.356     check[OK]        1  [Correct]               
+4-05                sol[OK]    0.503     check[OK]        1  [Correct]               
+4-06                sol[OK]    0.613     check[OK]        1  [Correct]               
+4-07                sol[OK]    0.583     check[OK]        1  [Correct]               
+samples             [1/1 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
+range-dp            [10/10 tests]  [Correct]             [27/27 pts]    [match with expected]             1-01
+cubic               [6/6 tests]    [Correct]             [18/18 pts]    [match with expected]             2-01
+knuth               [6/6 tests]    [Correct]             [41/41 pts]    [match with expected]             3-01
+full                [7/7 tests]    [Correct]             [14/14 pts]    [match with expected]             4-01
+
+Subtask summary
+100/100 pts
+
+Finished.
+
+encode_values.cpp
+solution            compile[OK]
+0-01                sol[OK]    0.021     check[OK]        1  [Correct]               
+1-01                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-02                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.026     check[OK]        1  [Correct]               
+1-04                sol[OK]    0.022     check[OK]        1  [Correct]               
+1-05                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-06                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-07                sol[OK]    0.024     check[OK]        1  [Correct]               
+1-08                sol[OK]    0.025     check[OK]        1  [Correct]               
+1-09                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-10                sol[OK]    0.023     check[OK]        1  [Correct]               
+2-01                sol[OK]    0.023     check[OK]        1  [Correct]               
+2-02                sol[OK]    0.026     check[OK]        1  [Correct]               
+2-03                sol[OK]    0.028     check[OK]        1  [Correct]               
+2-04                sol[OK]    0.030     check[OK]        1  [Correct]               
+2-05                sol[OK]    0.064     check[OK]        1  [Correct]               
+2-06                sol[OK]    0.071     check[OK]        1  [Correct]               
+3-01                sol[OK]    0.067     check[OK]        1  [Correct]               
+3-02                sol[OK]    0.076     check[OK]        1  [Correct]               
+3-03                sol[OK]    0.104     check[OK]        1  [Correct]               
+3-04                sol[OK]    0.114     check[OK]        1  [Correct]               
+3-05                sol[OK]    0.142     check[OK]        1  [Correct]               
+3-06                sol[OK]    0.162     check[OK]        1  [Correct]               
+4-01                sol[OK]    0.172     check[OK]        1  [Correct]               
+4-02                sol[OK]    0.250     check[OK]        1  [Correct]               
+4-03                sol[OK]    0.359     check[OK]        1  [Correct]               
+4-04                sol[OK]    0.361     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+4-05                sol[OK]    0.499     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+4-06                sol[OK]    0.634     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+4-07                sol[OK]    0.653     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+samples             [1/1 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
+range-dp            [10/10 tests]  [Correct]             [27/27 pts]    [match with expected]             1-01
+cubic               [6/6 tests]    [Correct]             [18/18 pts]    [match with expected]             2-01
+knuth               [6/6 tests]    [Correct]             [41/41 pts]    [match with expected]             3-01
+full                [7/7 tests]    [Wrong Answer (1): encoded string is longer than B]                             [0/14 pts]     [expected: incorrect]             4-04
+
+Subtask summary
+86/100 pts
+
+Finished.
+
+fixed_width.cpp
+solution            compile[OK]
+0-01                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-01                sol[OK]    0.022     check[OK]        1  [Correct]               
+1-02                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.027     check[OK]        1  [Correct]               
+1-04                sol[OK]    0.025     check[OK]        1  [Correct]               
+1-05                sol[OK]    0.024     check[OK]        1  [Correct]               
+1-06                sol[OK]    0.025     check[OK]        1  [Correct]               
+1-07                sol[OK]    0.024     check[OK]        1  [Correct]               
+1-08                sol[OK]    0.025     check[OK]        1  [Correct]               
+1-09                sol[OK]    0.024     check[OK]        1  [Correct]               
+1-10                sol[OK]    0.024     check[OK]        1  [Correct]               
+2-01                sol[OK]    0.023     check[OK]        1  [Correct]               
+2-02                sol[OK]    0.028     check[OK]        1  [Correct]               
+2-03                sol[OK]    0.028     check[OK]        1  [Correct]               
+2-04                sol[OK]    0.032     check[OK]        1  [Correct]               
+2-05                sol[OK]    0.081     check[OK]        1  [Correct]               
+2-06                sol[OK]    0.076     check[OK]        1  [Correct]               
+3-01                sol[OK]    0.104     check[OK]        1  [Correct]               
+3-02                sol[OK]    0.086     check[OK]        1  [Correct]               
+3-03                sol[OK]    0.113     check[OK]        1  [Correct]               
+3-04                sol[OK]    0.124     check[OK]        1  [Correct]               
+3-05                sol[OK]    0.142     check[OK]        1  [Correct]               
+3-06                sol[OK]    0.186     check[OK]        1  [Correct]               
+4-01                sol[OK]    0.176     check[OK]        1  [Correct]               
+4-02                sol[OK]    0.172     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+4-03                sol[OK]    0.270     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+4-04                sol[OK]    0.338     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+4-05                sol[OK]    0.462     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+4-06                sol[OK]    0.628     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+4-07                sol[OK]    0.628     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+samples             [1/1 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
+range-dp            [10/10 tests]  [Correct]             [27/27 pts]    [match with expected]             1-01
+cubic               [6/6 tests]    [Correct]             [18/18 pts]    [match with expected]             2-01
+knuth               [6/6 tests]    [Correct]             [41/41 pts]    [match with expected]             3-01
+full                [7/7 tests]    [Wrong Answer (1): encoded string is longer than B]                             [0/14 pts]     [expected: incorrect]             4-02
+
+Subtask summary
+86/100 pts
+
+Finished.
+
+int_overflow.cpp
+solution            compile[OK]
+0-01                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-01                sol[OK]    0.024     check[OK]        1  [Correct]               
+1-02                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.022     check[OK]        0  [Wrong Answer (3): query 8 returned a non-optimal cut 0]                                    
+1-04                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-05                sol[OK]    0.026     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 20]                                     
+1-06                sol[OK]    0.023     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 14]                                     
+1-07                sol[OK]    0.024     check[OK]        1  [Correct]               
+1-08                sol[OK]    0.022     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 21]                                     
+1-09                sol[OK]    0.024     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 32]                                     
+1-10                sol[OK]    0.024     check[OK]        1  [Correct]               
+2-01                sol[OK]    0.024     check[OK]        0  [Wrong Answer (3): query 51 returned a non-optimal cut 1]                                     
+2-02                sol[OK]    0.026     check[OK]        0  [Wrong Answer (3): query 198 returned a non-optimal cut 0]                                      
+2-03                sol[OK]    0.030     check[OK]        1  [Correct]               
+2-04                sol[OK]    0.029     check[OK]        1  [Correct]               
+2-05                sol[OK]    0.063     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 161]                                      
+2-06                sol[OK]    0.061     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 102]                                      
+3-01                sol[OK]    0.069     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 122]                                      
+3-02                sol[OK]    0.082     check[OK]        1  [Correct]               
+3-03                sol[OK]    0.110     check[OK]        0  [Wrong Answer (3): query 2 returned a non-optimal cut 267]                                      
+3-04                sol[OK]    0.121     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 230]                                      
+3-05                sol[OK]    0.134     check[OK]        1  [Correct]               
+3-06                sol[OK]    0.190     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 405]                                      
+4-01                sol[OK]    0.168     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 402]                                      
+4-02                sol[OK]    0.202     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 78]                                     
+4-03                sol[OK]    0.313     check[OK]        1  [Correct]               
+4-04                sol[OK]    0.359     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 711]                                      
+4-05                sol[OK]    0.438     check[OK]        0  [Wrong Answer (3): query 402 returned a non-optimal cut 1200]                                         
+4-06                sol[OK]    0.646     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 1002]                                       
+4-07                sol[OK]    0.679     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 997]                                      
+samples             [1/1 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
+range-dp            [10/10 tests]  [Wrong Answer (3): query 8 returned a non-optimal cut 0]                                  [0/27 pts]     [expected: incorrect]             1-03
+cubic               [6/6 tests]    [Wrong Answer (3): query 51 returned a non-optimal cut 1]                                   [0/18 pts]     [expected: incorrect]             2-01
+knuth               [6/6 tests]    [Wrong Answer (3): query 1 returned a non-optimal cut 122]                                    [0/41 pts]     [expected: incorrect]             3-01
+full                [7/7 tests]    [Wrong Answer (3): query 1 returned a non-optimal cut 402]                                    [0/14 pts]     [expected: incorrect]             4-01
+
+Subtask summary
+0/100 pts
+
+Finished.
+
+middle.cpp
+solution            compile[OK]
+0-01                sol[OK]    0.023     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 1]                                    
+1-01                sol[OK]    0.024     check[OK]        1  [Correct]               
+1-02                sol[OK]    0.026     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.028     check[OK]        0  [Wrong Answer (3): query 9 returned a non-optimal cut 2]                                    
+1-04                sol[OK]    0.025     check[OK]        1  [Correct]               
+1-05                sol[OK]    0.026     check[OK]        0  [Wrong Answer (3): query 5 returned a non-optimal cut 38]                                     
+1-06                sol[OK]    0.027     check[OK]        1  [Correct]               
+1-07                sol[OK]    0.025     check[OK]        1  [Correct]               
+1-08                sol[OK]    0.025     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 24]                                     
+1-09                sol[OK]    0.026     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 32]                                     
+1-10                sol[OK]    0.025     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 18]                                     
+2-01                sol[OK]    0.024     check[OK]        0  [Wrong Answer (3): query 51 returned a non-optimal cut 1]                                     
+2-02                sol[OK]    0.026     check[OK]        1  [Correct]               
+2-03                sol[OK]    0.032     check[OK]        0  [Wrong Answer (3): query 128 returned a non-optimal cut 2]                                      
+2-04                sol[OK]    0.031     check[OK]        1  [Correct]               
+2-05                sol[OK]    0.074     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 166]                                      
+2-06                sol[OK]    0.073     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 99]                                     
+3-01                sol[OK]    0.075     check[OK]        1  [Correct]               
+3-02                sol[OK]    0.083     check[OK]        1  [Correct]               
+3-03                sol[OK]    0.083     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 273]                                      
+3-04                sol[OK]    0.103     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 230]                                      
+3-05                sol[OK]    0.134     check[OK]        1  [Correct]               
+3-06                sol[OK]    0.147     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 399]                                      
+4-01                sol[OK]    0.156     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 400]                                      
+4-02                sol[OK]    0.176     check[OK]        1  [Correct]               
+4-03                sol[OK]    0.235     check[OK]        0  [Wrong Answer (3): query 28 returned a non-optimal cut 706]                                       
+4-04                sol[OK]    0.281     check[OK]        1  [Correct]               
+4-05                sol[OK]    0.375     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 656]                                      
+4-06                sol[OK]    0.621     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 999]                                      
+4-07                sol[OK]    0.528     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 999]                                      
+samples             [1/1 tests]    [Wrong Answer (3): query 1 returned a non-optimal cut 1]                                  [0/0 pts]      [expected: incorrect]             0-01
+range-dp            [10/10 tests]  [Wrong Answer (3): query 9 returned a non-optimal cut 2]                                  [0/27 pts]     [expected: incorrect]             1-03
+cubic               [6/6 tests]    [Wrong Answer (3): query 51 returned a non-optimal cut 1]                                   [0/18 pts]     [expected: incorrect]             2-01
+knuth               [6/6 tests]    [Wrong Answer (3): query 1 returned a non-optimal cut 273]                                    [0/41 pts]     [expected: incorrect]             3-03
+full                [7/7 tests]    [Wrong Answer (3): query 1 returned a non-optimal cut 400]                                    [0/14 pts]     [expected: incorrect]             4-01
+
+Subtask summary
+0/100 pts
+
+Finished.
+
+first_cut.cpp
+solution            compile[OK]
+0-01                sol[OK]    0.022     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+1-01                sol[OK]    0.022     check[OK]        1  [Correct]               
+1-02                sol[OK]    0.022     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.021     check[OK]        0  [Wrong Answer (3): query 8 returned a non-optimal cut 0]                                    
+1-04                sol[OK]    0.021     check[OK]        0  [Wrong Answer (3): query 30 returned a non-optimal cut 0]                                     
+1-05                sol[OK]    0.023     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+1-06                sol[OK]    0.022     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+1-07                sol[OK]    0.022     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+1-08                sol[OK]    0.022     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+1-09                sol[OK]    0.022     check[OK]        0  [Wrong Answer (3): query 2 returned a non-optimal cut 29]                                     
+1-10                sol[OK]    0.022     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+2-01                sol[OK]    0.022     check[OK]        0  [Wrong Answer (3): query 52 returned a non-optimal cut 1]                                     
+2-02                sol[OK]    0.027     check[OK]        0  [Wrong Answer (3): query 198 returned a non-optimal cut 0]                                      
+2-03                sol[OK]    0.026     check[OK]        0  [Wrong Answer (3): query 127 returned a non-optimal cut 0]                                      
+2-04                sol[OK]    0.028     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+2-05                sol[OK]    0.059     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 146]                                      
+2-06                sol[OK]    0.064     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+3-01                sol[OK]    0.061     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+3-02                sol[OK]    0.068     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+3-03                sol[OK]    0.083     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 148]                                      
+3-04                sol[OK]    0.093     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 227]                                      
+3-05                sol[OK]    0.109     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+3-06                sol[OK]    0.126     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+4-01                sol[OK]    0.130     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+4-02                sol[OK]    0.163     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+4-03                sol[OK]    0.231     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+4-04                sol[OK]    0.273     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+4-05                sol[OK]    0.429     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 359]                                      
+4-06                sol[OK]    0.511     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+4-07                sol[OK]    0.517     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+samples             [1/1 tests]    [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                  [0/0 pts]      [expected: incorrect]             0-01
+range-dp            [10/10 tests]  [Wrong Answer (3): query 8 returned a non-optimal cut 0]                                  [0/27 pts]     [expected: incorrect]             1-03
+cubic               [6/6 tests]    [Wrong Answer (3): query 52 returned a non-optimal cut 1]                                   [0/18 pts]     [expected: incorrect]             2-01
+knuth               [6/6 tests]    [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                  [0/41 pts]     [expected: incorrect]             3-01
+full                [7/7 tests]    [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                  [0/14 pts]     [expected: incorrect]             4-01
+
+Subtask summary
+0/100 pts
+
+Finished.
+
+invalid_cut.cpp
+solution            compile[OK]
+0-01                sol[OK]    0.022     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 3]                              
+1-01                sol[OK]    0.024     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 1]                              
+1-02                sol[OK]    0.022     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 1]                              
+1-03                sol[OK]    0.031     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 1]                              
+1-04                sol[OK]    0.022     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 1]                              
+1-05                sol[OK]    0.022     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 49]                               
+1-06                sol[OK]    0.034     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 32]                               
+1-07                sol[OK]    0.023     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 48]                               
+1-08                sol[OK]    0.023     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 49]                               
+1-09                sol[OK]    0.024     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 34]                               
+1-10                sol[OK]    0.026     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 36]                               
+2-01                sol[OK]    0.025     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 1]                              
+2-02                sol[OK]    0.033     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 1]                              
+2-03                sol[OK]    0.026     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 1]                              
+2-04                sol[OK]    0.028     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 159]                                
+2-05                sol[OK]    0.059     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 187]                                
+2-06                sol[OK]    0.065     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 199]                                
+3-01                sol[OK]    0.062     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 256]                                
+3-02                sol[OK]    0.074     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 374]                                
+3-03                sol[OK]    0.083     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 398]                                
+3-04                sol[OK]    0.095     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 234]                                
+3-05                sol[OK]    0.108     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 798]                                
+3-06                sol[OK]    0.124     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 799]                                
+4-01                sol[OK]    0.133     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 800]                                
+4-02                sol[OK]    0.158     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 170]                                
+4-03                sol[OK]    0.240     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 1413]                                 
+4-04                sol[OK]    0.276     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 1414]                                 
+4-05                sol[OK]    0.372     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 953]                                
+4-06                sol[OK]    0.515     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 1998]                                 
+4-07                sol[OK]    0.510     check[OK]        0  [Wrong Answer (2): query 1 returned illegal cut 1999]                                 
+samples             [1/1 tests]    [Wrong Answer (2): query 1 returned illegal cut 3]                            [0/0 pts]      [expected: incorrect]             0-01
+range-dp            [10/10 tests]  [Wrong Answer (2): query 1 returned illegal cut 1]                            [0/27 pts]     [expected: incorrect]             1-01
+cubic               [6/6 tests]    [Wrong Answer (2): query 1 returned illegal cut 1]                            [0/18 pts]     [expected: incorrect]             2-01
+knuth               [6/6 tests]    [Wrong Answer (2): query 1 returned illegal cut 256]                              [0/41 pts]     [expected: incorrect]             3-01
+full                [7/7 tests]    [Wrong Answer (2): query 1 returned illegal cut 800]                              [0/14 pts]     [expected: incorrect]             4-01
+
+Subtask summary
+0/100 pts
+
+Finished.
+
+too_long.cpp
+solution            compile[OK]
+0-01                sol[OK]    0.023     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+1-01                sol[OK]    0.022     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+1-02                sol[OK]    0.024     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+1-03                sol[OK]    0.023     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+1-04                sol[OK]    0.023     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+1-05                sol[OK]    0.024     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+1-06                sol[OK]    0.023     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+1-07                sol[OK]    0.023     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+1-08                sol[OK]    0.023     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+1-09                sol[OK]    0.023     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+1-10                sol[OK]    0.023     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+2-01                sol[OK]    0.023     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+2-02                sol[OK]    0.024     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+2-03                sol[OK]    0.025     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+2-04                sol[OK]    0.026     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+2-05                sol[OK]    0.041     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+2-06                sol[OK]    0.044     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+3-01                sol[OK]    0.048     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+3-02                sol[OK]    0.056     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+3-03                sol[OK]    0.071     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+3-04                sol[OK]    0.084     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+3-05                sol[OK]    0.094     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+3-06                sol[OK]    0.109     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+4-01                sol[OK]    0.117     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+4-02                sol[OK]    0.173     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+4-03                sol[OK]    0.226     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+4-04                sol[OK]    0.257     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+4-05                sol[OK]    0.365     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+4-06                sol[OK]    0.527     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+4-07                sol[OK]    0.587     check[OK]        0  [Wrong Answer (1): encoded string is longer than B]                               
+samples             [1/1 tests]    [Wrong Answer (1): encoded string is longer than B]                             [0/0 pts]      [expected: incorrect]             0-01
+range-dp            [10/10 tests]  [Wrong Answer (1): encoded string is longer than B]                             [0/27 pts]     [expected: incorrect]             1-01
+cubic               [6/6 tests]    [Wrong Answer (1): encoded string is longer than B]                             [0/18 pts]     [expected: incorrect]             2-01
+knuth               [6/6 tests]    [Wrong Answer (1): encoded string is longer than B]                             [0/41 pts]     [expected: incorrect]             3-01
+full                [7/7 tests]    [Wrong Answer (1): encoded string is longer than B]                             [0/14 pts]     [expected: incorrect]             4-01
+
+Subtask summary
+0/100 pts
+
+Finished.
+
+non_binary.cpp
+solution            compile[OK]
+0-01                sol[OK]    0.022     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+1-01                sol[OK]    0.023     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+1-02                sol[OK]    0.021     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+1-03                sol[OK]    0.022     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+1-04                sol[OK]    0.022     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+1-05                sol[OK]    0.022     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+1-06                sol[OK]    0.022     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+1-07                sol[OK]    0.022     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+1-08                sol[OK]    0.022     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+1-09                sol[OK]    0.022     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+1-10                sol[OK]    0.022     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+2-01                sol[OK]    0.022     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+2-02                sol[OK]    0.023     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+2-03                sol[OK]    0.024     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+2-04                sol[OK]    0.025     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+2-05                sol[OK]    0.040     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+2-06                sol[OK]    0.041     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+3-01                sol[OK]    0.047     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+3-02                sol[OK]    0.051     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+3-03                sol[OK]    0.063     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+3-04                sol[OK]    0.076     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+3-05                sol[OK]    0.089     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+3-06                sol[OK]    0.107     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+4-01                sol[OK]    0.105     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+4-02                sol[OK]    0.139     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+4-03                sol[OK]    0.213     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+4-04                sol[OK]    0.260     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+4-05                sol[OK]    0.345     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+4-06                sol[OK]    0.477     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+4-07                sol[OK]    0.487     check[OK]        0  [Wrong Answer (1): encoded string is not binary]                            
+samples             [1/1 tests]    [Wrong Answer (1): encoded string is not binary]                          [0/0 pts]      [expected: incorrect]             0-01
+range-dp            [10/10 tests]  [Wrong Answer (1): encoded string is not binary]                          [0/27 pts]     [expected: incorrect]             1-01
+cubic               [6/6 tests]    [Wrong Answer (1): encoded string is not binary]                          [0/18 pts]     [expected: incorrect]             2-01
+knuth               [6/6 tests]    [Wrong Answer (1): encoded string is not binary]                          [0/41 pts]     [expected: incorrect]             3-01
+full                [7/7 tests]    [Wrong Answer (1): encoded string is not binary]                          [0/14 pts]     [expected: incorrect]             4-01
+
+Subtask summary
+0/100 pts
+
+Finished.
+
+shared_global.cpp
+solution            compile[OK]
+0-01                sol[OK]    0.022     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+1-01                sol[OK]    0.021     check[OK]        1  [Correct]               
+1-02                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.022     check[OK]        0  [Wrong Answer (3): query 8 returned a non-optimal cut 0]                                    
+1-04                sol[OK]    0.021     check[OK]        0  [Wrong Answer (3): query 30 returned a non-optimal cut 0]                                     
+1-05                sol[OK]    0.026     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+1-06                sol[OK]    0.022     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+1-07                sol[OK]    0.026     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+1-08                sol[OK]    0.028     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+1-09                sol[OK]    0.024     check[OK]        0  [Wrong Answer (3): query 2 returned a non-optimal cut 29]                                     
+1-10                sol[OK]    0.022     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+2-01                sol[OK]    0.022     check[OK]        0  [Wrong Answer (3): query 52 returned a non-optimal cut 1]                                     
+2-02                sol[OK]    0.025     check[OK]        0  [Wrong Answer (3): query 198 returned a non-optimal cut 0]                                      
+2-03                sol[OK]    0.025     check[OK]        0  [Wrong Answer (3): query 127 returned a non-optimal cut 0]                                      
+2-04                sol[OK]    0.028     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+2-05                sol[OK]    0.068     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 146]                                      
+2-06                sol[OK]    0.067     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+3-01                sol[OK]    0.071     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+3-02                sol[OK]    0.084     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+3-03                sol[OK]    0.086     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 148]                                      
+3-04                sol[OK]    0.098     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 227]                                      
+3-05                sol[OK]    0.113     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+3-06                sol[OK]    0.163     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+4-01                sol[OK]    0.167     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+4-02                sol[OK]    0.207     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+4-03                sol[OK]    0.240     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+4-04                sol[OK]    0.293     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+4-05                sol[OK]    0.377     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 359]                                      
+4-06                sol[OK]    0.495     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+4-07                sol[OK]    0.509     check[OK]        0  [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                    
+samples             [1/1 tests]    [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                  [0/0 pts]      [expected: incorrect]             0-01
+range-dp            [10/10 tests]  [Wrong Answer (3): query 8 returned a non-optimal cut 0]                                  [0/27 pts]     [expected: incorrect]             1-03
+cubic               [6/6 tests]    [Wrong Answer (3): query 52 returned a non-optimal cut 1]                                   [0/18 pts]     [expected: incorrect]             2-01
+knuth               [6/6 tests]    [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                  [0/41 pts]     [expected: incorrect]             3-01
+full                [7/7 tests]    [Wrong Answer (3): query 1 returned a non-optimal cut 0]                                  [0/14 pts]     [expected: incorrect]             4-01
+
+Subtask summary
+0/100 pts
+
+Finished.
+
+range_dp.cpp
+solution            compile[OK]
+0-01                sol[OK]    0.022     check[OK]        1  [Correct]               
+1-01                sol[OK]    0.021     check[OK]        1  [Correct]               
+1-02                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.021     check[OK]        1  [Correct]               
+1-04                sol[OK]    0.021     check[OK]        1  [Correct]               
+1-05                sol[OK]    0.024     check[OK]        1  [Correct]               
+1-06                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-07                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-08                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-09                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-10                sol[OK]    0.022     check[OK]        1  [Correct]               
+2-01                sol[OK]    0.023     check[OK]        1  [Correct]               
+2-02                sol[OK]    0.031     check[OK]        1  [Correct]               
+2-03                sol[OK]    0.039     check[OK]        1  [Correct]               
+2-04                sol[OK]    0.055     check[OK]        1  [Correct]               
+2-05                sol[OK]    0.137     check[OK]        1  [Correct]               
+2-06                sol[OK]    0.123     check[OK]        1  [Correct]               
+3-01                sol[OK]    0.178     check[OK]        1  [Correct]               
+3-02                sol[OK]    0.506     check[OK]        1  [Correct]               
+3-03                sol[FAIL]  1.508     check[SKIP]      0  [Time Limit Exceeded]   solution finished after time limit '1.0', with exit code '0'
+3-04                sol[FAIL]  2.238     check[SKIP]      0  [Time Limit Exceeded]   solution finished after time limit '1.0', with exit code '0'
+3-05                sol[FAIL]  3.002     check[SKIP]      0  [Time Limit Exceeded]   solution terminated after hard time limit '3.0'
+3-06                sol[FAIL]  3.002     check[SKIP]      0  [Time Limit Exceeded]   solution terminated after hard time limit '3.0'
+4-01                sol[FAIL]  3.004     check[SKIP]      0  [Time Limit Exceeded]   solution terminated after hard time limit '3.0'
+4-02                sol[FAIL]  3.003     check[SKIP]      0  [Time Limit Exceeded]   solution terminated after hard time limit '3.0'
+4-03                sol[FAIL]  3.006     check[SKIP]      0  [Time Limit Exceeded]   solution terminated after hard time limit '3.0'
+4-04                sol[FAIL]  3.003     check[SKIP]      0  [Time Limit Exceeded]   solution terminated after hard time limit '3.0'
+4-05                sol[FAIL]  3.006     check[SKIP]      0  [Time Limit Exceeded]   solution terminated after hard time limit '3.0'
+4-06                sol[FAIL]  3.008     check[SKIP]      0  [Time Limit Exceeded]   solution terminated after hard time limit '3.0'
+4-07                sol[FAIL]  3.003     check[SKIP]      0  [Time Limit Exceeded]   solution terminated after hard time limit '3.0'
+samples             [1/1 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
+range-dp            [10/10 tests]  [Correct]             [27/27 pts]    [match with expected]             1-01
+cubic               [6/6 tests]    [Correct]             [18/18 pts]    [match with expected]             2-01
+knuth               [6/6 tests]    [Time Limit Exceeded] [0/41 pts]     [match with expected]             3-03
+full                [7/7 tests]    [Time Limit Exceeded] [0/14 pts]     [match with expected]             4-01
+
+Subtask summary
+45/100 pts
+
+Finished.
+
