@@ -11,13 +11,13 @@
         },
         "tisame": {
             "index": 1,
-            "score": 5,
+            "score": 2,
             "text": "所有 $t_i$ 相同",
             "validators": ["validator.cpp 200000 1"]
         },
         "n2": {
             "index": 2,
-            "score": 5,
+            "score": 8,
             "text": "$n = 2$",
             "validators": ["validator.cpp 2 0"]
         },
@@ -29,13 +29,13 @@
         },
         "n2000": {
             "index": 4,
-            "score": 20,
+            "score": 23,
             "text": "$n \\le 2000$",
             "validators": ["validator.cpp 2000 0"]
         },
         "full": {
             "index": 5,
-            "score": 55,
+            "score": 52,
             "text": "無額外限制",
             "validators": []
         }
