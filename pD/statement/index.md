@@ -53,7 +53,7 @@ charhao 準備了 $Q$ 個問題想考考奧沙利文，每次詢問會指定一�
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.82\textwidth]{sample-1-path.png}
+\includegraphics[width=0.82\textwidth]{sample-1-path.jpg}
 \caption{範例一中，球由入口 $5$ 移動至出口 $10$ 的路徑}
 \end{figure}
 
@@ -84,7 +84,7 @@ $$
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.48\textwidth]{sample-2-path.png}
+\includegraphics[width=0.48\textwidth]{sample-2-path.jpg}
 \caption{範例二的兩條反射路徑；紅色為 $1\to4$，藍色為 $2\to3$}
 \end{figure}
 
@@ -104,7 +104,7 @@ $$
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.68\textwidth]{sample-3-path.png}
+\includegraphics[width=0.68\textwidth]{sample-3-path.jpg}
 \caption{範例三中，球由入口 $8$ 經過三次反射後抵達出口 $10$}
 \end{figure}
 
