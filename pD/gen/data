@@ -1,5 +1,7 @@
 @subtask samples
 manual example-1.in
+manual example-2.in
+manual example-3.in
 
 @subtask brute
 gen 1 1 4 dots cycle

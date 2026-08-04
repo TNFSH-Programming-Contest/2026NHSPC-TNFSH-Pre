@@ -1,0 +1,55 @@
+digraph sample_1 {
+    graph [layout=neato, overlap=true, splines=line, outputorder=nodesfirst,
+           bgcolor="white", pad=0.2];
+    node [fontname="Noto Sans Mono CJK TC", fontsize=22, shape=box,
+          fixedsize=true, width=0.78, height=0.78, style="filled",
+          fillcolor="#f6f8fa", color="#5f6368", penwidth=1.5];
+    edge [color="#d94841", penwidth=4, arrowsize=0.8];
+
+    c11 [label=".", pos="0,116!"];
+    c12 [label="", pos="58,116!", fillcolor="#ffe9e7"];
+    c13 [label=".", pos="116,116!", fillcolor="#ffe9e7"];
+    c14 [label=".", pos="174,116!", fillcolor="#ffe9e7"];
+    c21 [label=".", pos="0,58!"];
+    c22 [label=".", pos="58,58!", fillcolor="#ffe9e7"];
+    c23 [label="", pos="116,58!", fillcolor="#e8f0fe"];
+    c24 [label=".", pos="174,58!"];
+    c31 [label="", pos="0,0!", fillcolor="#e8f0fe"];
+    c32 [label=".", pos="58,0!", fillcolor="#ffe9e7"];
+    c33 [label=".", pos="116,0!"];
+    c34 [label="", pos="174,0!", fillcolor="#e8f0fe"];
+
+    node [shape=point, fixedsize=true, width=0.01, height=0.01,
+          label="", style=invis];
+    c12_bl [pos="30,88!"];
+    c12_tr [pos="86,144!"];
+    c23_tl [pos="88,86!"];
+    c23_br [pos="144,30!"];
+    c31_tl [pos="-28,28!"];
+    c31_br [pos="28,-28!"];
+    c34_bl [pos="146,-28!"];
+    c34_tr [pos="202,28!"];
+    c12_bl -> c12_tr [color="#202124", penwidth=2.5, arrowhead=none];
+    c23_tl -> c23_br [color="#202124", penwidth=2.5, arrowhead=none];
+    c31_tl -> c31_br [color="#202124", penwidth=2.5, arrowhead=none];
+    c34_bl -> c34_tr [color="#202124", penwidth=2.5, arrowhead=none];
+
+    node [shape=plaintext, fixedsize=false, style="", fontsize=17,
+          fontname="Noto Sans CJK TC", fontcolor="#5f6368"];
+    p1  [label="1", pos="0,180!"];
+    p2  [label="2", pos="58,180!"];
+    p3  [label="3", pos="116,180!"];
+    p4  [label="4", pos="174,180!"];
+    p5  [label="5 入口", pos="252,116!", fontcolor="#b3261e", fontsize=19];
+    p6  [label="6", pos="252,58!"];
+    p7  [label="7", pos="252,0!"];
+    p8  [label="8", pos="174,-66!"];
+    p9  [label="9", pos="116,-66!"];
+    p10 [label="10 出口", pos="58,-66!", fontcolor="#b3261e", fontsize=19];
+    p11 [label="11", pos="0,-66!"];
+    p12 [label="12", pos="-70,0!"];
+    p13 [label="13", pos="-70,58!"];
+    p14 [label="14", pos="-70,116!"];
+
+    p5 -> c14 -> c13 -> c12 -> c22 -> c32 -> p10;
+}

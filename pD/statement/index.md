@@ -41,8 +41,71 @@ charhao 準備了 $Q$ 個問題想考考奧沙利文，每次詢問會指定一�
 
 \clearpage
 
-## 範例輸入
+## 範例輸入 1
 \testfile{0-01.in}
 
-## 範例輸出
+## 範例輸出 1
 \testfile{0-01.out}
+
+## 範例解釋 1
+
+以入口 $5$ 為例，球從右側進入第 $1$ 列，向左移動到第 $1$ 列第 $2$ 欄的 `/` 後轉向下方，最後由底邊的出口 $10$ 離開。路徑如下，其中箭頭表示球的移動方向：
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.82\textwidth]{sample-1-path.png}
+\caption{範例一中，球由入口 $5$ 移動至出口 $10$ 的路徑}
+\end{figure}
+
+八次詢問所對應的入口與出口依序為
+
+$$
+1\to4,\quad
+4\to1,\quad
+5\to10,\quad
+7\to8,\quad
+8\to7,\quad
+11\to12,\quad
+13\to9,\quad
+14\to2.
+$$
+
+\clearpage
+
+## 範例輸入 2
+\testfile{0-02.in}
+
+## 範例輸出 2
+\testfile{0-02.out}
+
+## 範例解釋 2
+
+唯一的格子中放置了 `/`。從頂邊入口 $1$ 射入的球會向左反射，從出口 $4$ 離開；從右邊入口 $2$ 射入的球則會向下反射，從出口 $3$ 離開。
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.48\textwidth]{sample-2-path.png}
+\caption{範例二的兩條反射路徑；紅色為 $1\to4$，藍色為 $2\to3$}
+\end{figure}
+
+路徑可以反向行進，因此另外兩次詢問的答案分別為 $3\to2$ 與 $4\to1$。
+
+\clearpage
+
+## 範例輸入 3
+\testfile{0-03.in}
+
+## 範例輸出 3
+\testfile{0-03.out}
+
+## 範例解釋 3
+
+以入口 $8$ 為例，球由底邊進入第 $1$ 欄，依序在 $(2,1)$ 的 `/`、$(2,2)$ 的 `/` 與 $(1,2)$ 的 `\` 反射，最後由出口 $10$ 離開：
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.68\textwidth]{sample-3-path.png}
+\caption{範例三中，球由入口 $8$ 經過三次反射後抵達出口 $10$}
+\end{figure}
+
+反向從入口 $10$ 進入時會沿同一條路徑從出口 $8$ 離開。另外，入口 $2$ 與出口 $4$ 互相連通，入口 $5$ 則與出口 $7$ 互相連通，因此五次詢問的答案依序為 $10$、$8$、$4$、$2$、$7$。
