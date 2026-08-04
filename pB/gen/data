@@ -52,3 +52,7 @@ gen 200000 cluster 43199 25
 gen 200000 progression 0 1
 gen 200000 progression 43199 7919
 gen 200000 uniform 0 43199
+gen 22223 ranktrap 5000 11111 2 1
+gen 86399 ranktrap 14000 28799 3 2
+gen 172799 ranktrap 7000 34559 5 4
+gen 172799 ranktrap 10000 34559 5 4

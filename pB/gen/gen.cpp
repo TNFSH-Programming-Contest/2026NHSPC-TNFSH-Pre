@@ -106,6 +106,32 @@ int main(int argc, char* argv[]) {
         }
         ensuref(total == n, "group sizes sum to %d instead of n = %d", total, n);
         shuffle(times.begin(), times.end());
+    } else if (mode == "ranktrap") {
+        const int start = opt<int>(3);
+        const int decoys = opt<int>(4);
+        const int decoyFrequency = opt<int>(5);
+        const int targetFrequency = opt<int>(6);
+        requireTime(start, "start");
+        ensuref(1 <= decoys && decoys < PERIOD,
+                "decoys must be in [1, 43200)");
+        ensuref(1 <= targetFrequency &&
+                    targetFrequency < decoyFrequency,
+                "frequencies must satisfy 1 <= target < decoy");
+        const long long expectedN =
+            1LL * decoys * decoyFrequency + targetFrequency;
+        ensuref(expectedN == n,
+                "ranktrap frequencies produce %lld values instead of n = %d",
+                expectedN, n);
+        ensuref(n < 1LL * PERIOD * targetFrequency,
+                "target is not guaranteed to improve the circular cost");
+
+        for (int offset = 0; offset < decoys; ++offset) {
+            const int value = normalize(start + offset);
+            times.insert(times.end(), decoyFrequency, value);
+        }
+        const int target = normalize(start + decoys);
+        times.insert(times.end(), targetFrequency, target);
+        shuffle(times.begin(), times.end());
     } else {
         quitf(_fail, "unknown generation mode: %s", mode.c_str());
     }
