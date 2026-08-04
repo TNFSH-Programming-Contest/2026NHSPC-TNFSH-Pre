@@ -32,18 +32,17 @@ $$w_{a,c}+w_{b,d}\le w_{a,d}+w_{b,c}.$$
 
 ## 互動說明
 
-本題是 **Communication** 題型。你只需要上傳一份程式碼，且不需要實作 `main` 函式。
+本題是 **Communication** 題型。你需要上傳兩份程式碼 `sixseven.cpp` 與 `eightseven.cpp`，且不需要實作 `main` 函式。
 
-你可以在程式碼中使用 `#include "Cake_4.h"` 引入評測端提供的函式宣告。
+您必須在程式碼中使用 `#include "Cake_4.h"` 引入評測端提供的函式宣告。
 
-你的程式碼會與評測程式提供的 stub 編譯成一個執行檔。評測時，同一個執行檔會在兩個不同的程序中各執行一次。兩個程序無法共用全域變數或其他記憶體，且只能透過評測程式傳遞下述二進位字串。
+你的程式碼會與評測程式提供的 `stub.cpp` 編譯成一個執行檔。評測時，同一個執行檔會在兩個不同的程式中各執行一次。兩個程式只能透過評測程式傳遞下述二進位字串。
 
 你需要實作以下三個函式。
 
 ### 階段一：柳棲的編碼
 
-第一個程序會呼叫：
-
+你必須要在 `sixseven.cpp` 內實作以下函式，且評測程式會呼叫 `sixseven.cpp` 中的 `encode` 函式一次
 ```cpp
 std::string encode(int n, std::vector<std::vector<long long>> w);
 ```
@@ -56,17 +55,18 @@ std::string encode(int n, std::vector<std::vector<long long>> w);
 
 ### 階段二：巴漆的解碼與處理詢問
 
-評測程式會將 `encode` 的回傳值傳給第二個程序，並先呼叫一次：
+你必須要在 `eightseven.cpp` 內實作以下函式，\
+且評測程式會將 `encode` 的回傳值傳給第二個程式並呼叫 `eightseven.cpp` 中的 `decode` 函式一次
 
 ```cpp
 void decode(int n, std::string S);
 ```
 
 - `n` 是蛋糕的總段數。
-- `S` 是第一個程序中 `encode` 回傳的二進位字串。
-- 第二個程序不會取得費用表 $w$。
+- `S` 是第一個程式中 `encode` 回傳的二進位字串。
+- 第二個程式不會取得費用表 $w$。
 
-接著，評測程式會呼叫 $Q$ 次：
+接著，評測程式會呼叫 `eightseven.cpp` 中的 `query` 函式 $Q$ 次：
 
 ```cpp
 int query(int l, int r);
@@ -76,7 +76,7 @@ int query(int l, int r);
 - 你必須回傳一個最佳的第一刀切點 $k$，且 $l\le k<r$。
 - 如果有多個最佳切點，回傳其中任意一個即可。
 
-評測程式不會同時呼叫上述函式。第一個程序只會呼叫 `encode`；第二個程序只會呼叫 `decode` 與 `query`。
+評測程式不會同時呼叫上述函式。第一個程式只會呼叫 `encode` 函式；第二個程式只會呼叫 `decode` 與 `query` 函式。
 
 \clearpage
 
@@ -129,7 +129,7 @@ $$
 2. 進入題目目錄並產生測資：
    cd /directory/pE
    tps gen
-3. 以正式 Communication manager、stub 與兩個程序執行解答：
+3. 以正式 Communication manager、stub 與兩個程式執行解答：
    tps invoke solution/correct.cpp
 4. 執行特定測資：
    tps invoke solution/correct.cpp -t 0-01

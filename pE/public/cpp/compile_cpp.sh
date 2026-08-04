@@ -1,3 +1,3 @@
 #!/bin/bash
 set -euo pipefail
-g++ -std=gnu++17 -O2 -Wall -Wextra grader.cpp Cake_4.cpp -o Cake_4
+g++ -std=gnu++17 -O2 -Wall -Wextra stub.cpp sixseven.cpp eightseven.cpp -o Cake_4

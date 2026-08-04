@@ -5,9 +5,6 @@
 #include <utility>
 #include <vector>
 
-// This lightweight public grader runs both stages in one process. Use the
-// commented TPS instructions in the statement to test process isolation.
-
 int main() {
     int n, q;
     if (!(std::cin >> n >> q)) return 0;
