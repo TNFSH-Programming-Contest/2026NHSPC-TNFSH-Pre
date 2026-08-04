@@ -3,8 +3,8 @@ digraph sample_2 {
            bgcolor="white", pad=0.25];
     node [fontname="Noto Sans Mono CJK TC", fontsize=28, shape=box,
           fixedsize=true, width=0.9, height=0.9, style="filled",
-          fillcolor="#fff4d6", color="#5f6368", penwidth=1.8];
-    edge [penwidth=4, arrowsize=0.85];
+          fillcolor="#fdd663", color="#3c4043", penwidth=2];
+    edge [penwidth=4.5, arrowsize=0.85];
 
     cell [label="", pos="0,0!"];
 
@@ -17,12 +17,12 @@ digraph sample_2 {
     node [shape=plaintext, fixedsize=false, style="", fontsize=19,
           fontname="Noto Sans CJK TC"];
     p1 [label="1 入口", pos="0,92!", fontcolor="#b3261e"];
-    p2 [label="2 入口", pos="108,0!", fontcolor="#185abc"];
-    p3 [label="3 出口", pos="0,-92!", fontcolor="#185abc"];
+    p2 [label="2 入口", pos="108,0!", fontcolor="#0b57d0"];
+    p3 [label="3 出口", pos="0,-92!", fontcolor="#0b57d0"];
     p4 [label="4 出口", pos="-108,0!", fontcolor="#b3261e"];
 
-    p1 -> cell [color="#d94841"];
-    cell -> p4 [color="#d94841"];
-    p2 -> cell [color="#1a73e8"];
-    cell -> p3 [color="#1a73e8"];
+    p1 -> cell [color="#b3261e"];
+    cell -> p4 [color="#b3261e"];
+    p2 -> cell [color="#0b57d0"];
+    cell -> p3 [color="#0b57d0"];
 }

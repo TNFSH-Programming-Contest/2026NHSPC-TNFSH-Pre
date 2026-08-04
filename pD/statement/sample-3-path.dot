@@ -3,14 +3,14 @@ digraph sample_3 {
            bgcolor="white", pad=0.2];
     node [fontname="Noto Sans Mono CJK TC", fontsize=22, shape=box,
           fixedsize=true, width=0.78, height=0.78, style="filled",
-          fillcolor="#f6f8fa", color="#5f6368", penwidth=1.5];
-    edge [color="#d94841", penwidth=4, arrowsize=0.8];
+          fillcolor="#e8eaed", color="#3c4043", penwidth=1.7];
+    edge [color="#b3261e", penwidth=4.5, arrowsize=0.8];
 
-    c11 [label=".", pos="0,58!", fillcolor="#ffe9e7"];
-    c12 [label="", pos="58,58!", fillcolor="#ffe9e7"];
+    c11 [label=".", pos="0,58!", fillcolor="#f28b82"];
+    c12 [label="", pos="58,58!", fillcolor="#f28b82"];
     c13 [label=".", pos="116,58!"];
-    c21 [label="", pos="0,0!", fillcolor="#ffe9e7"];
-    c22 [label="", pos="58,0!", fillcolor="#ffe9e7"];
+    c21 [label="", pos="0,0!", fillcolor="#f28b82"];
+    c22 [label="", pos="58,0!", fillcolor="#f28b82"];
     c23 [label=".", pos="116,0!"];
 
     node [shape=point, fixedsize=true, width=0.01, height=0.01,
@@ -26,7 +26,7 @@ digraph sample_3 {
     c22_bl -> c22_tr [color="#202124", penwidth=2.5, arrowhead=none];
 
     node [shape=plaintext, fixedsize=false, style="", fontsize=17,
-          fontname="Noto Sans CJK TC", fontcolor="#5f6368"];
+          fontname="Noto Sans CJK TC", fontcolor="#3c4043"];
     p1  [label="1", pos="0,122!"];
     p2  [label="2", pos="58,122!"];
     p3  [label="3", pos="116,122!"];
