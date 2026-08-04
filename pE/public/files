@@ -1,5 +1,7 @@
 public cpp/compile_cpp.sh
 public cpp/run_cpp.sh
+public cpp/compile_cpp.bat
+public cpp/run_cpp.bat
 public cpp/sixseven.cpp
 public cpp/eightseven.cpp
 public cpp/Cake_4.h
