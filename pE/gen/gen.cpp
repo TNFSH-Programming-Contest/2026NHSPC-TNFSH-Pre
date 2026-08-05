@@ -123,6 +123,36 @@ int main(int argc, char* argv[]) {
                 delta[l][r] = (3 * l + 5 * r + r - l) % (maximum + 1);
             }
         }
+    } else if (costMode == "wide-trap") {
+        const int target = opt<int>(nextArgument++);
+        ensuref(2 <= target && target + 1 < n,
+                "wide-trap target must be in [2, n-2]");
+        // The endpoint fans force the neighboring optimal roots far apart.
+        // The full interval then has a wide Knuth window whose unique optimum
+        // is target - 1, which fixed-count random candidate searches can miss.
+        for (int r = 1; r < n; ++r) {
+            for (int l = 0; l < r; ++l) {
+                if (l == 0) delta[l][r] = r < target ? 2 : 15;
+                if (r == n - 1) delta[l][r] = 10;
+            }
+        }
+    } else if (costMode == "ternary-trap") {
+        ensuref(n == 10, "ternary-trap requires n = 10");
+        const std::vector<std::vector<int>> rows = {
+            {},
+            {0},
+            {14, 15},
+            {12, 11, 2},
+            {6, 13, 5, 4},
+            {0, 1, 1, 1, 2},
+            {7, 13, 9, 15, 12, 7},
+            {1, 4, 3, 0, 14, 12, 15},
+            {10, 2, 5, 9, 2, 4, 4, 11},
+            {6, 9, 7, 13, 2, 13, 4, 2, 6}
+        };
+        for (int r = 1; r < n; ++r) {
+            for (int l = 0; l < r; ++l) delta[l][r] = rows[r][l];
+        }
     } else {
         quitf(_fail, "unknown cost mode: %s", costMode.c_str());
     }
@@ -193,6 +223,12 @@ int main(int argc, char* argv[]) {
                 queries.emplace_back(l, r);
             }
         }
+    } else if (queryMode == "fixed") {
+        const int l = opt<int>(nextArgument++);
+        const int r = opt<int>(nextArgument++);
+        ensuref(0 <= l && l < r && r < n,
+                "fixed query must satisfy 0 <= l < r < n");
+        queries.assign(q, {l, r});
     } else {
         quitf(_fail, "unknown query mode: %s", queryMode.c_str());
     }

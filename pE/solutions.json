@@ -51,5 +51,40 @@
             "range-dp": "correct",
             "cubic": "correct"
         }
+    },
+    "random_cut.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "samples": "correct"
+        }
+    },
+    "magic_candidates.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "samples": "correct",
+            "range-dp": "correct",
+            "cubic": "correct",
+            "knuth": "correct"
+        }
+    },
+    "annealing.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "samples": "correct"
+        }
+    },
+    "budget_cubic.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "samples": "correct",
+            "range-dp": "correct",
+            "cubic": "correct"
+        }
+    },
+    "ternary_search.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "samples": "correct"
+        }
     }
 }
