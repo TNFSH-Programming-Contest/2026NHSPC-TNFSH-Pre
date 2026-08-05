@@ -83,6 +83,17 @@ int main(int argc, char* argv[]) {
         for (int i = 0; i < n; ++i) {
             times.push_back(normalize(center + rnd.next(-radius, radius)));
         }
+    } else if (mode == "scatter") {
+        const int offset = opt<int>(3);
+        requireTime(offset, "offset");
+        ensuref(n <= PERIOD, "scatter mode requires n <= 43200");
+        for (int i = 0; i < n; ++i) {
+            const int left = static_cast<int>(1LL * i * PERIOD / n);
+            const int right =
+                static_cast<int>(1LL * (i + 1) * PERIOD / n) - 1;
+            times.push_back(normalize(offset + rnd.next(left, right)));
+        }
+        shuffle(times.begin(), times.end());
     } else if (mode == "choice") {
         const int count = opt<int>(3);
         ensuref(count >= 1, "choice mode needs at least one candidate");

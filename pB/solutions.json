@@ -47,5 +47,23 @@
 			"tisame": "correct",
 			"n2": "correct"
 		}
+	},
+	"blame-binary-hack.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"samples": "correct",
+			"tisame": "correct",
+			"n2": "correct",
+			"n8": "correct"
+		}
+	},
+	"simulated_annealing.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"samples": "correct",
+			"tisame": "correct",
+			"n2": "correct",
+			"n8": "correct"
+		}
 	}
 }
