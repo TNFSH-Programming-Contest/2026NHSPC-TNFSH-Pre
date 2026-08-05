@@ -1,4 +1,6 @@
 samples 0-01
+samples 0-02
+samples 0-03
 brute 1-01
 brute 1-02
 brute 1-03
@@ -27,6 +29,7 @@ brute2 3-07
 brute2 3-08
 brute2 3-09
 brute2 3-10
+brute2 3-11
 full 4-01
 full 4-02
 full 4-03
@@ -36,3 +39,4 @@ full 4-06
 full 4-07
 full 4-08
 full 4-09
+full 4-10
