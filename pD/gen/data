@@ -36,6 +36,7 @@ gen 199 200 1000 blocks corners 7
 gen 200 199 1000 random cycle 5 3 2
 gen 127 193 640 random random 1 4 4
 gen 200 200 1000 blocks reverse 1
+gen 199 199 1000 double_snake same 795
 
 @subtask full
 gen 2000 2000 200000 dots same 1
@@ -47,3 +48,4 @@ gen 1 2000 200000 checker same 1
 gen 2000 1 200000 checker random
 gen 1379 1999 200000 random corners 6 2 2
 gen 2000 2000 200000 slash random
+gen 1999 1999 200000 double_snake same 7995

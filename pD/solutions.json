@@ -32,5 +32,14 @@
 			"samples": "correct",
 			"straight": "correct"
 		}
+	},
+	"million_step_cap.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"samples": "correct",
+			"brute": "correct",
+			"straight": "correct",
+			"brute2": "correct"
+		}
 	}
 }

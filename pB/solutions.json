@@ -65,5 +65,15 @@
 			"n2": "correct",
 			"n8": "correct"
 		}
+	},
+	"all_but_one_magic.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"samples": "correct",
+			"tisame": "correct",
+			"n2": "correct",
+			"n8": "correct",
+			"n2000": "correct"
+		}
 	}
 }

@@ -75,6 +75,13 @@ int main(int argc, char* argv[]) {
             times.push_back(normalize(start + 1LL * i * step));
         }
         shuffle(times.begin(), times.end());
+    } else if (mode == "ordered_progression") {
+        const int start = opt<int>(3);
+        const int step = opt<int>(4);
+        requireTime(start, "start");
+        for (int i = 0; i < n; ++i) {
+            times.push_back(normalize(start + 1LL * i * step));
+        }
     } else if (mode == "cluster") {
         const int center = opt<int>(3);
         const int radius = opt<int>(4);

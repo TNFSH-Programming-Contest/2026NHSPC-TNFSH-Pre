@@ -83,6 +83,36 @@ int main(int argc, char* argv[]) {
                     cells[((row / blockSize) + (column / blockSize)) % 3];
             }
         }
+    } else if (gridMode == "double_snake") {
+        ensuref(n >= 5 && m >= 5 && n % 2 == 1 && m % 2 == 1,
+                "double_snake requires odd N, M >= 5");
+
+        // One path snakes horizontally through the inner rows, while a
+        // second one snakes vertically through the inner columns. Empty
+        // cells let the paths cross. Replacing their near-final crossing
+        // by a slash splices the two long prefixes into one boundary path
+        // whose length approaches 2*N*M.
+        for (int transition = 0; transition < n - 3; ++transition) {
+            const int row = 1 + transition;
+            if (transition % 2 == 0) {
+                grid[row][m - 1] = '\\';
+                grid[row + 1][m - 1] = '/';
+            } else {
+                grid[row][0] = '/';
+                grid[row + 1][0] = '\\';
+            }
+        }
+        for (int transition = 0; transition < m - 3; ++transition) {
+            const int column = 1 + transition;
+            if (transition % 2 == 0) {
+                grid[n - 1][column] = '\\';
+                grid[n - 1][column + 1] = '/';
+            } else {
+                grid[0][column] = '/';
+                grid[0][column + 1] = '\\';
+            }
+        }
+        grid[n - 2][m - 2] = '/';
     } else {
         quitf(_fail, "unknown grid mode: %s", gridMode.c_str());
     }
