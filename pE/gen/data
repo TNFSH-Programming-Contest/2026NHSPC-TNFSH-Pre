@@ -13,6 +13,10 @@ gen 50 1000 1000000000 sparse mixed 15 25
 gen 47 1000 999999937 choice random 5 0 1 3 7 15
 gen 37 666 1 gradient full 15
 gen 10 1 1 ternary-trap fixed 0 7
+gen 10 45 1 random all 0 1000000000
+gen 3 1 1 zero-edge-trap fixed 0 2
+gen 4 1 1 huge-trap fixed 0 3
+gen 3 1 1 double-trap fixed 0 2
 
 @subtask cubic
 gen 51 1275 1000000000 random all 0 15
@@ -21,6 +25,10 @@ gen 127 8001 1 gradient all 15
 gen 160 12720 6767 bands boundary 1 14 7
 gen 199 100000 999999937 sparse random 15 20
 gen 200 100000 1000000000 random mixed 0 15
+gen 101 5050 1 random all 0 1000000000
+gen 51 1 1 zero-edge-trap fixed 0 2
+gen 51 1 1 huge-trap fixed 0 3
+gen 51 1 1 double-trap fixed 0 2
 
 @subtask knuth
 gen 257 100000 1000000000 checker mixed 0 15
@@ -34,6 +42,10 @@ gen 800 1 1 wide-trap full 173
 gen 800 1 1 wide-trap full 277
 gen 800 1 1 wide-trap full 419
 gen 800 1 1 wide-trap full 631
+gen 401 100000 1 random mixed 0 1000000000
+gen 257 1 1 zero-edge-trap fixed 0 2
+gen 257 1 1 huge-trap fixed 0 3
+gen 257 1 1 double-trap fixed 0 2
 
 @subtask full
 gen 801 100000 1000000000 random mixed 0 15
@@ -51,3 +63,7 @@ gen 2000 1 1 wide-trap full 829
 gen 2000 1 1 wide-trap full 1103
 gen 2000 1 1 wide-trap full 1379
 gen 2000 1 1 wide-trap full 1667
+gen 801 100000 1 random mixed 0 1000000000
+gen 801 1 1 zero-edge-trap fixed 0 2
+gen 801 1 1 huge-trap fixed 0 3
+gen 801 1 1 double-trap fixed 0 2

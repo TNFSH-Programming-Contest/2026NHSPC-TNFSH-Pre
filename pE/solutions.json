@@ -5,10 +5,7 @@
     "encode_values.cpp": {
         "verdict": "incorrect",
         "except": {
-            "samples": "correct",
-            "range-dp": "correct",
-            "cubic": "correct",
-            "knuth": "correct"
+            "samples": "correct"
         }
     },
     "fixed_width.cpp": {
@@ -82,6 +79,24 @@
         }
     },
     "ternary_search.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "samples": "correct"
+        }
+    },
+    "clamp_delta.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "samples": "correct"
+        }
+    },
+    "positive_baseline.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "samples": "correct"
+        }
+    },
+    "double_dp.cpp": {
         "verdict": "incorrect",
         "except": {
             "samples": "correct"

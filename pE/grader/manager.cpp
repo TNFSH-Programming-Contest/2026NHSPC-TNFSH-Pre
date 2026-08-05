@@ -104,7 +104,7 @@ int main(int argc, char* argv[]) {
     }
     std::vector<std::vector<long long>> w(
         n, std::vector<long long>(n));
-    std::vector<int> delta(n);
+    std::vector<long long> delta(n);
     for (int r = 1; r < n; ++r) {
         for (int l = 0; l < r; ++l) {
             if (!(std::cin >> delta[l])) {

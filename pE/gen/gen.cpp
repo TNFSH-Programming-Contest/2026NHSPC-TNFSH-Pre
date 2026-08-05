@@ -9,7 +9,7 @@
 
 namespace {
 
-constexpr int MAX_DELTA = 15;
+constexpr long long MAX_DELTA = 30000000000000000LL;
 int argumentCount;
 char** arguments;
 
@@ -24,9 +24,9 @@ T opt(int index) {
     return value;
 }
 
-void checkDelta(int value) {
+void checkDelta(long long value) {
     ensuref(0 <= value && value <= MAX_DELTA,
-            "interval-cost difference %d is outside [0, %d]",
+            "interval-cost difference %lld is outside [0, %lld]",
             value, MAX_DELTA);
 }
 
@@ -49,7 +49,8 @@ int main(int argc, char* argv[]) {
             "scale must be in [1, 1e9]");
 
     int nextArgument = 6;
-    std::vector<std::vector<int>> delta(n, std::vector<int>(n));
+    std::vector<std::vector<long long>> delta(
+        n, std::vector<long long>(n));
     if (costMode == "zero") {
         // Already initialized.
     } else if (costMode == "same") {
@@ -153,6 +154,26 @@ int main(int argc, char* argv[]) {
         for (int r = 1; r < n; ++r) {
             for (int l = 0; l < r; ++l) delta[l][r] = rows[r][l];
         }
+    } else if (costMode == "zero-edge-trap") {
+        ensuref(n >= 3, "zero-edge-trap requires n >= 3");
+        // w[0][1] = 0 and w[1][2] = 1.  For [0,2], the unique optimum
+        // is therefore k = 1; forcing every adjacent cost positive changes it.
+        delta[0][1] = -1;
+    } else if (costMode == "huge-trap") {
+        ensuref(n >= 4, "huge-trap requires n >= 4");
+        // Clamping the two 1e15 entries to 1e9 changes opt[0][3]
+        // from 0 to 1, while all expanded costs remain below 3e16.
+        delta[0][1] = 1000000000000000LL;
+        delta[0][2] = 1000000000000000LL;
+        delta[1][2] = 1000000000LL;
+        delta[2][3] = 1000000000LL;
+    } else if (costMode == "double-trap") {
+        ensuref(n >= 3, "double-trap requires n >= 3");
+        // For [0,2], the two candidates differ by exactly one near 1.5e16.
+        // IEEE double rounds them to the same value and picks the wrong root.
+        delta[0][1] = 14999999999999998LL;
+        delta[1][2] = 14999999999999999LL;
+        for (int r = 3; r < n; ++r) delta[r - 1][r] = -1;
     } else {
         quitf(_fail, "unknown cost mode: %s", costMode.c_str());
     }
