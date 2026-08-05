@@ -8,5 +8,61 @@
             "samples": "correct",
             "n3": "correct"
         }
+	},
+	"endpoint_max.cpp": {
+		"verdict": "incorrect"
+	},
+	"odd_only.cpp": {
+		"verdict": "incorrect"
+	},
+	"maximal_only.cpp": {
+		"verdict": "incorrect"
+	},
+	"pair_interval.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"samples": "correct",
+			"full": "time_limit"
+		}
+	},
+	"noncrossing.cpp": {
+		"verdict": "incorrect"
+	},
+	"int_overflow.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"samples": "correct",
+			"n3": "correct",
+			"n2": "correct"
+		}
+	},
+	"one_layer.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"samples": "correct"
+		}
+	},
+	"prefix_layers.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"samples": "correct"
+		}
+	},
+	"endpoint_center.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"samples": "correct"
+		}
+	},
+	"quadratic.cpp": {
+		"verdict": "runtime_error",
+		"except": {
+			"samples": "correct",
+			"n3": "correct",
+			"n2": "correct"
+		}
+	},
+	"recursive.cpp": {
+		"verdict": "correct"
 	}
 }

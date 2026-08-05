@@ -105,6 +105,66 @@ int main(int argc, char* argv[]) {
             base += len;
         }
     }
+    else if (mode == "even-random") {
+        vector<int> permutation(n);
+        iota(permutation.begin(), permutation.end(), 0);
+        shuffle(permutation.begin(), permutation.end());
+        for (int value : permutation) a.push_back(value);
+        for (int i = n - 1; i >= 0; --i) {
+            a.push_back(permutation[i]);
+        }
+    }
+    else if (mode == "odd-random") {
+        vector<int> permutation(n);
+        iota(permutation.begin(), permutation.end(), 0);
+        shuffle(permutation.begin(), permutation.end());
+        for (int i = 0; i + 1 < n; ++i) {
+            a.push_back(permutation[i]);
+        }
+        a.push_back(permutation[n - 1]);
+        for (int i = n - 2; i >= 0; --i) {
+            a.push_back(permutation[i]);
+        }
+        a.push_back(permutation[n - 1]);
+    }
+    else if (mode == "shell-pairs") {
+        ensuref(n >= 3, "shell-pairs requires n >= 3");
+        vector<int> permutation(n);
+        iota(permutation.begin(), permutation.end(), 0);
+        shuffle(permutation.begin(), permutation.end());
+        a.push_back(permutation[0]);
+        for (int i = 1; i < n; ++i) {
+            a.push_back(permutation[i]);
+            a.push_back(permutation[i]);
+        }
+        a.push_back(permutation[0]);
+    }
+    else if (mode == "deep-fake") {
+        ensuref(n >= 4, "deep-fake requires n >= 4");
+        vector<int> permutation(n);
+        iota(permutation.begin(), permutation.end(), 0);
+        shuffle(permutation.begin(), permutation.end());
+        a.push_back(permutation[0]);
+        a.push_back(permutation[1]);
+        for (int i = 2; i < n; ++i) {
+            a.push_back(permutation[i]);
+            a.push_back(permutation[i]);
+        }
+        a.push_back(permutation[1]);
+        a.push_back(permutation[0]);
+    }
+    else if (mode == "almost-even") {
+        ensuref(n >= 5, "almost-even requires n >= 5");
+        vector<int> permutation(n);
+        iota(permutation.begin(), permutation.end(), 0);
+        shuffle(permutation.begin(), permutation.end());
+        for (int value : permutation) a.push_back(value);
+        for (int i = n - 1; i >= 0; --i) {
+            a.push_back(permutation[i]);
+        }
+        // Preserve the two outer layers while breaking symmetry deeper inside.
+        swap(a[n + 1], a[n + 2]);
+    }
     else {
         quitf(_fail, "unknown mode: %s", mode.c_str());
     }

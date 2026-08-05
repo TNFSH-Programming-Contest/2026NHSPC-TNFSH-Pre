@@ -8,12 +8,23 @@ gen 2 even-up
 gen 100 random
 gen 100 even-down
 gen 100 mixed
+gen 4 deep-fake
+gen 7 even-random
+gen 8 odd-random
+gen 9 almost-even
+gen 10 shell-pairs
+gen 100 almost-even
 
 @subtask n2
 gen 2000 random
 gen 2000 pairs
 gen 2000 odd-up
 gen 2000 mixed
+gen 1999 deep-fake
+gen 2000 even-random
+gen 1997 odd-random
+gen 1999 almost-even
+gen 2000 shell-pairs
 
 @subtask full
 gen 1000000 random
@@ -22,3 +33,6 @@ gen 1000000 even-up
 gen 1000000 even-down
 gen 1000000 odd-down
 gen 1000000 mixed
+gen 999983 even-random
+gen 200003 deep-fake
+gen 200003 almost-even
