@@ -1,10 +1,10 @@
 # 好多手錶
 
-<!-- \begin{figure}[h]
+\begin{figure}[h]
 \centering
-\includegraphics[width=2in]{TODO.jpg}
-\caption{TODO: 圖片說明}
-\end{figure} -->
+\includegraphics[width=5in]{photo.jpg}
+\caption{好多手錶}
+\end{figure}
 
 tobiichi3227 最近收到一些手錶，因為這些手錶機芯品質不一，所以有誤差，tobiichi3227 希望將所有手錶的時間調整到相同來比較哪隻手錶誤差最大。
 
@@ -37,8 +37,6 @@ tobiichi3227 想知道最少總共要調整多少秒才能讓所有手錶的時�
 ## 子任務
 \subtasks
 
-\clearpage
-
 ## 範例輸入 1
 \testfile{0-01.in}
 
@@ -48,6 +46,7 @@ tobiichi3227 想知道最少總共要調整多少秒才能讓所有手錶的時�
 ## 範例解釋 1
 一個手錶，根本不用調整，直接輸出 $0$
 
+\clearpage
 
 ## 範例輸入 2
 \testfile{0-02.in}
@@ -67,8 +66,6 @@ tobiichi3227 想知道最少總共要調整多少秒才能讓所有手錶的時�
 
 ## 範例輸出 3
 \testfile{0-03.out}
-
-\clearpage
 
 ## 範例解釋 3
 同步到 $200$，總成本為 $200 + 100 + 0 + 3400 = 3700$
