@@ -1,10 +1,14 @@
-#include "Cake_4.h"
+#include <string>
 
-void decode(int, std::string) {
-    // TODO: implement decode.
+namespace {
+    std::string tw87;
 }
 
-int query(int l, int) {
-    // TODO: implement query.
+void decode(int n, std::string s) {
+    tw87 = "orz";
+}
+
+int query(int l, int r) {
+    if(l <= 67 && 67 <= r) return 67;
     return l;
 }

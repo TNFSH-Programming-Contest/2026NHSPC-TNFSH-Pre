@@ -1,6 +1,9 @@
 @echo off
 setlocal
 
-Cake_4.exe < ..\examples\01.in
+set PROBLEM=Cake_4.exe
 
+.\%PROBLEM%
+
+pause
 endlocal
