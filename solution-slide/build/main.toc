@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Fun Fact}{3}{0}{1}
+\beamer@sectionintoc {2}{A. 大家好我是今年選訓二階結訓選手}{6}{0}{2}
+\beamer@sectionintoc {3}{B. 好多手錶}{11}{0}{3}
+\beamer@sectionintoc {4}{C. 1145141}{13}{0}{4}

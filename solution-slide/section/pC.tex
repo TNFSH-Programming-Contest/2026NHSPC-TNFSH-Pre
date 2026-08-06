@@ -1,0 +1,81 @@
+\setsubtitle{author : blame}
+\section{C. 1145141}
+
+\begin{frame}{\btitle{題目敘述}}
+    給定一個正整數 n，求 n! 的正因數個數。
+\end{frame}
+
+\begin{frame}{\btitle{子任務}}
+    \begin{enumerate}
+        \item{$1 \le n \le 15$}
+        \item{$1 \le n \le 10^3$}
+        \item{無額外限制}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{\btitle{$1 \le n \le 15$}}
+    $15! \approx 10^{12}$
+
+    所以可以先把 $n!$ 算出來之後再用 $O(\sqrt{n})$ 計算因數個數
+\end{frame}
+
+\begin{frame}{\btitle{$1 \le n \le 10^3$}}
+    這邊有一個很關鍵的數學公式。
+
+    當我們把 $a$ 進行質因數拆解為
+
+    $$
+    a = p_1^{k_1} \times p_2^{k_2} \times \ldots \times p_n^{k_n}
+    $$
+
+    那麼對於 $a$ 的正因數個數總和為 $(k_1 + 1) \times (k_2 + 1) \times \ldots \times (k_n + 1)$
+\end{frame}
+
+\begin{frame}{\btitle{$1 \le n \le 10^3$}}
+    那麼題目就轉化為了，對於一個質數 $p$ 來講
+
+    他在 $n!$ 中總共貢獻多少次?
+
+    最後把 $[1, n]$ 中的質數貢獻全部乘起來就是答案了
+
+    更數學一點來講
+
+    $$
+    ans = \prod^n_{p=1, p \text{ is prime}} (k+1)(k \text{ is the maximum number such that } p^k | n!)
+    $$
+\end{frame}
+
+\begin{frame}{\btitle{$1 \le n \le 10^3$}}
+    所以枚舉每個數字，並判斷他是否為質數
+
+    假如是質數，則跑過 $1 \sim n$，並計算總共除掉多少次。
+
+    花費時間 $O(n^2)$
+\end{frame}
+
+\begin{frame}{\btitle{無額外限制}}
+    發現
+
+    $$
+    (k \text{ is the maximum number such that } p^k | n!)
+    $$
+
+    我們可以想像有一些數字只貢獻了一個 $p$
+
+    有些數字貢獻了 $p^2, p^3, \ldots, p^k$
+
+    但 $p^2$ 一定至少貢獻了一次 $p$。
+\end{frame}
+
+\begin{frame}{\btitle{無額外限制}}
+    所以我們可以分開計算
+
+    $$
+    \begin{aligned}
+        k &= \sum_{i}{\text{有多少個數字被 $p^i$ 整除}} \\
+          &= \sum_{i}{\lfloor \frac{n}{p^i} \rfloor}
+    \end{aligned}
+    $$
+
+    跑質數篩找 $p$，用 $O(\log{n})$ 的時間計算 $k$，總共 $O(n + \lvert \{ p \} \rvert \log{n})$
+\end{frame}

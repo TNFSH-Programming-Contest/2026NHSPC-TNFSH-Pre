@@ -1,0 +1,140 @@
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\documentclass[hyperref,UTF8,notheorems,xcolor={dvipsnames}]{beamer}
+\usepackage[dvipsnames]{xcolor}
+\usetheme{Rochester}
+\usepackage{amsmath, mathtools, graphicx}
+\usepackage{standalone}
+\usepackage[most]{tcolorbox}
+\usepackage[normalem]{ulem}
+\usepackage{xeCJK}
+\usepackage{fontspec}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pifont}
+\usepackage{fontawesome5}
+\usepgfplotslibrary{polar}
+\usepgflibrary{shapes.geometric}
+\usetikzlibrary{calc,angles,quotes}
+\defaultfontfeatures{Mapping=tex-text}
+\usefonttheme{professionalfonts}
+\usepackage{concmath}
+\usepackage{minted}
+
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
+\newcommand{\CC}[1]{#1}
+
+\newcommand{\Cincluded}{{\small\cmark}}
+\newcommand{\Cdefine}{{\small\cmark\faFile*[regular]}}
+\newcommand{\Ccodeonly}{{\small\cmark\faFile*~}}
+\newcommand{\Cnofocus}{{\small\faQuestion}}
+\newcommand{\Cexmaybe}{{\small\xmark\faQuestionCircle}}
+\newcommand{\Cexcluded}{{\small\xmark}}
+
+\newcommand{\Iincluded}{\item[\hbox to 1.8em{\Cincluded\hfill}]}
+\newcommand{\Idefine}{\item[\hbox to 1.8em{\Cdefine\hfill}]}
+\newcommand{\Icodeonly}{\item[\hbox to 1.8em{\Ccodeonly\hfill}]}
+\newcommand{\Inofocus}{\item[\hbox to 1.8em{\Cnofocus\hfill}]}
+\newcommand{\Iexmaybe}{\item[\hbox to 1.8em{\Cexmaybe\hfill}]}
+\newcommand{\Iexcluded}{\item[\hbox to 1.8em{\Cexcluded\hfill}]}
+
+\DeclareRobustCommand{\rddots}{\text{\reflectbox{$\ddots$}}}
+
+
+\usepackage{graphicx}
+\graphicspath{ {./../images/} }
+
+\def\codesize{\fontsize{8}{9}\selectfont}
+\setmonofont[Mapping=]{Noto Sans Mono}
+\setminted{fontsize=\codesize, linenos, frame=lines, mathescape, autogobble, tabsize=4}
+\setCJKmainfont[AutoFakeSlant,BoldFont=Noto Sans CJK TC Bold]{Noto Sans CJK TC}
+
+\setlength{\parskip}{\baselineskip} 
+\newcommand{\btitle}[1]{{\secname} -- #1}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{定理}
+\newtheorem{lemma}{引理}
+\newtheorem{property}{性質}
+\newtheorem{corollary}{推論}
+\newtheorem{problem}{例題}
+
+
+\newtheorem{definition}{定義}
+\AtBeginEnvironment{definition}{
+  \setbeamercolor{block title}{fg=white,bg=red!70!black}
+  \setbeamercolor{block body}{fg=black, bg=block title.bg!10!bg}
+}
+
+\newtheorem{exercise}{習題}
+\AtBeginEnvironment{exercise}{
+  \setbeamercolor{block title}{fg=white,bg=green!30!black}
+  \setbeamercolor{block body}{fg=black, bg=block title.bg!10!bg}
+}
+
+\newcommand{\sectionsubtitle}{} 
+\newcommand{\setsubtitle}[1]{\renewcommand{\sectionsubtitle}{#1}}
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=6pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\LARGE\insertsectionhead\par%
+    % 判斷 \sectionsubtitle 是否為空，如果不為空才渲染小字
+    \ifx\sectionsubtitle\empty\else
+      \vspace{4pt}% 微調大字與小字間距
+      {\footnotesize\sectionsubtitle}\par%
+    \fi
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+  % 每次進入新 Section 後自動重置小字，避免影響下一個 Section
+  \gdef\sectionsubtitle{}
+}
+
+\AtBeginSubsection[]{
+  \begin{frame}
+    \tableofcontents[subsectionstyle=show/shaded/hide]
+  \end{frame}
+}
+
+\usepackage{ctable}
+\usepackage{tabularx}
+
+\setlength{\parskip}{\baselineskip}
+
+\hypersetup{CJKbookmarks=true}
+
+\usepackage{listings}
+\usepackage{xcolor} % Required for defining custom colors
+
+% Define color palette
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+% Setup custom style block
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,                 % Auto-wrap long lines
+    captionpos=b,                    % Put caption at bottom (b) or top (t)
+    keepspaces=true,
+    numbers=left,                    % Line numbers on the left
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle} % Apply the style globally
+

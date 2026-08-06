@@ -1,0 +1,34 @@
+\setsubtitle{author : blame \& tobiichi3227}
+\section{A. 大家好我是今年選訓二階結訓選手}
+
+\begin{frame}{\btitle{題目敘述}}
+    給你一個長度為 $n$ 的陣列 $A$
+
+    找其中由小到大排序，第 $k$ 小的值是多少。
+\end{frame}
+
+\begin{frame}{\btitle{子任務}}
+    \begin{enumerate}
+        \item{$0 \le A_i \le 10^9$}
+        \item{無額外限制}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{\btitle{$0 \le A_i \le 10^9$}}
+    給忘記開 long long 的人 $67$ 分
+
+    因為忘記開真的很 67
+\end{frame}
+
+\begin{frame}{\btitle{無額外限制}}
+    這題有很多做法
+    
+    \begin{enumerate}
+        \item{$O(n^2)$ : 跑 $k$ 次找最小值，每次找到最小值就在陣列上紀錄下來，然後下次就不要算到他。}
+        \item{$O(n^2)$ : 跑 bubble sort，然後找第 $k$ 小。}
+        \item{$O(n \log{n})$ : 跑 merge sort 或者 quick sort，找第 $k$ 小。}
+        \item{$O(n)$ : 用 nth\_element 找第 $k$ 小可以做到線性。}
+    \end{enumerate}
+\end{frame}
+
+

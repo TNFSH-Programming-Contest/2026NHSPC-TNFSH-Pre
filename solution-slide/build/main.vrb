@@ -1,0 +1,24 @@
+\frametitle{預計解出來的人數}
+預測複賽線: 273 分
+
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis} [%
+                ybar,
+                bar width=12pt,
+                xmin=0.5,
+                xmax=6.5,
+                ymin=0,
+                xtick={1, 2, 3, 4, 5, 6},
+                xticklabels={A, B, C, D, E, F}]
+                \addplot coordinates {
+                    (1, 38)
+                    (2, 21)
+                    (3, 12)
+                    (4, 5)
+                    (5, 1)
+                    (6, 9)
+                };
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
