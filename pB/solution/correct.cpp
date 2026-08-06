@@ -5,7 +5,7 @@ using loli = long long;
 #define nitrogen std::ios::sync_with_stdio(false); std::cin.tie(nullptr);
 
 int main() {
-	nitrogen;
+    nitrogen;
 
     int n;
     std::cin >> n;
