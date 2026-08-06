@@ -64,15 +64,16 @@ int query(int l, int r);
 
 ## 執行細節
 
- - 你上傳的兩個檔案會與評測端準備的 `stub.cpp` 一同編譯成兩個獨立的執行檔，你可以在兩個檔案內宣告任何全域變數或內部函數，但請將這些函數宣告在匿名命名空間內以避免變數撞名，詳細請參考範例程式碼。
- - 評測端會額外準備 `manager.cpp` 來操作兩個執行檔之間的互動。具體來說，評測端在編譯出三份執行檔 `manager`、`sixseven` 和 `eightseven` 後，三份執行檔將會同時運行，並用以下方式測試:
-    1. `manager` 從輸入檔讀入輸入
-    2. `manager` 將所需資料透過 `pipe` 傳給程式 `sixseven`，並呼叫 `encode()`
-    3. `sixseven` 在收到 `encode()` 的回傳值後，將回傳值透過 `pipe` 傳給 `manager`
-    4. `manager` 將所需資料透過 `pipe` 傳給程式 `eightseven` ，並呼叫 `decode()`
-    5. 接著 `manager` 將會執行 $Q$ 次的詢問，每次呼叫 `query()`
-    6. 每次詢問的時候，`eightseven` 收到 `query()` 的回傳值，將回傳值透過 `pipe` 回傳給 `manager` 並判斷結果
- - 評分時 `sixseven` 和 `eightseven` 分別是兩個不同的執行緒，這代表兩分程式之間的全域變數或內部函數是不能共用的。你也不能使用任何方法來和任何外部檔案互動，唯輸出至 `stderr` 不在此限。
+ - 你上傳的兩個檔案會與評測端準備的 `stub.cpp` 一同編譯成一個執行檔 `Cake_4`，你可以在兩個檔案內宣告任何全域變數或內部函數，但請將這些函數宣告在匿名命名空間內以避免變數撞名，詳細請參考範例程式碼。
+ - 評測端會額外準備 `manager.cpp` 來操作兩個行程之間的互動。具體來說，評測端在編譯出兩份執行檔 `manager` 和`Cake_4` 後，兩份執行檔將會同時運行，並用以下方式測試:
+    1. 評測端建立兩個不同的行程 `sixseven` 與 `eightseven` (`sixseven` 與 `eightseven` 都是執行 `Cake_4` 得到) 以及 `manager` 行程
+    2. `manager` 從輸入檔讀入輸入
+    3. `manager` 將所需資料透過 `pipe` 傳給程式 `sixseven`，並呼叫 `encode()`
+    4. `sixseven` 在收到 `encode()` 的回傳值後，將回傳值透過 `pipe` 傳給 `manager`
+    5. `manager` 將所需資料透過 `pipe` 傳給程式 `eightseven` ，並呼叫 `decode()`
+    6. 接著 `manager` 將會執行 $Q$ 次的詢問，每次呼叫 `query()`
+    7. 每次詢問的時候，`eightseven` 收到 `query()` 的回傳值，將回傳值透過 `pipe` 回傳給 `manager` 並判斷結果
+ - 評分時評測端會建立兩個不同且隔離的行程 (Process)，這代表兩分程式之間的全域變數或內部函數是不能共用的。你也不能使用任何方法來和任何外部檔案互動，任何對 stdout、stderr 的輸出會被忽略。
  - `manager.cpp` 跟 `stub.cpp` 的所花時間微小至可忽略不計。
 
 ## 測資限制
