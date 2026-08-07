@@ -8,7 +8,7 @@ loli min(loli a, loli b) {
 }
 
 int main(void) {
-    // O(n^2) partial solution.
+    // O(n^2) partial solution for W <= 20000.
 
     int n;
     scanf("%d", &n);

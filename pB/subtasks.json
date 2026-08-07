@@ -27,11 +27,11 @@
             "text": "$W \\le 8$",
             "validators": ["validator.cpp 8 0"]
         },
-        "n30000": {
+        "n20000": {
             "index": 4,
             "score": 23,
-            "text": "$W \\le 30000$",
-            "validators": ["validator.cpp 30000 0"]
+            "text": "$W \\le 20000$",
+            "validators": ["validator.cpp 20000 0"]
         },
         "full": {
             "index": 5,
