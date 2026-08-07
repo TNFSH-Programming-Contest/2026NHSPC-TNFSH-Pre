@@ -20,7 +20,7 @@
 | solution | [:white_check_mark:](pA/solution) | [:white_check_mark:](pB/solution) | [:white_check_mark:](pC/solution) | [:white_check_mark:](pD/solution) | [:white_check_mark:](pE/solution) | [:white_check_mark:](pF/solution) |
 | validator | [:white_check_mark:](pA/validator) | [:white_check_mark:](pB/validator) | [:white_check_mark:](pC/validator) | [:white_check_mark:](pD/validator) | [:white_check_mark:](pE/validator) | [:white_check_mark:](pF/validator) |
 | subtasks.json<br>global_validators / subtask_sensitive_validators |  [:white_check_mark:](pA/subtasks.json) | [:white_check_mark:](pB/subtasks.json) | [:white_check_mark:](pC/subtasks.json) | [:white_check_mark:](pD/subtasks.json) | [:white_check_mark:](pE/subtasks.json) | [:white_check_mark:](pF/subtasks.json) |
-| tests | [:white_check_mark:](pA/tests) | [:x:](pB/tests) | [:white_check_mark:](pC/tests) | [:white_check_mark:](pD/tests) | [:white_check_mark:](pE/tests) | [:white_check_mark:](pF/tests) |
+| tests | [:white_check_mark:](pA/tests) | [:white_check_mark:](pB/tests) | [:white_check_mark:](pC/tests) | [:white_check_mark:](pD/tests) | [:white_check_mark:](pE/tests) | [:white_check_mark:](pF/tests) |
 | statement/index.md | [:white_check_mark:](pA/statement/index.md) | [:white_check_mark:](pB/statement/index.md) | [:white_check_mark:](pC/statement/index.md) | [:white_check_mark:](pD/statement/index.md) | [:white_check_mark:](pE/statement/index.md) | [:white_check_mark:](pF/statement/index.md) |
 | statement/index.pdf | [:white_check_mark:](pA/statement/index.pdf) | [:white_check_mark:](pB/statement/index.pdf) | [:white_check_mark:](pC/statement/index.pdf) | [:white_check_mark:](pD/statement/index.pdf) | [:white_check_mark:](pE/statement/index.pdf) | [:white_check_mark:](pF/statement/index.pdf) |
 
@@ -32,7 +32,7 @@
 | | 1 | 2 | 3 | 4 | 5 |
 | --- | --- | --- | --- | --- | --- |
 | A | 67<br>$0 \le A_i \le 10^9$ | 33<br>無額外限制 |
-| B | 2<br>所有 $t_i$ 相同 | 8<br>$W = 2$ | 15<br>$W \le 8$ | 23<br>$W \le 5000$ | 52<br>無額外限制 |
+| B | 2<br>所有 $t_i$ 相同 | 8<br>$W = 2$ | 15<br>$W \le 8$ | 23<br>$W \le 30000$ | 52<br>無額外限制 |
 | C | 8<br>$1 \le n \le 15$ | 51<br>$1 \le n \le 10^3$ | 41<br>無額外限制 |
 | D | 7<br>$1 \le N, M \le 10, 1 \le Q \le 10$ | 8<br>$1 \le N, M \le 1000, 1 \le Q \le 100$，輸入的字元僅包含 `.` | 18<br>$1 \le N, M \le 200, 1 \le Q \le 1000$ | 67<br>無額外限制 |
 | E | 27<br>$2 \le n \le 50, 1 \le Q \le 1000$ | 18<br>$2 \le n \le 200$ | 41<br>$2 \le n \le 800$ | 14<br>無額外限制 |
