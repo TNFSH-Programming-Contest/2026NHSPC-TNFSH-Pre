@@ -32,22 +32,22 @@ gen 8 progression 100 5399
 gen 8 groups 4 0 3 1 1 21600 3 43199 1
 gen 8 uniform 0 43199
 
-@subtask n2000
-gen 9 uniform 0 43199
-gen 31 progression 43190 7
-gen 100 cluster 0 100
-gen 511 choice 6 0 1 100 21600 43198 43199
-gen 1025 ranktrap 7000 512 2 1
-gen 1537 ranktrap 21000 512 3 1
-gen 1999 ranktrap 12000 666 3 1
-gen 1999 ranktrap 43000 999 2 1
-gen 1900 scatter 35000
-gen 1901 scatter 14000
-gen 1902 scatter 7000
-gen 1997 scatter 0
-gen 1999 progression 0 37
-gen 2000 groups 4 0 499 1 501 21600 499 43199 501
-gen 2000 uniform 0 43199
+@subtask n5000
+gen 29 uniform 0 43199
+gen 231 progression 43190 7
+gen 2100 cluster 0 100
+gen 2511 choice 6 0 1 100 21600 43198 43199
+gen 4025 ranktrap 7000 512 2 1
+gen 4537 ranktrap 21000 512 3 1
+gen 4999 ranktrap 12000 666 3 1
+gen 4999 ranktrap 43000 999 2 1
+gen 4900 scatter 35000
+gen 4901 scatter 14000
+gen 4902 scatter 7000
+gen 4997 scatter 0
+gen 4999 progression 0 37
+gen 5000 groups 4 0 499 1 501 21600 499 43199 501
+gen 5000 uniform 0 43199
 
 @subtask full
 @include n2 n8 n2000 samples
