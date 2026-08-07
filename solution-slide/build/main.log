@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.11.7)  6 AUG 2026 22:19
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.7.29)  7 AUG 2026 09:45
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1854,7 +1854,7 @@ LaTeX Font Info:    External font `xccex10' loaded for size
 
 ] [12
 
-]) (./section/pC.tex [13
+] [13
 
 ] [14
 
@@ -1862,8 +1862,31 @@ LaTeX Font Info:    External font `xccex10' loaded for size
 
 ] [16
 
+] [17
+
+] [18
+
+] [19
+
+] [20
+
 ]
-[17
+Overfull \vbox (29.76988pt too high) detected at line 106
+ []
+
+[21
+
+] [22
+
+]) (./section/pC.tex [23
+
+] [24
+
+] [25
+
+] [26
+
+] [27
 
 ]
 Overfull \hbox (10.346pt too wide) detected at line 46
@@ -1872,13 +1895,13 @@ m/n/10.95 + 1)(\OML/ccm/m/it/10.95 k[]p[]\OMS/ccsy/m/n/10.95 j\OML/ccm/m/it/10.
 95 n\OT1/ccr/m/n/10.95 !)
  []
 
-[18
+[28
 
-] [19
+] [29
 
-] [20
+] [30
 
-] [21
+] [31
 
 ])
 \tf@nav=\write8
@@ -1899,12 +1922,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: E5FCF01A80ADA01B2D94E8B1FFB66C1F;456.
  ) 
 Here is how much of TeX's memory you used:
- 53705 strings out of 474878
- 1307552 string characters out of 5762516
+ 53731 strings out of 476415
+ 1307892 string characters out of 5792682
  1931627 words of memory out of 5000000
- 74716 multiletter control sequences out of 15000+600000
+ 74650 multiletter control sequences out of 15000+600000
  569538 words of font info for 105 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
+ 264 hyphenation exceptions out of 8191
  133i,15n,126p,734b,2180s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main.pdf (21 pages).
+Output written on build/main.pdf (31 pages).

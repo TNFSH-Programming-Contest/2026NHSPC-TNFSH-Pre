@@ -2,5 +2,131 @@
 \section{B. 好多手錶}
 
 \begin{frame}{\btitle{題目敘述}}
+    給一個 $W$ 的陣列，值最多加到 $43200$，超過會 $MOD\ 43200$
 
+    求最少要增加多少次才會使整個陣列相同
+\end{frame}
+
+\begin{frame}{\btitle{子任務}}
+    \begin{enumerate}
+        \item{所有 $t_i$ 相同}
+        \item{$W = 2$}
+        \item{$W \le 8$}
+        \item{$W \le 5000$}
+        \item{無額外限制}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{\btitle{所有 $t_i$ 相同}}
+    送分的，拿不到可以考慮回家休息了
+
+    時間都一樣就不用調整了
+\end{frame}
+
+\begin{frame}{\btitle{$W = 2$}}
+    還是送分的，沒拿到可以檢討自己了
+
+    算兩個時間差，看是直接讓小的調整到大的比較好還是繞一圈比較好
+\end{frame}
+
+\begin{frame}{\btitle{$W \le 8$}}
+    直接枚舉時間從 $0$ 到 $43199$，並枚舉所有手錶
+
+    計算哪個時間調整過去所需花費最小
+
+    複雜度 $O(43200N)$
+\end{frame}
+
+\begin{frame}{\btitle{$W \le 5000$}}
+    思考一下可以發現要調整到的時間會是某一支手錶原本的時間
+
+    為甚麼呢
+
+    考慮相鄰且不同的時間 $t_i < t_{i + 1}$
+
+    選一個目標時間 $x$ 使得 $t_i < x < t{i + 1}$，當 $x$ 增加一秒時，所有 $t_w$ 都要加一秒，整體增加 $N$
+
+    相鄰的區間內成本嚴格遞增，所以挑左端點是最好的，而左端點 $t_i$ 必然存在於原本的時間中
+\end{frame}
+
+\begin{frame}{\btitle{$W \le 5000$}}
+    基於前面所說的，我們可以直接枚舉所有手錶，每次選一個當作目標時間
+
+    計算哪個時間調整過去的花費最小
+
+    複雜度 $O(N^2)$
+\end{frame}
+
+\begin{frame}{\btitle{無額外限制}}
+    這個有兩個做法，先講 $O(N \log_2 N)$ 的
+
+    先排序所有時間，挑一個目標時間 $x = t_i$，$t_1 \cdots t_i$ 調整到 $t_i$ 不需要跨過 $43200$，$t_{i+1} \cdots t_W$ 需要跨過 $43200$
+
+    對於所有 $j \le i$ 成本為
+\[
+\displaystyle \sum_{j=0}^{i}(t_j-t_i)
+= (i+1)t_i-\displaystyle\sum_{j=0}^{i}a_j
+\]
+
+對於所有 $j>i$ 成本為
+\[
+\displaystyle \sum_{j=i+1}^{N-1}\bigl(43200-(t_j-t_i)\bigr)
+= (N-i-1)(43200+t_i)-\displaystyle\sum_{j=i+1}^{N-1}a_j
+\]
+\end{frame}
+
+\begin{frame}{\btitle{無額外限制}}
+    可以發現後面那個 $\sum$ 就是前綴和
+
+    所以我們對原本的陣列求前綴和並枚舉所有時間就好了
+
+    複雜度 $O(N \log_2 N)$
+\end{frame}
+
+\begin{frame}{\btitle{無額外限制}}
+    另一個更快的做法
+
+    令 $M=43200$
+
+    定義 
+\[
+F(x) = \displaystyle \sum{i=1}^{N}{(x - t_i + M)} mod M
+\]
+，代表往前調到時間 $x$ 的總成本
+
+    要找 $min_{0 \le x \le M}{\{F(x)\}}$
+
+    假設我們知道 $F(x)$，從 $x$ 增加到 $x + 1\ (mod M)$ 一般來說總成本需要增加 $N$
+
+    但如果某個手錶已經在 $x+1$ 了，那成本不同
+
+    如果是調整到 $x$，成本為 $M-1$
+
+    如果是調整到 $x+1$，成本為 $0$
+\end{frame}
+
+\begin{frame}{\btitle{無額外限制}}
+    所以成本變化不是 $+1$，而是 $-(M-1)$，總成本需要額外減去 $M$
+
+    如果時間為 $x + 1$ 的手錶有 $cnt[x + 1]$ 支，則 $F(x + 1) = F(x) + N - M \cdot cnt[x + 1]$ 
+    
+    先算 $F(0)$
+
+\[
+F(0)=\sum_{i=1}^{N}
+\begin{cases}
+0, & \text{if } t_i=0,\\
+M-t_i, & \text{if } t_i>0.
+\end{cases}
+\]
+
+    剩下的 $F(1),\ F(2), \cdots F(M-1)$ 遞推算一下就有了
+
+    然後算的時候順便找最小值，複雜度 $O(N)$
+\end{frame}
+
+\begin{frame}{\btitle{無額外限制}}
+    但這題沒打算卡到 $O(N)$，所以 $N \log_2 N$ 就可以過了
+
+    雖然 $O(N)$ 的程式應該更好寫
 \end{frame}
