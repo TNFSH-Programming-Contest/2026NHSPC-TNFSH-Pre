@@ -20,7 +20,6 @@
 	"n8.cpp": {
 		"verdict": "correct",
 		"except": {
-			"n5000": "time_limit",
 			"full": "time_limit"
 		}
 	},
