@@ -8,7 +8,7 @@ loli min(loli a, loli b) {
 }
 
 int main(void) {
-    // nitrogen
+    // O(n^2) partial solution.
 
     int n;
     scanf("%d", &n);

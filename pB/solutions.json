@@ -20,10 +20,11 @@
 	"n8.cpp": {
 		"verdict": "correct",
 		"except": {
+			"n30000": "time_limit",
 			"full": "time_limit"
 		}
 	},
-	"n5000.cpp": {
+	"n30000.cpp": {
 		"verdict": "correct",
 		"except": {
 			"full": "time_limit"
@@ -73,7 +74,7 @@
 			"tisame": "correct",
 			"n2": "correct",
 			"n8": "correct",
-			"n5000": "correct"
+			"n30000": "correct"
 		}
 	}
 }
