@@ -50,7 +50,7 @@ gen 5000 groups 4 0 499 1 501 21600 499 43199 501
 gen 5000 uniform 0 43199
 
 @subtask full
-@include n2 n8 n2000 samples
+@include n2 n8 n5000 samples
 gen 2001 uniform 0 43199
 gen 10000 cluster 0 1000
 gen 50000 choice 7 0 1 2 21599 21600 43198 43199
