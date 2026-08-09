@@ -1,12 +1,15 @@
 @subtask samples
 manual example-1.in
 
-@subtask brute
+@subtask handwrite
 gen 1
 gen 2
 gen 3
 gen 4
 gen 5
+
+@subtask brute
+@include handwrite
 gen 6
 gen 7
 gen 8
@@ -19,6 +22,7 @@ gen 14
 gen 15
 
 @subtask brute2
+@include brute
 gen 16
 gen 17
 gen 18
@@ -48,10 +52,12 @@ gen 999
 gen 1000
 
 @subtask full
+@include brute2
 gen 1001
 gen 1024
-gen 1145
+gen 1110
 gen 2000
+gen 3227
 gen 4096
 gen 10000
 gen 12345

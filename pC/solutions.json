@@ -2,6 +2,13 @@
 	"correct.cpp": {
 		"verdict": "model_solution"
 	},
+	"handwrite.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"samples": "correct",
+			"handwrite": "correct"
+		}
+	},
 	"brute_factorial.cpp": {
 		"verdict": "incorrect",
 		"except": {

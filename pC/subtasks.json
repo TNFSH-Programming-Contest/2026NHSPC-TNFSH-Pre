@@ -9,21 +9,27 @@
             "text": "範例輸入輸出",
             "validators": ["validator.cpp 1000000"]
         },
-        "brute": {
+        "handwrite": {
             "index": 1,
-            "score": 8,
+            "score": 6,
+            "text": "$1 \\le n \\le 5$",
+            "validators": ["validator.cpp 5"]
+        },
+        "brute": {
+            "index": 2,
+            "score": 12,
             "text": "$1 \\le n \\le 15$",
             "validators": ["validator.cpp 15"]
         },
         "brute2": {
-            "index": 2,
-            "score": 51,
+            "index": 3,
+            "score": 44,
             "text": "$1 \\le n \\le 10^3$",
             "validators": ["validator.cpp 1000"]
         },
         "full": {
-            "index": 3,
-            "score": 41,
+            "index": 4,
+            "score": 38,
             "text": "無額外限制",
             "validators": []
         }
