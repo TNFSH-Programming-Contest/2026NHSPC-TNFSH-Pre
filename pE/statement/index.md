@@ -130,7 +130,7 @@ $$
 
 為了測試方便，範例評分程式不完全按照執行細節段落內所講的執行，而是會將你的程式編譯成單一執行檔執行後，直接在該次執行依序呼叫 `sixseven` 和 `eightseven` 兩支程式。請注意，在範例評分程式執行的過程中，`sixseven` 與 `eightseven` 將可以共享不在匿名空間內的全域變數或內部函數，\textbf{但這在正式評分程式是不允許的}，因此還請特別注意別誤共享了資訊。
 
-請使用 `compile_cpp.sh` 或 `compile_cpp.bat` 來編譯你寫好的兩支程式。並使用 `run_cpp.sh` 或 `run_cpp.sh` 執行範例評分程式，它將採用以下格式輸入:\
+請使用 `compile_cpp.sh` 或 `compile_cpp.bat` 來編譯你寫好的兩支程式。並使用 `run_cpp.sh` 或 `run_cpp.bat` 執行範例評分程式，它將採用以下格式輸入:\
 \noindent\fbox{%
 \begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
 \raggedright
