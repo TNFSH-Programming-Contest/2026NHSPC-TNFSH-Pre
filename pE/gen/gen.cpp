@@ -9,7 +9,7 @@
 
 namespace {
 
-constexpr long long MAX_DELTA = 30000000000000000LL;
+constexpr long long MAX_DELTA = 3e15;
 int argumentCount;
 char** arguments;
 
@@ -161,18 +161,18 @@ int main(int argc, char* argv[]) {
         delta[0][1] = -1;
     } else if (costMode == "huge-trap") {
         ensuref(n >= 4, "huge-trap requires n >= 4");
-        // Clamping the two 1e15 entries to 1e9 changes opt[0][3]
+        // Clamping the two 1e14 entries to 1e9 changes opt[0][3]
         // from 0 to 1, while all expanded costs remain below 3e16.
-        delta[0][1] = 1000000000000000LL;
-        delta[0][2] = 1000000000000000LL;
+        delta[0][1] = 100000000000000LL;
+        delta[0][2] = 100000000000000LL;
         delta[1][2] = 1000000000LL;
         delta[2][3] = 1000000000LL;
     } else if (costMode == "double-trap") {
         ensuref(n >= 3, "double-trap requires n >= 3");
-        // For [0,2], the two candidates differ by exactly one near 1.5e16.
+        // For [0,2], the two candidates differ by exactly one near 1.5e15.
         // IEEE double rounds them to the same value and picks the wrong root.
-        delta[0][1] = 14999999999999998LL;
-        delta[1][2] = 14999999999999999LL;
+        delta[0][1] = 1499999999999998LL;
+        delta[1][2] = 1499999999999999LL;
         for (int r = 3; r < n; ++r) delta[r - 1][r] = -1;
     } else {
         quitf(_fail, "unknown cost mode: %s", costMode.c_str());

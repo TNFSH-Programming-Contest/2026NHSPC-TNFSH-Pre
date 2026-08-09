@@ -5,8 +5,8 @@
 
 namespace {
 
-constexpr long long MAX_DELTA = 30000000000000000LL;
-constexpr long long MAX_COST = 30000000000000000LL;
+constexpr long long MAX_DELTA = 3e16;
+constexpr long long MAX_COST = 3e16;
 
 }  // namespace
 
@@ -45,7 +45,7 @@ int main(int argc, char* argv[]) {
             const __int128 current =
                 lastCost[l] + extensionCost * scale;
             ensuref(current <= MAX_COST,
-                    "expanded w[%d][%d] exceeds 3e16", l, r);
+                    "expanded w[%d][%d] exceeds 3e15", l, r);
             lastCost[l] = static_cast<long long>(current);
         }
     }

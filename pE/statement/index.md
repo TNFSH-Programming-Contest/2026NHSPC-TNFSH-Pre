@@ -79,7 +79,7 @@ int query(int l, int r);
 ## 測資限制
 
 - $2\le n\le 2000$
-- $0\le w_{l,r}\le 3\times 10^{16}$
+- $0\le w_{l,r}\le 3\times 10^{15}$
 - $w_{i,i}=0$
 - 費用表 $w$ 滿足題目開頭所述的兩項性質
 - $1\le Q\le 10^5$
