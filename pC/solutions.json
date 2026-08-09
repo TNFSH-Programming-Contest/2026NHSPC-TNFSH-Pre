@@ -2,6 +2,12 @@
 	"correct.cpp": {
 		"verdict": "model_solution"
 	},
+	"print_table.cpp": {
+		"verdict": "correct",
+		"except": {
+			"full": "incorrect"
+		}
+	},
 	"handwrite.cpp": {
 		"verdict": "incorrect",
 		"except": {
