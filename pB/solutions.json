@@ -17,7 +17,15 @@
 			"n2": "correct"
 		}
 	},
-	"n8.cpp": {
+	"n3.cpp": {
+		"verdict": "correct",
+		"except": {
+			"n2000": "time_limit",
+			"n20000": "time_limit",
+			"full": "time_limit"
+		}
+	},
+	"43200n.cpp": {
 		"verdict": "correct",
 		"except": {
 			"n20000": "time_limit",

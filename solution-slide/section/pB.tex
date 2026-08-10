@@ -12,7 +12,8 @@
         \item{所有 $t_i$ 相同}
         \item{$W = 2$}
         \item{$W \le 8$}
-        \item{$W \le 5000$}
+        \item{$W \le 2000$}
+        \item{$W \le 20000$}
         \item{無額外限制}
     \end{enumerate}
 \end{frame}
@@ -30,6 +31,10 @@
 \end{frame}
 
 \begin{frame}{\btitle{$W \le 8$}}
+    應該隨便做都有？
+\end{frame}
+
+\begin{frame}{\btitle{$W \le 2000$}}
     直接枚舉時間從 $0$ 到 $43199$，並枚舉所有手錶
 
     計算哪個時間調整過去所需花費最小
@@ -37,7 +42,7 @@
     複雜度 $O(43200N)$
 \end{frame}
 
-\begin{frame}{\btitle{$W \le 5000$}}
+\begin{frame}{\btitle{$W \le 20000$}}
     思考一下可以發現要調整到的時間會是某一支手錶原本的時間
 
     為甚麼呢
@@ -88,7 +93,7 @@
 
     令 $M=43200$
 
-    定義 
+    定義
 \[
 F(x) = \displaystyle \sum_{i=1}^{N}{(x - t_i + M)}\ mod\ M
 \]
@@ -108,8 +113,8 @@ F(x) = \displaystyle \sum_{i=1}^{N}{(x - t_i + M)}\ mod\ M
 \begin{frame}{\btitle{無額外限制}}
     所以成本變化不是 $+1$，而是 $-(M-1)$，總成本需要額外減去 $M$
 
-    如果時間為 $x + 1$ 的手錶有 $cnt[x + 1]$ 支，則 $F(x + 1) = F(x) + N - M \cdot cnt[x + 1]$ 
-    
+    如果時間為 $x + 1$ 的手錶有 $cnt[x + 1]$ 支，則 $F(x + 1) = F(x) + N - M \cdot cnt[x + 1]$
+
     先算 $F(0)$
 
 \[
