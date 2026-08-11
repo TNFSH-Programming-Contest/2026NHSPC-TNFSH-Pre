@@ -11,19 +11,19 @@
         },
         "handwrite": {
             "index": 1,
-            "score": 6,
+            "score": 5,
             "text": "$1 \\le n \\le 5$",
             "validators": ["validator.cpp 5"]
         },
         "brute": {
             "index": 2,
-            "score": 12,
+            "score": 11,
             "text": "$1 \\le n \\le 15$",
             "validators": ["validator.cpp 15"]
         },
         "brute2": {
             "index": 3,
-            "score": 44,
+            "score": 45,
             "text": "$1 \\le n \\le 10^3$",
             "validators": ["validator.cpp 1000"]
         },
@@ -33,9 +33,15 @@
             "text": "$1 \\le n \\le 10^6$",
             "validators": ["validator.cpp 1000000"]
         },
-        "full": {
+        "1e8": {
             "index": 5,
-            "score": 12,
+            "score": 6,
+            "text": "$1 \\le n \\le 10^8$",
+            "validators": ["validator.cpp 100000000"]
+        },
+        "full": {
+            "index": 6,
+            "score": 7,
             "text": "無額外限制",
             "validators": []
         }

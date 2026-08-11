@@ -5,12 +5,20 @@
     "blame_1e6.cpp": {
 		"verdict": "correct",
 		"except": {
+			"1e8": "time_limit",
 			"full": "time_limit"
 		}
     },
+	"blame_n78.cpp": {
+		"verdict": "correct",
+		"except": {
+			"full": "time_limit"
+		}
+	},
 	"1e6.cpp": {
 		"verdict": "correct",
 		"except": {
+			"1e8": "time_limit",
 			"full": "time_limit"
 		}
 	},
