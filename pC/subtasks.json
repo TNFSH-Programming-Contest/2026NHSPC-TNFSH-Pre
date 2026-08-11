@@ -1,35 +1,35 @@
 {
     "global_validators": [
-        "validator.cpp 1000000"
+        "validator.cpp 2000 2000 200000 0"
     ],
     "subtasks": {
         "samples": {
             "index": 0,
             "score": 0,
             "text": "範例輸入輸出",
-            "validators": ["validator.cpp 1000000"]
-        },
-        "handwrite": {
-            "index": 1,
-            "score": 6,
-            "text": "$1 \\le n \\le 5$",
-            "validators": ["validator.cpp 5"]
+            "validators": ["validator.cpp 2000 2000 200000 0"]
         },
         "brute": {
+            "index": 1,
+            "score": 7,
+            "text": "$1 \\le N, M \\le 10, 1 \\le Q \\le 10$",
+            "validators": ["validator.cpp 10 10 10 0"]
+        },
+        "straight": {
             "index": 2,
-            "score": 12,
-            "text": "$1 \\le n \\le 15$",
-            "validators": ["validator.cpp 15"]
+            "score": 8,
+            "text": "$1 \\le N, M \\le 1000, 1 \\le Q \\le 100$，輸入的字元僅包含 `.`",
+            "validators": ["validator.cpp 1000 1000 100 1"]
         },
         "brute2": {
             "index": 3,
-            "score": 44,
-            "text": "$1 \\le n \\le 10^3$",
-            "validators": ["validator.cpp 1000"]
+            "score": 18,
+            "text": "$1 \\le N, M \\le 200, 1 \\le Q \\le 1000$",
+            "validators": ["validator.cpp 200 200 1000 0"]
         },
         "full": {
             "index": 4,
-            "score": 38,
+            "score": 67,
             "text": "無額外限制",
             "validators": []
         }

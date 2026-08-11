@@ -1,51 +1,73 @@
 @subtask samples
 manual example-1.in
-manual example-2.in
-manual example-3.in
+
+@subtask handwrite
+gen 1
+gen 2
+gen 3
+gen 4
+gen 5
 
 @subtask brute
-gen 1 1 4 dots cycle
-gen 1 1 4 slash cycle
-gen 1 1 4 backslash cycle
-gen 1 5 10 checker cycle
-gen 5 1 10 checker reverse
-gen 2 2 8 checker cycle
-gen 3 4 10 random random 1 1 1
-gen 4 3 10 random corners 3 2 2
-gen 10 10 10 blocks corners 2
-gen 9 10 10 random cycle 4 3 3
-
-@subtask straight
-gen 1 1 4 dots cycle
-gen 1 1000 100 dots cycle
-gen 1000 1 100 dots reverse
-gen 2 3 10 dots corners
-gen 1000 1000 100 dots random
-gen 999 997 100 dots reverse
-gen 512 1000 100 dots same 1
-gen 1000 777 100 dots corners
+@include handwrite
+gen 6
+gen 7
+gen 8
+gen 9
+gen 10
+gen 11
+gen 12
+gen 13
+gen 14
+gen 15
 
 @subtask brute2
-gen 1 200 402 checker cycle
-gen 200 1 402 checker reverse
-gen 200 200 800 checker cycle
-gen 200 200 1000 random random 1 1 1
-gen 200 200 1000 slash cycle
-gen 200 200 1000 backslash reverse
-gen 199 200 1000 blocks corners 7
-gen 200 199 1000 random cycle 5 3 2
-gen 127 193 640 random random 1 4 4
-gen 200 200 1000 blocks reverse 1
-gen 199 199 1000 double_snake same 795
+@include brute
+gen 16
+gen 17
+gen 18
+gen 19
+gen 20
+gen 23
+gen 24
+gen 25
+gen 30
+gen 31
+gen 32
+gen 49
+gen 64
+gen 97
+gen 100
+gen 127
+gen 128
+gen 199
+gen 200
+gen 256
+gen 499
+gen 500
+gen 512
+gen 720
+gen 997
+gen 999
+gen 1000
 
 @subtask full
-gen 2000 2000 200000 dots same 1
-gen 2000 2000 8000 checker cycle
-gen 2000 2000 8000 random reverse 1 1 1
-gen 2000 1999 200000 random random 4 3 3
-gen 1999 2000 200000 blocks cycle 17
-gen 1 2000 200000 checker same 1
-gen 2000 1 200000 checker random
-gen 1379 1999 200000 random corners 6 2 2
-gen 2000 2000 200000 slash random
-gen 1999 1999 200000 double_snake same 7995
+@include brute2
+gen 1001
+gen 1024
+gen 1110
+gen 2000
+gen 3227
+gen 4096
+gen 10000
+gen 12345
+gen 65536
+gen 114514
+gen 314159
+gen 500000
+gen 524287
+gen 750000
+gen 999979
+gen 999983
+gen 999999
+gen 1000000

@@ -2,52 +2,43 @@
 	"correct.cpp": {
 		"verdict": "model_solution"
 	},
-	"print_table.cpp": {
-		"verdict": "correct",
-		"except": {
-			"full": "incorrect"
-		}
-	},
-	"handwrite.cpp": {
-		"verdict": "incorrect",
-		"except": {
-			"samples": "correct",
-			"handwrite": "correct"
-		}
-	},
-	"brute_factorial.cpp": {
-		"verdict": "incorrect",
-		"except": {
-			"samples": "correct",
-			"brute": "correct"
-		}
-	},
-	"max_1000.cpp": {
-		"verdict": "incorrect",
+	"simulate_each.cpp": {
+		"verdict": "time_limit",
 		"except": {
 			"samples": "correct",
 			"brute": "correct",
+			"straight": "correct",
 			"brute2": "correct"
 		}
 	},
-	"number_divisors.cpp": {
+	"straight_only.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"straight": "correct"
+		}
+	},
+	"wrong_mirrors.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"straight": "correct"
+		}
+	},
+	"wrong_numbering.cpp": {
 		"verdict": "incorrect"
 	},
-	"missing_powers.cpp": {
-		"verdict": "incorrect"
-	},
-	"wrong_mod.cpp": {
+	"cell_visited.cpp": {
 		"verdict": "incorrect",
 		"except": {
 			"samples": "correct",
-			"brute": "correct"
+			"straight": "correct"
 		}
 	},
-	"int_overflow.cpp": {
+	"million_step_cap.cpp": {
 		"verdict": "incorrect",
 		"except": {
 			"samples": "correct",
 			"brute": "correct",
+			"straight": "correct",
 			"brute2": "correct"
 		}
 	}

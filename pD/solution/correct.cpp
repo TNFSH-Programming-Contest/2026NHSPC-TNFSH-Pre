@@ -1,80 +1,41 @@
 #include <iostream>
-#include <string>
 #include <vector>
+
+namespace {
+
+constexpr long long MOD = 1145141;
+
+}  // namespace
 
 int main() {
     std::ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
 
-    int n, m, q;
-    std::cin >> n >> m >> q;
+    int n;
+    std::cin >> n;
 
-    std::vector<std::string> grid(n);
-    for (std::string& row : grid) std::cin >> row;
-
-    const int perimeter = 2 * (n + m);
-    std::vector<int> answer(perimeter + 1, 0);
-
-    constexpr int dr[4] = {-1, 0, 1, 0};
-    constexpr int dc[4] = {0, 1, 0, -1};
-
-    auto enter = [&](int entry, int& row, int& column, int& direction) {
-        if (entry <= m) {
-            row = 0;
-            column = entry - 1;
-            direction = 2;
-        } else if (entry <= m + n) {
-            row = entry - m - 1;
-            column = m - 1;
-            direction = 3;
-        } else if (entry <= 2 * m + n) {
-            row = n - 1;
-            column = 2 * m + n - entry;
-            direction = 0;
-        } else {
-            row = 2 * m + 2 * n - entry;
-            column = 0;
-            direction = 1;
+    std::vector<int> primes;
+    std::vector<bool> composite(n + 1, false);
+    for (int value = 2; value <= n; ++value) {
+        if (!composite[value]) primes.push_back(value);
+        for (int prime : primes) {
+            if (1LL * value * prime > n) break;
+            composite[value * prime] = true;
+            if (value % prime == 0) break;
         }
-    };
-
-    auto exitNumber = [&](int row, int column) {
-        if (row < 0) return column + 1;
-        if (column >= m) return m + row + 1;
-        if (row >= n) return m + n + (m - column);
-        return 2 * m + n + (n - row);
-    };
-
-    auto trace = [&](int entry) {
-        int row, column, direction;
-        enter(entry, row, column, direction);
-
-        const long long stateLimit = 4LL * n * m + 1;
-        long long states = 0;
-        while (0 <= row && row < n && 0 <= column && column < m) {
-            if (++states > stateLimit) return -1;
-
-            if (grid[row][column] == '/') {
-                direction ^= 1;
-            } else if (grid[row][column] == '\\') {
-                direction ^= 3;
-            }
-
-            row += dr[direction];
-            column += dc[direction];
-        }
-        return exitNumber(row, column);
-    };
-
-    while (q--) {
-        int entry;
-        std::cin >> entry;
-
-        if (answer[entry] == 0) {
-            const int exit = trace(entry);
-            answer[entry] = exit;
-            if (exit != -1) answer[exit] = entry;
-        }
-        std::cout << answer[entry] << '\n';
     }
+
+    long long answer = 1;
+    for (int prime : primes) {
+        long long exponent = 0;
+        long long power = prime;
+        while (power <= n) {
+            exponent += n / power;
+            if (power > n / prime) break;
+            power *= prime;
+        }
+        answer = answer * (exponent + 1) % MOD;
+    }
+
+    std::cout << answer << '\n';
 }
