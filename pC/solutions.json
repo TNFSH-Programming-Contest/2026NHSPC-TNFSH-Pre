@@ -5,10 +5,69 @@
     "blame_ac.cpp": {
         "verdict": "correct"
     },
+	"nm1.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"nm1": "correct"
+		}
+	},
+	"q10.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"samples": "correct",
+			"nm1": "correct",
+			"q10": "correct",
+			"brute": "correct"
+		}
+	},
+	"n1.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"nm1": "correct",
+			"n1": "correct"
+		}
+	},
+	"n2.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"nm1": "correct",
+			"n1": "correct",
+			"n2": "correct"
+		}
+	},
+	"all_same_type.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"nm1": "correct",
+			"all_same_type": "correct",
+			"straight": "correct"
+		}
+	},
+	"query_upper.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"query_upper": "correct"
+		}
+	},
+	"row.cpp": {
+		"verdict": "incorrect",
+		"except": {
+			"nm1": "correct",
+			"row": "correct",
+			"straight": "correct"
+		}
+	},
 	"simulate_each.cpp": {
 		"verdict": "time_limit",
 		"except": {
 			"samples": "correct",
+			"nm1": "correct",
+			"q10": "correct",
+			"n1": "correct",
+			"n2": "correct",
+			"all_same_type": "correct",
+			"query_upper": "correct",
+			"row": "correct",
 			"brute": "correct",
 			"straight": "correct",
 			"brute2": "correct"
@@ -33,6 +92,10 @@
 		"verdict": "incorrect",
 		"except": {
 			"samples": "correct",
+			"nm1": "correct",
+			"n1": "correct",
+			"all_same_type": "correct",
+			"row": "correct",
 			"straight": "correct"
 		}
 	},
@@ -40,6 +103,11 @@
 		"verdict": "incorrect",
 		"except": {
 			"samples": "correct",
+			"nm1": "correct",
+			"n1": "correct",
+			"n2": "correct",
+			"all_same_type": "correct",
+			"row": "correct",
 			"brute": "correct",
 			"straight": "correct",
 			"brute2": "correct"

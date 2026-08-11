@@ -1,35 +1,77 @@
 {
     "global_validators": [
-        "validator.cpp 2000 2000 200000 0"
+        "validator.cpp 2000 2000 200000 0 0"
     ],
     "subtasks": {
         "samples": {
             "index": 0,
             "score": 0,
             "text": "範例輸入輸出",
-            "validators": ["validator.cpp 2000 2000 200000 0"]
+            "validators": ["validator.cpp 2000 2000 200000 0 0"]
+        },
+        "nm1": {
+            "index": 1,
+            "score": 3,
+            "text": "$NM = 1$",
+            "validators": ["validator.cpp 1 1 200000 0 0"]
+        },
+        "q10": {
+            "index": 2,
+            "score": 5,
+            "text": "$1 \\le Q \\le 10$",
+            "validators": ["validator.cpp 2000 2000 10 0 0"]
+        },
+        "n1": {
+            "index": 3,
+            "score": 5,
+            "text": "$N = 1$",
+            "validators": ["validator.cpp 1 2000 200000 0 0"]
+        },
+        "n2": {
+            "index": 4,
+            "score": 7,
+            "text": "$1 \\le N \\le 2$",
+            "validators": ["validator.cpp 2 2000 200000 0 0"]
+        },
+        "all_same_type": {
+            "index": 5,
+            "score": 7,
+            "text": "只會有 `.` 與 `/` 或 `\\`",
+            "validators": ["validator.cpp 2000 2000 200000 2 0"]
+        },
+        "query_upper": {
+            "index": 6,
+            "score": 7,
+            "text": "所有詢問都從上方進入",
+            "validators": ["validator.cpp 2000 2000 200000 0 1"]
+        },
+        "row": {
+            "index": 7,
+            "score": 8,
+            "text": "每一列最多有一個 `\\` 或 `/`",
+            "validators": ["validator.cpp 2000 2000 200000 3 0"]
         },
         "brute": {
-            "index": 1,
+            "index": 8,
             "score": 7,
             "text": "$1 \\le N, M \\le 10, 1 \\le Q \\le 10$",
-            "validators": ["validator.cpp 10 10 10 0"]
+            "validators": ["validator.cpp 10 10 10 0 0"]
         },
         "straight": {
-            "index": 2,
+            "index": 9,
             "score": 8,
             "text": "$1 \\le N, M \\le 1000, 1 \\le Q \\le 100$，輸入的字元僅包含 `.`",
-            "validators": ["validator.cpp 1000 1000 100 1"]
+            "validators": ["validator.cpp 1000 1000 100 1 0"]
         },
         "brute2": {
-            "index": 3,
+            "index": 10,
             "score": 18,
             "text": "$1 \\le N, M \\le 200, 1 \\le Q \\le 1000$",
-            "validators": ["validator.cpp 200 200 1000 0"]
+            "validators": ["validator.cpp 200 200 1000 0 0"]
         },
         "full": {
-            "index": 4,
-            "score": 67,
+            "index": 11,
+            "score": 25,
             "text": "無額外限制",
             "validators": []
         }
