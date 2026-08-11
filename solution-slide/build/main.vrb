@@ -1,5 +1,5 @@
 \frametitle{預計解出來的人數}
-預測複賽線: 273 分
+預測複賽線: 260 分
 
     \begin{center}
         \begin{tikzpicture}
@@ -14,8 +14,8 @@
                 \addplot coordinates {
                     (1, 38)
                     (2, 21)
-                    (3, 12)
-                    (4, 5)
+                    (3, 5)
+                    (4, 0)
                     (5, 1)
                     (6, 9)
                 };

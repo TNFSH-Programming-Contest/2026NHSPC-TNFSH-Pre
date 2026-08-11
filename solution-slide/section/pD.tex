@@ -1,8 +1,10 @@
 \setsubtitle{author : blame}
-\section{C. 1145141}
+\section{D. 1145141}
 
 \begin{frame}{\btitle{題目敘述}}
-    給定一個正整數 n，求 n! 的正因數個數。
+    給定一個正整數 $n$，求 $n!$ 的正因數個數。
+
+    $1 \le n \le 10^9$
 \end{frame}
 
 \begin{frame}{\btitle{子任務}}
@@ -11,17 +13,19 @@
         \item{$1 \le n \le 15$}
         \item{$1 \le n \le 10^3$}
         \item{$1 \le n \le 10^6$}
-        \item{無額外限制}
+        \item{$1 \le n \le 10^8$}
+        \item{$1 \le n \le 10^9$}
     \end{enumerate}
 \end{frame}
 
-\begin{frame}{\btitle{$1 \le n \le 15$}}
-    $5! = 120 = 2^3 \times 3 \times 5$
+\begin{frame}{\btitle{$1 \le n \le 5$ \& $1 \le n \le 15$}}
+    $n \le 5$ :
 
-    可以直接手算答案然後用 if-else 判斷輸出
-\end{frame}
+    $ans = {1, 1, 2, 4, 8, 16}$
+    \pause
 
-\begin{frame}{\btitle{$1 \le n \le 15$}}
+    $n \le 15$ :
+
     $15! \approx 10^{12}$
 
     所以可以先把 $n!$ 算出來之後再用 $O(\sqrt{n})$ 計算因數個數
@@ -30,60 +34,146 @@
 \begin{frame}{\btitle{$1 \le n \le 10^3$}}
     這邊有一個很關鍵的數學公式。
 
+    \begin{corollary}
     當我們把 $a$ 進行質因數拆解為
 
     $$
     a = p_1^{k_1} \times p_2^{k_2} \times \ldots \times p_n^{k_n}
     $$
 
-    那麼對於 $a$ 的正因數個數總和為 $(k_1 + 1) \times (k_2 + 1) \times \ldots \times (k_n + 1)$
+    因為對於每個質因數，可以選 $0 \sim k$ 個，\\且每種選擇都可以對應到不同的因數。
+
+    所以對於 $a$ 的正因數個數總和為 $(k_1 + 1) \times (k_2 + 1) \times \ldots \times (k_n + 1)$
+    \end{corollary}
 \end{frame}
 
 \begin{frame}{\btitle{$1 \le n \le 10^3$}}
     那麼題目就轉化為了，對於一個質數 $p$ 來講
 
-    他在 $n!$ 中總共貢獻多少次?
+    他在 $n!$ 中總共貢獻多少次質因數? \\$\Rightarrow$ $n!$ 最多除多少次 $p$ 才可以不被 $p$ 整除
 
-    最後把 $[1, n]$ 中的質數貢獻全部乘起來就是答案了
+    最後把 $[1, n]$ 中的質數貢獻 $+1$ 後全部乘起來就是答案了
 
     更數學一點來講
 
     $$
-    ans = \prod^n_{p=1, p \text{ is prime}} (k+1)(k \text{ is the maximum number such that } p^k | n!)
+    ans = \prod^n_{p=1, p \text{ is prime}} (k+1), k \text{ is the maximum number such that } p^k | n!
     $$
 \end{frame}
 
 \begin{frame}{\btitle{$1 \le n \le 10^3$}}
-    所以枚舉每個數字，並判斷他是否為質數
+    所以枚舉每個數字，用 $O(\sqrt{n})$ 判斷他是否為質數
 
     假如是質數，則跑過 $1 \sim n$，並計算總共除掉多少次。
 
-    花費時間 $O(n^2)$
+    對於每個數字最多會被 $p$ 除掉 $log(n)$ 次
+
+    花費時間 $O(n (\sqrt{n} +  n\log(n))) = O(n^2\log(n))$
 \end{frame}
 
-\begin{frame}{\btitle{無額外限制}}
-    發現
+\begin{frame}{\btitle{$1 \le n \le 10^6$}}
+    想像對於某個質數$p$，在數線上 $k$ 的長相:
 
-    $$
-    (k \text{ is the maximum number such that } p^k | n!)
-    $$
-
-    我們可以想像有一些數字只貢獻了一個 $p$
-
-    有些數字貢獻了 $p^2, p^3, \ldots, p^k$
-
-    但 $p^2$ 一定至少貢獻了一次 $p$。
+    \includegraphics[width=0.9\textwidth]{./photo/pD-photo.png}
 \end{frame}
 
-\begin{frame}{\btitle{無額外限制}}
-    所以我們可以分開計算
+\begin{frame}{\btitle{$1 \le n \le 10^6$}}
+    發現只要 $k=2$ 的地方就會被 $k=1$ 的格子佔到欸?
+
+    雖然聽起來很像廢話，但是會發現我們可以將 $k = ?$ 分開算
+
+    $k = a$ 在 $n!$ 中貢獻很好算，就是 $\lfloor \frac{n}{a} \rfloor$
+
+    然後發現 $k$ 最大也才 $\log(n)$ 量級\pause
+
+    跑質數篩找質數 $p$，用 $O(\log{n})$ 的時間枚舉 $k$，時間複雜度總共 $O(n + \lvert \{ p \} \rvert \log{n})$
+\end{frame}
+
+\begin{frame}{\btitle{$1 \le n \le 10^8$ \& $1 \le n \le 10^9$}}
+    剛剛的解法，空間開 $O(n)$ 掛了。
+
+    所以我們想要讓空間少一點。\pause
+
+    首先，先分兩個 case 討論:
+
+    \begin{itemize}
+        \item{$p \le \sqrt{n}$}
+        \item{$p > \sqrt{n}$}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{\btitle{$1 \le n \le 10^8$ \& $1 \le n \le 10^9$}}
+    $p \le \sqrt{n}$
+
+    因為我們可以花 $\sqrt{n}$ 的時間跟空間求出這些符合條件的質數 $p$ 們
+
+    所以照剛剛解法求就好了。\pause
+
+    $p > \sqrt{n}$
+
+    對於這些 $p$ 來講，他們 $p^2 > n$ 欸!
+
+    那這樣不就是只要算 $(\sqrt{n}, n]$ 中的質數們 $\lfloor \frac{n}{p} \rfloor$ 的總和嗎?
+\end{frame}
+
+\begin{frame}{\btitle{$1 \le n \le 10^8$ \& $1 \le n \le 10^9$}}
+    觀察到 $\lfloor \frac{n}{p} \rfloor$ 只有 $\sqrt{n}$ 個而已。
+
+    所以可以用數論分塊找到對於 $k = \lfloor \frac{n}{p} \rfloor$ 所對應的區間 $[l, r]$
+
+    也就是對於 $[l, r]$ 區間中的質數 $p$ 們，他們的 $k$ 都是 $\lfloor \frac{n}{l} \rfloor$\pause
+
+    數學中，$\pi(n)$ 為 $< n$ 總共有多少個質數。
+
+    這樣不就轉成了，數論分塊中的 $[l, r]$，對於答案的貢獻為 $(k+1)^{(\pi(r) - \pi(l-1))}$\pause
+
+    那要怎麼求 $\pi(n)$?
+\end{frame}
+
+\begin{frame}{\btitle{$1 \le n \le 10^8$ \& $1 \le n \le 10^9$}}
+    \begin{itemize}
+        \item {令 $p_k$ 為從小到大數第 $k$ 個質數}
+        \item {$\text{lpf}(x)$ 是 $x$ 最小的質因數}
+    \end{itemize}\pause
+
+    然後通靈出一個 dp 函式。
 
     $$
-    \begin{aligned}
-        k &= \sum_{i}{\text{有多少個數字被 $p^i$ 整除}} \\
-          &= \sum_{i}{\lfloor \frac{n}{p^i} \rfloor}
-    \end{aligned}
+    dp(n, k) = \sum^{n}_{i = 2} 1[\text{i is a prime or } \text{lpf}(i) > p_k]
     $$
 
-    跑質數篩找 $p$，用 $O(\log{n})$ 的時間計算 $k$，總共 $O(n + \lvert \{ p \} \rvert \log{n})$
+    這樣對於 $[2, n]$ 的質數個數 $\pi(n)$，就直接求 $dp(n, \infty)$ 就好了。
+\end{frame}
+
+\begin{frame}{\btitle{$1 \le n \le 10^8$ \& $1 \le n \le 10^9$}}
+    不難發現到，其實只要求到 $dp(n, \le \sqrt{n}\text{ 最大的質數的 rank})$
+
+    而對於 $dp(n, 0)$ 的初始狀態，肯定是 [2, n] 的所有數了，所以是 $dp(n, 0) = 2$
+
+    而這個 dp 其實就是慢慢從第一、第二個 $\ldots$ 質數篩上去，所以對於 $dp(n, j)$ 的轉移，其實可以看成
+
+    $$
+    dp(n, j) = dp(n, j-1) - (dp(\lfloor \frac{n}{p_j} \rfloor, j-1) - (j-1))
+    $$
+
+    從 $dp(n, j-1)$ 轉上來，要把那些 $\text{lpf}(x) = p_j$ 的篩掉，阿那些數量是 $dp(\lfloor \frac{n}{p_j} \rfloor)$\\
+    但因為 dp 的定義，所以需要把 $1 \sim \lfloor \frac{n}{p_j} \rfloor$ 的質數刪掉，那些剛好等於 $j-1$
+\end{frame}
+
+\begin{frame}{\btitle{$1 \le n \le 10^8$ \& $1 \le n \le 10^9$}}
+    最後用 bottom up 的形式
+
+    從 $j = 0$ 慢慢做背包上去算 dp\pause
+
+    $\Large\text{恭喜你，發明了 min25 篩!}$
+\end{frame}
+
+\begin{frame}{\btitle{$1 \le n \le 10^8$ \& $1 \le n \le 10^9$}}
+    然後你開開心心的丟上去，你就會發現 TLE 在 $1 \le n \le 10^9$ 的 case 了!
+
+    因為你每次整數分塊 $O(\sqrt{n})$ 又搭配上 min25 篩的 $O(\frac{n^{\frac{3}{4}}}{\log(n)})$，變成了 $O(n^{\frac{7}{8}})$!
+
+    所以你要改成 top down，然後用unordered\_map 存。
+
+    或者跑一次 bottom up (因為神奇的，你在整數分塊中需要的 $\pi(n)$ 的 $n$ 集合剛好等於 min25 中算過的 $n$ 集合) 就可以 AC 了!
 \end{frame}
