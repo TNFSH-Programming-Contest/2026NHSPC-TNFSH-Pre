@@ -70,7 +70,6 @@ gen 1 2000 8004 row_random exhaustive 1 2 2
 gen 1 1999 8000 row_wave exhaustive
 
 @subtask n2
-@include n1
 gen 2 1 12 encoded exhaustive 0
 gen 2 1 12 encoded exhaustive 1
 gen 2 1 12 encoded exhaustive 2
@@ -246,7 +245,7 @@ gen 200 200 1000 blocks reverse 1
 gen 199 199 1000 double_snake same 795
 
 @subtask full
-@include brute2 straight brute row query_upper all_same_type n2 q10 samples
+@include brute2 straight brute row query_upper all_same_type n2 n1 q10 samples
 gen 2000 2000 200000 dots same 1
 gen 2000 2000 8000 checker cycle
 gen 2000 2000 8000 random reverse 1 1 1

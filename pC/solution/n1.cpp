@@ -1,65 +1,47 @@
-#include <iostream>
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
+using namespace std;
 
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
     int n, m, q;
-    std::cin >> n >> m >> q;
-    std::vector<std::string> grid(n);
-    for (std::string& row : grid) std::cin >> row;
-    if (n != 1) return 0;
+    cin >> n >> m >> q;
 
-    std::vector<int> queries(q);
-    for (int& entry : queries) std::cin >> entry;
+    string s;
+    cin >> s;
 
-    const int perimeter = 2 * (n + m);
-    std::vector<int> answer(perimeter + 1);
-    constexpr int dr[4] = {-1, 0, 1, 0};
-    constexpr int dc[4] = {0, 1, 0, -1};
+    vector<int> ans(2 * m + 3);
 
-    auto trace = [&](int entry) {
-        int row, column, direction;
-        if (entry <= m) {
-            row = 0;
-            column = entry - 1;
-            direction = 2;
-        } else if (entry <= m + n) {
-            row = entry - m - 1;
-            column = m - 1;
-            direction = 3;
-        } else if (entry <= 2 * m + n) {
-            row = n - 1;
-            column = 2 * m + n - entry;
-            direction = 0;
-        } else {
-            row = perimeter - entry;
-            column = 0;
-            direction = 1;
-        }
+    auto top = [&](int c) { return c + 1; };
+    auto bottom = [&](int c) { return m + 1 + m - c; };
 
-        while (0 <= row && row < n && 0 <= column && column < m) {
-            if (grid[row][column] == '/') direction ^= 1;
-            if (grid[row][column] == '\\') direction ^= 3;
-            row += dr[direction];
-            column += dc[direction];
-        }
+    int L = 2 * m + 2;
+    int R = m + 1;
+    int cur = L;
 
-        if (row < 0) return column + 1;
-        if (column >= m) return m + row + 1;
-        if (row >= n) return 2 * m + n - column;
-        return perimeter - row;
+    auto link = [&](int x, int y) {
+        ans[x] = y;
+        ans[y] = x;
     };
 
-    for (int entry : queries) {
-        if (answer[entry] == 0) {
-            const int exit = trace(entry);
-            answer[entry] = exit;
-            answer[exit] = entry;
+    for (int c = 0; c < m; ++c) {
+        if (s[c] == '.') {
+            link(top(c), bottom(c));
+        } else if (s[c] == '/') {
+            link(cur, top(c));
+            cur = bottom(c);
+        } else {
+            link(cur, bottom(c));
+            cur = top(c);
         }
-        std::cout << answer[entry] << '\n';
+    }
+
+    link(cur, R);
+
+    while (q--) {
+        int x;
+        cin >> x;
+        cout << ans[x] << '\n';
     }
 }
-

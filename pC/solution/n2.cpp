@@ -1,65 +1,52 @@
-#include <iostream>
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
+using namespace std;
 
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
     int n, m, q;
-    std::cin >> n >> m >> q;
-    std::vector<std::string> grid(n);
-    for (std::string& row : grid) std::cin >> row;
-    if (n > 2) return 0;
+    cin >> n >> m >> q;
 
-    std::vector<int> queries(q);
-    for (int& entry : queries) std::cin >> entry;
+    vector<string> a(n);
+    for (auto &s : a) cin >> s;
 
-    const int perimeter = 2 * (n + m);
-    std::vector<int> answer(perimeter + 1);
-    constexpr int dr[4] = {-1, 0, 1, 0};
-    constexpr int dc[4] = {0, 1, 0, -1};
+    int dr[4] = {-1, 0, 1, 0};
+    int dc[4] = {0, 1, 0, -1};
 
-    auto trace = [&](int entry) {
-        int row, column, direction;
-        if (entry <= m) {
-            row = 0;
-            column = entry - 1;
-            direction = 2;
-        } else if (entry <= m + n) {
-            row = entry - m - 1;
-            column = m - 1;
-            direction = 3;
-        } else if (entry <= 2 * m + n) {
-            row = n - 1;
-            column = 2 * m + n - entry;
-            direction = 0;
+    while (q--) {
+        int x;
+        cin >> x;
+
+        int r, c, d;
+
+        if (x <= m) {
+            r = 0, c = x - 1, d = 2;
+        } else if (x <= m + 2) {
+            r = x - m - 1, c = m - 1, d = 3;
+        } else if (x <= 2 * m + 2) {
+            r = 1, c = 2 * m + 2 - x, d = 0;
         } else {
-            row = perimeter - entry;
-            column = 0;
-            direction = 1;
+            r = 2 * m + 4 - x, c = 0, d = 1;
         }
 
-        while (0 <= row && row < n && 0 <= column && column < m) {
-            if (grid[row][column] == '/') direction ^= 1;
-            if (grid[row][column] == '\\') direction ^= 3;
-            row += dr[direction];
-            column += dc[direction];
+        while (0 <= r && r < 2 && 0 <= c && c < m) {
+            if (a[r][c] == '/') d ^= 1;
+            else if (a[r][c] == '\\') d ^= 3;
+
+            r += dr[d];
+            c += dc[d];
         }
 
-        if (row < 0) return column + 1;
-        if (column >= m) return m + row + 1;
-        if (row >= n) return 2 * m + n - column;
-        return perimeter - row;
-    };
+        if (r < 0)
+            cout << c + 1;
+        else if (c >= m)
+            cout << m + r + 1;
+        else if (r >= 2)
+            cout << m + 2 + m - c;
+        else
+            cout << 2 * m + 2 + 2 - r;
 
-    for (int entry : queries) {
-        if (answer[entry] == 0) {
-            const int exit = trace(entry);
-            answer[entry] = exit;
-            answer[exit] = entry;
-        }
-        std::cout << answer[entry] << '\n';
+        cout << '\n';
     }
 }
-

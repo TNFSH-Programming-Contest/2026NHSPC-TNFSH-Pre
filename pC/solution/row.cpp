@@ -1,92 +1,105 @@
-#include <iostream>
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
+using namespace std;
 
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
     int n, m, q;
-    std::cin >> n >> m >> q;
+    cin >> n >> m >> q;
 
-    std::vector<int> mirrorColumn(n, -1);
-    std::vector<char> mirrorType(n, '.');
-    for (int row = 0; row < n; ++row) {
-        std::string cells;
-        std::cin >> cells;
-        for (int column = 0; column < m; ++column) {
-            if (cells[column] == '.') continue;
-            if (mirrorColumn[row] != -1) return 0;
-            mirrorColumn[row] = column;
-            mirrorType[row] = cells[column];
+    vector<int> pos(n, -1), prv(n, -1), nxt(n, -1);
+    vector<char> type(n);
+
+    vector<int> first(m, -1), last(m, -1);
+
+    for (int r = 0; r < n; ++r) {
+        string s;
+        cin >> s;
+
+        for (int c = 0; c < m; ++c) {
+            if (s[c] == '.') continue;
+
+            pos[r] = c;
+            type[r] = s[c];
+
+            if (first[c] == -1) first[c] = r;
+
+            if (last[c] != -1) {
+                prv[r] = last[c];
+                nxt[last[c]] = r;
+            }
+
+            last[c] = r;
+            break;
         }
     }
 
-    std::vector<int> first(m, -1), last(m, -1);
-    std::vector<int> previous(n, -1), next(n, -1);
-    for (int row = 0; row < n; ++row) {
-        const int column = mirrorColumn[row];
-        if (column == -1) continue;
-        if (first[column] == -1) first[column] = row;
-        previous[row] = last[column];
-        if (last[column] != -1) next[last[column]] = row;
-        last[column] = row;
-    }
+    auto top = [&](int c) { return c + 1; };
+    auto right = [&](int r) { return m + r + 1; };
+    auto bottom = [&](int c) { return m + n + m - c; };
+    auto left = [&](int r) { return 2 * m + n + n - r; };
 
-    const int perimeter = 2 * (n + m);
-    auto leaveAfterVerticalHit = [&](int row, bool movingDown) {
-        if ((movingDown && mirrorType[row] == '/') ||
-            (!movingDown && mirrorType[row] == '\\')) {
-            return perimeter - row;
-        }
-        return m + row + 1;
+    auto hitUp = [&](int r, int c) {
+        if (r == -1) return top(c);
+        return type[r] == '/' ? right(r) : left(r);
+    };
+
+    auto hitDown = [&](int r, int c) {
+        if (r == -1) return bottom(c);
+        return type[r] == '/' ? left(r) : right(r);
     };
 
     while (q--) {
-        int entry;
-        std::cin >> entry;
+        int x;
+        cin >> x;
 
-        if (entry <= m) {
-            const int column = entry - 1;
-            const int hit = first[column];
-            if (hit == -1) {
-                std::cout << 2 * m + n - column << '\n';
+        if (x <= m) {
+            int c = x - 1;
+            int r = first[c];
+
+            if (r == -1) cout << bottom(c);
+            else cout << (type[r] == '/' ? left(r) : right(r));
+        }
+
+        else if (x <= m + n) {
+            int r = x - m - 1;
+
+            if (pos[r] == -1) {
+                cout << left(r);
             } else {
-                std::cout << leaveAfterVerticalHit(hit, true) << '\n';
+                int c = pos[r];
+
+                if (type[r] == '/')
+                    cout << hitDown(nxt[r], c);
+                else
+                    cout << hitUp(prv[r], c);
             }
-            continue;
         }
 
-        if (entry > m + n && entry <= 2 * m + n) {
-            const int column = 2 * m + n - entry;
-            const int hit = last[column];
-            if (hit == -1) {
-                std::cout << column + 1 << '\n';
+        else if (x <= 2 * m + n) {
+            int c = 2 * m + n - x;
+            int r = last[c];
+
+            if (r == -1) cout << top(c);
+            else cout << (type[r] == '/' ? right(r) : left(r));
+        }
+
+        else {
+            int r = 2 * m + 2 * n - x;
+
+            if (pos[r] == -1) {
+                cout << right(r);
             } else {
-                std::cout << leaveAfterVerticalHit(hit, false) << '\n';
+                int c = pos[r];
+
+                if (type[r] == '/')
+                    cout << hitUp(prv[r], c);
+                else
+                    cout << hitDown(nxt[r], c);
             }
-            continue;
         }
 
-        const bool fromLeft = entry > 2 * m + n;
-        const int row = fromLeft ? perimeter - entry : entry - m - 1;
-        const int column = mirrorColumn[row];
-        if (column == -1) {
-            std::cout << (fromLeft ? m + row + 1 : perimeter - row) << '\n';
-            continue;
-        }
-
-        const bool movingDown =
-            (fromLeft && mirrorType[row] == '\\') ||
-            (!fromLeft && mirrorType[row] == '/');
-        const int secondHit = movingDown ? next[row] : previous[row];
-        if (secondHit != -1) {
-            std::cout << leaveAfterVerticalHit(secondHit, movingDown) << '\n';
-        } else if (movingDown) {
-            std::cout << 2 * m + n - column << '\n';
-        } else {
-            std::cout << column + 1 << '\n';
-        }
+        cout << '\n';
     }
 }
-

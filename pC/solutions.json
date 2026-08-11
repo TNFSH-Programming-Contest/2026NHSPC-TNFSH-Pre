@@ -30,8 +30,6 @@
 	"n2.cpp": {
 		"verdict": "incorrect",
 		"except": {
-			"nm1": "correct",
-			"n1": "correct",
 			"n2": "correct"
 		}
 	},

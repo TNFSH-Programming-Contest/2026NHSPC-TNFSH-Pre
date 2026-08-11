@@ -1,72 +1,94 @@
-#include <iostream>
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
+using namespace std;
 
 int main() {
-    std::ios::sync_with_stdio(false);
-    std::cin.tie(nullptr);
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
     int n, m, q;
-    std::cin >> n >> m >> q;
-    std::vector<std::string> grid(n);
-    for (std::string& row : grid) std::cin >> row;
-    bool hasSlash = false, hasBackslash = false;
-    for (const std::string& row : grid) {
-        for (char cell : row) {
-            hasSlash |= cell == '/';
-            hasBackslash |= cell == '\\';
-        }
+    cin >> n >> m >> q;
+
+    vector<string> a(n);
+    char type = '/';
+
+    for (auto &s : a) {
+        cin >> s;
+        for (char c : s)
+            if (c != '.') type = c;
     }
-    if (hasSlash && hasBackslash) return 0;
 
-    std::vector<int> queries(q);
-    for (int& entry : queries) std::cin >> entry;
+    vector<int> ans(2 * (n + m) + 1);
 
-    const int perimeter = 2 * (n + m);
-    std::vector<int> answer(perimeter + 1);
-    constexpr int dr[4] = {-1, 0, 1, 0};
-    constexpr int dc[4] = {0, 1, 0, -1};
+    auto top = [&](int c) { return c + 1; };
+    auto right = [&](int r) { return m + r + 1; };
+    auto bottom = [&](int c) { return m + n + m - c; };
+    auto left = [&](int r) { return 2 * m + n + n - r; };
 
-    auto trace = [&](int entry) {
-        int row, column, direction;
-        if (entry <= m) {
-            row = 0;
-            column = entry - 1;
-            direction = 2;
-        } else if (entry <= m + n) {
-            row = entry - m - 1;
-            column = m - 1;
-            direction = 3;
-        } else if (entry <= 2 * m + n) {
-            row = n - 1;
-            column = 2 * m + n - entry;
-            direction = 0;
-        } else {
-            row = perimeter - entry;
-            column = 0;
-            direction = 1;
+    if (type == '/') {
+        vector<int> v(m);
+        for (int c = 0; c < m; ++c) v[c] = bottom(c);
+
+        for (int r = n - 1; r >= 0; --r) {
+            int h = left(r);
+
+            for (int c = 0; c < m; ++c)
+                if (a[r][c] == '/') swap(h, v[c]);
+
+            ans[right(r)] = h;
         }
 
-        while (0 <= row && row < n && 0 <= column && column < m) {
-            if (grid[row][column] == '/') direction ^= 1;
-            if (grid[row][column] == '\\') direction ^= 3;
-            row += dr[direction];
-            column += dc[direction];
+        for (int c = 0; c < m; ++c)
+            ans[top(c)] = v[c];
+
+        for (int c = 0; c < m; ++c) v[c] = top(c);
+
+        for (int r = 0; r < n; ++r) {
+            int h = right(r);
+
+            for (int c = m - 1; c >= 0; --c)
+                if (a[r][c] == '/') swap(h, v[c]);
+
+            ans[left(r)] = h;
         }
 
-        if (row < 0) return column + 1;
-        if (column >= m) return m + row + 1;
-        if (row >= n) return 2 * m + n - column;
-        return perimeter - row;
-    };
+        for (int c = 0; c < m; ++c)
+            ans[bottom(c)] = v[c];
+    }
 
-    for (int entry : queries) {
-        if (answer[entry] == 0) {
-            const int exit = trace(entry);
-            answer[entry] = exit;
-            answer[exit] = entry;
+    else {
+        vector<int> v(m);
+        for (int c = 0; c < m; ++c) v[c] = bottom(c);
+
+        for (int r = n - 1; r >= 0; --r) {
+            int h = right(r);
+
+            for (int c = m - 1; c >= 0; --c)
+                if (a[r][c] == '\\') swap(h, v[c]);
+
+            ans[left(r)] = h;
         }
-        std::cout << answer[entry] << '\n';
+
+        for (int c = 0; c < m; ++c)
+            ans[top(c)] = v[c];
+
+        for (int c = 0; c < m; ++c) v[c] = top(c);
+
+        for (int r = 0; r < n; ++r) {
+            int h = left(r);
+
+            for (int c = 0; c < m; ++c)
+                if (a[r][c] == '\\') swap(h, v[c]);
+
+            ans[right(r)] = h;
+        }
+
+        for (int c = 0; c < m; ++c)
+            ans[bottom(c)] = v[c];
+    }
+
+    while (q--) {
+        int x;
+        cin >> x;
+        cout << ans[x] << '\n';
     }
 }
-
