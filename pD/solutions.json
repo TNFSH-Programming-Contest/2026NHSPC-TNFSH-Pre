@@ -2,10 +2,10 @@
 	"correct.cpp": {
 		"verdict": "model_solution"
 	},
-	"print_table.cpp": {
+	"1e6.cpp": {
 		"verdict": "correct",
 		"except": {
-			"full": "incorrect"
+			"full": "time_limit"
 		}
 	},
 	"handwrite.cpp": {

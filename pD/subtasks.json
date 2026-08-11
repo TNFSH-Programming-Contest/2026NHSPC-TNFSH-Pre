@@ -1,6 +1,6 @@
 {
     "global_validators": [
-        "validator.cpp 1000000"
+        "validator.cpp 1000000000"
     ],
     "subtasks": {
         "samples": {
@@ -27,9 +27,15 @@
             "text": "$1 \\le n \\le 10^3$",
             "validators": ["validator.cpp 1000"]
         },
-        "full": {
+        "1e6": {
             "index": 4,
-            "score": 38,
+            "score": 26,
+            "text": "$1 \\le n \\le 10^6$",
+            "validators": ["validator.cpp 1000000"]
+        },
+        "full": {
+            "index": 5,
+            "score": 12,
             "text": "無額外限制",
             "validators": []
         }

@@ -51,7 +51,7 @@ gen 997
 gen 999
 gen 1000
 
-@subtask full
+@subtask 1e6
 @include brute2
 gen 1001
 gen 1024
@@ -71,3 +71,20 @@ gen 999979
 gen 999983
 gen 999999
 gen 1000000
+
+@subtask full
+@include 1e6
+gen 583214907
+gen 147836251
+gen 926471803
+gen 314692578
+gen 751028436
+gen 209573164
+gen 864315729
+gen 438927051
+gen 672184395
+gen 391506842
+gen 999999979
+gen 999999983
+gen 999999999
+gen 1000000000
