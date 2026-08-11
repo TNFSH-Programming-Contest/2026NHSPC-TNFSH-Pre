@@ -2,42 +2,232 @@
 0-01	  2	manual example-1.in
 0-02	  3	manual example-2.in
 0-03	  4	manual example-3.in
-1-01	  7	gen 1 1 4 dots cycle
-1-02	  8	gen 1 1 4 slash cycle
-1-03	  9	gen 1 1 4 backslash cycle
-1-04	 10	gen 1 5 10 checker cycle
-1-05	 11	gen 5 1 10 checker reverse
-1-06	 12	gen 2 2 8 checker cycle
-1-07	 13	gen 3 4 10 random random 1 1 1
-1-08	 14	gen 4 3 10 random corners 3 2 2
-1-09	 15	gen 10 10 10 blocks corners 2
-1-10	 16	gen 9 10 10 random cycle 4 3 3
-2-01	 19	gen 1 1 4 dots cycle
-2-02	 20	gen 1 1000 100 dots cycle
-2-03	 21	gen 1000 1 100 dots reverse
-2-04	 22	gen 2 3 10 dots corners
-2-05	 23	gen 1000 1000 100 dots random
-2-06	 24	gen 999 997 100 dots reverse
-2-07	 25	gen 512 1000 100 dots same 1
-2-08	 26	gen 1000 777 100 dots corners
-3-01	 29	gen 1 200 402 checker cycle
-3-02	 30	gen 200 1 402 checker reverse
-3-03	 31	gen 200 200 800 checker cycle
-3-04	 32	gen 200 200 1000 random random 1 1 1
-3-05	 33	gen 200 200 1000 slash cycle
-3-06	 34	gen 200 200 1000 backslash reverse
-3-07	 35	gen 199 200 1000 blocks corners 7
-3-08	 36	gen 200 199 1000 random cycle 5 3 2
-3-09	 37	gen 127 193 640 random random 1 4 4
-3-10	 38	gen 200 200 1000 blocks reverse 1
-3-11	 39	gen 199 199 1000 double_snake same 795
-4-01	 42	gen 2000 2000 200000 dots same 1
-4-02	 43	gen 2000 2000 8000 checker cycle
-4-03	 44	gen 2000 2000 8000 random reverse 1 1 1
-4-04	 45	gen 2000 1999 200000 random random 4 3 3
-4-05	 46	gen 1999 2000 200000 blocks cycle 17
-4-06	 47	gen 1 2000 200000 checker same 1
-4-07	 48	gen 2000 1 200000 checker random
-4-08	 49	gen 1379 1999 200000 random corners 6 2 2
-4-09	 50	gen 2000 2000 200000 slash random
-4-10	 51	gen 1999 1999 200000 double_snake same 7995
+1-01	  7	manual nm1-1.in
+1-02	  8	manual nm1-2.in
+1-03	  9	manual nm1-3.in
+2-01	 13	gen 2000 2000 10 dots cycle
+2-02	 14	gen 2000 2000 10 slash reverse
+2-03	 15	gen 2000 2000 10 backslash random
+2-04	 16	gen 2000 2000 10 checker corners
+2-05	 17	gen 2000 1999 10 random random 1 1 1
+2-06	 18	gen 1999 2000 10 random same 4 3 3 1
+2-07	 19	gen 1379 1999 10 blocks reverse 17
+2-08	 20	gen 1999 1999 10 double_snake same 7995
+2-09	 21	gen 2000 2000 10 row_random random 1 1 1
+2-10	 22	gen 1999 2000 10 row_wave corners
+3-01	 26	gen 1 2 12 encoded exhaustive 0
+3-02	 27	gen 1 2 12 encoded exhaustive 1
+3-03	 28	gen 1 2 12 encoded exhaustive 2
+3-04	 29	gen 1 2 12 encoded exhaustive 3
+3-05	 30	gen 1 2 12 encoded exhaustive 4
+3-06	 31	gen 1 2 12 encoded exhaustive 5
+3-07	 32	gen 1 2 12 encoded exhaustive 6
+3-08	 33	gen 1 2 12 encoded exhaustive 7
+3-09	 34	gen 1 2 12 encoded exhaustive 8
+3-10	 35	gen 1 3 16 encoded exhaustive 0
+3-11	 36	gen 1 3 16 encoded exhaustive 1
+3-12	 37	gen 1 3 16 encoded exhaustive 2
+3-13	 38	gen 1 3 16 encoded exhaustive 3
+3-14	 39	gen 1 3 16 encoded exhaustive 4
+3-15	 40	gen 1 3 16 encoded exhaustive 5
+3-16	 41	gen 1 3 16 encoded exhaustive 6
+3-17	 42	gen 1 3 16 encoded exhaustive 7
+3-18	 43	gen 1 3 16 encoded exhaustive 8
+3-19	 44	gen 1 3 16 encoded exhaustive 9
+3-20	 45	gen 1 3 16 encoded exhaustive 10
+3-21	 46	gen 1 3 16 encoded exhaustive 11
+3-22	 47	gen 1 3 16 encoded exhaustive 12
+3-23	 48	gen 1 3 16 encoded exhaustive 13
+3-24	 49	gen 1 3 16 encoded exhaustive 14
+3-25	 50	gen 1 3 16 encoded exhaustive 15
+3-26	 51	gen 1 3 16 encoded exhaustive 16
+3-27	 52	gen 1 3 16 encoded exhaustive 17
+3-28	 53	gen 1 3 16 encoded exhaustive 18
+3-29	 54	gen 1 3 16 encoded exhaustive 19
+3-30	 55	gen 1 3 16 encoded exhaustive 20
+3-31	 56	gen 1 3 16 encoded exhaustive 21
+3-32	 57	gen 1 3 16 encoded exhaustive 22
+3-33	 58	gen 1 3 16 encoded exhaustive 23
+3-34	 59	gen 1 3 16 encoded exhaustive 24
+3-35	 60	gen 1 3 16 encoded exhaustive 25
+3-36	 61	gen 1 3 16 encoded exhaustive 26
+3-37	 62	gen 1 2000 8004 dots exhaustive
+3-38	 63	gen 1 2000 8004 slash exhaustive
+3-39	 64	gen 1 2000 8004 backslash exhaustive
+3-40	 65	gen 1 1999 8000 checker exhaustive
+3-41	 66	gen 1 2000 8004 random exhaustive 1 1 1
+3-42	 67	gen 1 1997 7992 random exhaustive 20 1 1
+3-43	 68	gen 1 2000 8004 blocks exhaustive 17
+3-44	 69	gen 1 2000 8004 row_random exhaustive 1 2 2
+3-45	 70	gen 1 1999 8000 row_wave exhaustive
+4-01	 74	gen 2 1 12 encoded exhaustive 0
+4-02	 75	gen 2 1 12 encoded exhaustive 1
+4-03	 76	gen 2 1 12 encoded exhaustive 2
+4-04	 77	gen 2 1 12 encoded exhaustive 3
+4-05	 78	gen 2 1 12 encoded exhaustive 4
+4-06	 79	gen 2 1 12 encoded exhaustive 5
+4-07	 80	gen 2 1 12 encoded exhaustive 6
+4-08	 81	gen 2 1 12 encoded exhaustive 7
+4-09	 82	gen 2 1 12 encoded exhaustive 8
+4-10	 83	gen 2 2 16 encoded exhaustive 0
+4-11	 84	gen 2 2 16 encoded exhaustive 1
+4-12	 85	gen 2 2 16 encoded exhaustive 2
+4-13	 86	gen 2 2 16 encoded exhaustive 3
+4-14	 87	gen 2 2 16 encoded exhaustive 4
+4-15	 88	gen 2 2 16 encoded exhaustive 5
+4-16	 89	gen 2 2 16 encoded exhaustive 6
+4-17	 90	gen 2 2 16 encoded exhaustive 7
+4-18	 91	gen 2 2 16 encoded exhaustive 8
+4-19	 92	gen 2 2 16 encoded exhaustive 9
+4-20	 93	gen 2 2 16 encoded exhaustive 10
+4-21	 94	gen 2 2 16 encoded exhaustive 11
+4-22	 95	gen 2 2 16 encoded exhaustive 12
+4-23	 96	gen 2 2 16 encoded exhaustive 13
+4-24	 97	gen 2 2 16 encoded exhaustive 14
+4-25	 98	gen 2 2 16 encoded exhaustive 15
+4-26	 99	gen 2 2 16 encoded exhaustive 16
+4-27	100	gen 2 2 16 encoded exhaustive 17
+4-28	101	gen 2 2 16 encoded exhaustive 18
+4-29	102	gen 2 2 16 encoded exhaustive 19
+4-30	103	gen 2 2 16 encoded exhaustive 20
+4-31	104	gen 2 2 16 encoded exhaustive 21
+4-32	105	gen 2 2 16 encoded exhaustive 22
+4-33	106	gen 2 2 16 encoded exhaustive 23
+4-34	107	gen 2 2 16 encoded exhaustive 24
+4-35	108	gen 2 2 16 encoded exhaustive 25
+4-36	109	gen 2 2 16 encoded exhaustive 26
+4-37	110	gen 2 2 16 encoded exhaustive 27
+4-38	111	gen 2 2 16 encoded exhaustive 28
+4-39	112	gen 2 2 16 encoded exhaustive 29
+4-40	113	gen 2 2 16 encoded exhaustive 30
+4-41	114	gen 2 2 16 encoded exhaustive 31
+4-42	115	gen 2 2 16 encoded exhaustive 32
+4-43	116	gen 2 2 16 encoded exhaustive 33
+4-44	117	gen 2 2 16 encoded exhaustive 34
+4-45	118	gen 2 2 16 encoded exhaustive 35
+4-46	119	gen 2 2 16 encoded exhaustive 36
+4-47	120	gen 2 2 16 encoded exhaustive 37
+4-48	121	gen 2 2 16 encoded exhaustive 38
+4-49	122	gen 2 2 16 encoded exhaustive 39
+4-50	123	gen 2 2 16 encoded exhaustive 40
+4-51	124	gen 2 2 16 encoded exhaustive 41
+4-52	125	gen 2 2 16 encoded exhaustive 42
+4-53	126	gen 2 2 16 encoded exhaustive 43
+4-54	127	gen 2 2 16 encoded exhaustive 44
+4-55	128	gen 2 2 16 encoded exhaustive 45
+4-56	129	gen 2 2 16 encoded exhaustive 46
+4-57	130	gen 2 2 16 encoded exhaustive 47
+4-58	131	gen 2 2 16 encoded exhaustive 48
+4-59	132	gen 2 2 16 encoded exhaustive 49
+4-60	133	gen 2 2 16 encoded exhaustive 50
+4-61	134	gen 2 2 16 encoded exhaustive 51
+4-62	135	gen 2 2 16 encoded exhaustive 52
+4-63	136	gen 2 2 16 encoded exhaustive 53
+4-64	137	gen 2 2 16 encoded exhaustive 54
+4-65	138	gen 2 2 16 encoded exhaustive 55
+4-66	139	gen 2 2 16 encoded exhaustive 56
+4-67	140	gen 2 2 16 encoded exhaustive 57
+4-68	141	gen 2 2 16 encoded exhaustive 58
+4-69	142	gen 2 2 16 encoded exhaustive 59
+4-70	143	gen 2 2 16 encoded exhaustive 60
+4-71	144	gen 2 2 16 encoded exhaustive 61
+4-72	145	gen 2 2 16 encoded exhaustive 62
+4-73	146	gen 2 2 16 encoded exhaustive 63
+4-74	147	gen 2 2 16 encoded exhaustive 64
+4-75	148	gen 2 2 16 encoded exhaustive 65
+4-76	149	gen 2 2 16 encoded exhaustive 66
+4-77	150	gen 2 2 16 encoded exhaustive 67
+4-78	151	gen 2 2 16 encoded exhaustive 68
+4-79	152	gen 2 2 16 encoded exhaustive 69
+4-80	153	gen 2 2 16 encoded exhaustive 70
+4-81	154	gen 2 2 16 encoded exhaustive 71
+4-82	155	gen 2 2 16 encoded exhaustive 72
+4-83	156	gen 2 2 16 encoded exhaustive 73
+4-84	157	gen 2 2 16 encoded exhaustive 74
+4-85	158	gen 2 2 16 encoded exhaustive 75
+4-86	159	gen 2 2 16 encoded exhaustive 76
+4-87	160	gen 2 2 16 encoded exhaustive 77
+4-88	161	gen 2 2 16 encoded exhaustive 78
+4-89	162	gen 2 2 16 encoded exhaustive 79
+4-90	163	gen 2 2 16 encoded exhaustive 80
+4-91	164	gen 2 2000 8008 dots exhaustive
+4-92	165	gen 2 2000 8008 slash exhaustive
+4-93	166	gen 2 2000 8008 backslash exhaustive
+4-94	167	gen 2 1999 8004 checker exhaustive
+4-95	168	gen 2 2000 8008 random exhaustive 1 1 1
+4-96	169	gen 2 1997 7996 random exhaustive 20 1 1
+4-97	170	gen 2 2000 8008 blocks exhaustive 17
+4-98	171	gen 2 2000 8008 row_random exhaustive 1 2 2
+4-99	172	gen 2 1999 8004 row_wave exhaustive
+5-01	175	gen 1 1 8 dots exhaustive
+5-02	176	gen 1 2000 8004 slash exhaustive
+5-03	177	gen 2000 1 8004 backslash exhaustive
+5-04	178	gen 2000 2000 16000 dots exhaustive
+5-05	179	gen 2000 2000 16000 slash exhaustive
+5-06	180	gen 2000 2000 16000 backslash exhaustive
+5-07	181	gen 1999 2000 15996 random exhaustive 7 3 0
+5-08	182	gen 2000 1999 15996 random exhaustive 7 0 3
+5-09	183	gen 1379 1999 13512 random exhaustive 99 1 0
+5-10	184	gen 1999 1379 13512 random exhaustive 99 0 1
+6-01	187	gen 1 1 2 dots upper_exhaustive
+6-02	188	gen 2000 2000 4000 dots upper_exhaustive
+6-03	189	gen 2000 2000 4000 slash upper_exhaustive
+6-04	190	gen 2000 2000 4000 backslash upper_exhaustive
+6-05	191	gen 2000 2000 4000 checker upper_exhaustive
+6-06	192	gen 2000 1999 3998 random upper_exhaustive 1 1 1
+6-07	193	gen 1999 2000 4000 random upper_exhaustive 4 3 3
+6-08	194	gen 1379 1999 3998 blocks upper_exhaustive 17
+6-09	195	gen 1999 1999 3998 double_snake upper_exhaustive
+6-10	196	gen 2000 2000 4000 row_random upper_exhaustive 1 1 1
+6-11	197	gen 1999 2000 4000 row_wave upper_exhaustive
+7-01	200	gen 1 1 8 dots exhaustive
+7-02	201	gen 1 2000 8004 row_random exhaustive 0 1 1
+7-03	202	gen 2000 1 8004 row_random exhaustive 1 1 1
+7-04	203	gen 2000 2000 16000 row_random exhaustive 10 1 1
+7-05	204	gen 2000 2000 16000 row_random exhaustive 1 10 10
+7-06	205	gen 1999 2000 15996 row_random exhaustive 0 1 0
+7-07	206	gen 2000 1999 15996 row_random exhaustive 0 0 1
+7-08	207	gen 2000 2000 16000 row_wave exhaustive
+7-09	208	gen 1999 1999 15992 row_wave exhaustive
+7-10	209	gen 2000 2000 16000 row_column exhaustive 1 alternate
+7-11	210	gen 2000 2000 16000 row_column exhaustive 1000 slash
+7-12	211	gen 2000 2000 16000 row_column exhaustive 2000 backslash
+8-01	214	gen 1 1 4 dots cycle
+8-02	215	gen 1 1 4 slash cycle
+8-03	216	gen 1 1 4 backslash cycle
+8-04	217	gen 1 5 10 checker cycle
+8-05	218	gen 5 1 10 checker reverse
+8-06	219	gen 2 2 8 checker cycle
+8-07	220	gen 3 4 10 random random 1 1 1
+8-08	221	gen 4 3 10 random corners 3 2 2
+8-09	222	gen 10 10 10 blocks corners 2
+8-10	223	gen 9 10 10 random cycle 4 3 3
+9-01	226	gen 1 1 4 dots cycle
+9-02	227	gen 1 1000 100 dots cycle
+9-03	228	gen 1000 1 100 dots reverse
+9-04	229	gen 2 3 10 dots corners
+9-05	230	gen 1000 1000 100 dots random
+9-06	231	gen 999 997 100 dots reverse
+9-07	232	gen 512 1000 100 dots same 1
+9-08	233	gen 1000 777 100 dots corners
+10-01	236	gen 1 200 402 checker cycle
+10-02	237	gen 200 1 402 checker reverse
+10-03	238	gen 200 200 800 checker cycle
+10-04	239	gen 200 200 1000 random random 1 1 1
+10-05	240	gen 200 200 1000 slash cycle
+10-06	241	gen 200 200 1000 backslash reverse
+10-07	242	gen 199 200 1000 blocks corners 7
+10-08	243	gen 200 199 1000 random cycle 5 3 2
+10-09	244	gen 127 193 640 random random 1 4 4
+10-10	245	gen 200 200 1000 blocks reverse 1
+10-11	246	gen 199 199 1000 double_snake same 795
+11-01	250	gen 2000 2000 200000 dots same 1
+11-02	251	gen 2000 2000 8000 checker cycle
+11-03	252	gen 2000 2000 8000 random reverse 1 1 1
+11-04	253	gen 2000 1999 200000 random random 4 3 3
+11-05	254	gen 1999 2000 200000 blocks cycle 17
+11-06	255	gen 1 2000 200000 checker same 1
+11-07	256	gen 2000 1 200000 checker random
+11-08	257	gen 1379 1999 200000 random corners 6 2 2
+11-09	258	gen 2000 2000 200000 slash random
+11-10	259	gen 1999 1999 200000 double_snake same 7995
