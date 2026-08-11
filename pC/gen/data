@@ -246,7 +246,7 @@ gen 200 200 1000 blocks reverse 1
 gen 199 199 1000 double_snake same 795
 
 @subtask full
-@include brute2, straight, brute, row, query_upper, all_same_type, n2, q10, samples
+@include brute2 straight brute row query_upper all_same_type n2 q10 samples
 gen 2000 2000 200000 dots same 1
 gen 2000 2000 8000 checker cycle
 gen 2000 2000 8000 random reverse 1 1 1
