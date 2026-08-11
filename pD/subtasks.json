@@ -7,7 +7,7 @@
             "index": 0,
             "score": 0,
             "text": "範例輸入輸出",
-            "validators": ["validator.cpp 1000000"]
+            "validators": ["validator.cpp 1000000000"]
         },
         "handwrite": {
             "index": 1,

@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
     ensuref(argc >= 2, "usage: gen n");
 
     const int n = parseArgument<int>(argv[1], "n");
-    ensuref(1 <= n && n <= 1000000, "n must be in [1, 1000000]");
+    ensuref(1 <= n && n <= 1000000000, "n must be in [1, 1000000000]");
 
     std::cout << n << '\n';
 }
