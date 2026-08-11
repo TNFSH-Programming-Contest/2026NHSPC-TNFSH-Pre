@@ -71,6 +71,79 @@ Subtask summary
 
 Finished.
 
+blame_ac.cpp
+solution            compile[WARN]
+0-01                sol[OK]    0.024     check[OK]        1  [Correct]               
+1-01                sol[OK]    0.040     check[OK]        1  [Correct]               
+1-02                sol[OK]    0.029     check[OK]        1  [Correct]               
+1-03                sol[OK]    0.022     check[OK]        1  [Correct]               
+1-04                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-05                sol[OK]    0.024     check[OK]        1  [Correct]               
+1-06                sol[OK]    0.024     check[OK]        1  [Correct]               
+1-07                sol[OK]    0.024     check[OK]        1  [Correct]               
+1-08                sol[OK]    0.025     check[OK]        1  [Correct]               
+1-09                sol[OK]    0.024     check[OK]        1  [Correct]               
+1-10                sol[OK]    0.024     check[OK]        1  [Correct]               
+1-11                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-12                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-13                sol[OK]    0.024     check[OK]        1  [Correct]               
+1-14                sol[OK]    0.023     check[OK]        1  [Correct]               
+1-15                sol[OK]    0.024     check[OK]        1  [Correct]               
+2-01                sol[OK]    0.035     check[OK]        1  [Correct]               
+2-02                sol[OK]    0.027     check[OK]        1  [Correct]               
+2-03                sol[OK]    0.029     check[OK]        1  [Correct]               
+2-04                sol[OK]    0.035     check[OK]        1  [Correct]               
+2-05                sol[OK]    0.073     check[OK]        1  [Correct]               
+2-06                sol[OK]    0.072     check[OK]        1  [Correct]               
+2-07                sol[OK]    0.028     check[OK]        1  [Correct]               
+2-08                sol[OK]    0.025     check[OK]        1  [Correct]               
+2-09                sol[OK]    0.023     check[OK]        1  [Correct]               
+2-10                sol[OK]    0.023     check[OK]        1  [Correct]               
+3-01                sol[OK]    0.079     check[OK]        1  [Correct]               
+3-02                sol[OK]    0.089     check[OK]        1  [Correct]               
+3-03                sol[OK]    0.111     check[OK]        1  [Correct]               
+3-04                sol[OK]    0.123     check[OK]        1  [Correct]               
+3-05                sol[OK]    0.154     check[OK]        1  [Correct]               
+3-06                sol[OK]    0.167     check[OK]        1  [Correct]               
+3-07                sol[OK]    0.095     check[OK]        1  [Correct]               
+3-08                sol[OK]    0.096     check[OK]        1  [Correct]               
+3-09                sol[OK]    0.097     check[OK]        1  [Correct]               
+3-10                sol[OK]    0.120     check[OK]        1  [Correct]               
+3-11                sol[OK]    0.090     check[OK]        1  [Correct]               
+3-12                sol[OK]    0.088     check[OK]        1  [Correct]               
+3-13                sol[OK]    0.033     check[OK]        1  [Correct]               
+3-14                sol[OK]    0.029     check[OK]        1  [Correct]               
+3-15                sol[OK]    0.029     check[OK]        1  [Correct]               
+4-01                sol[OK]    0.151     check[OK]        1  [Correct]               
+4-02                sol[OK]    0.195     check[OK]        1  [Correct]               
+4-03                sol[OK]    0.352     check[OK]        1  [Correct]               
+4-04                sol[OK]    0.354     check[OK]        1  [Correct]               
+4-05                sol[OK]    0.506     check[OK]        1  [Correct]               
+4-06                sol[OK]    0.714     check[OK]        1  [Correct]               
+4-07                sol[OK]    0.727     check[OK]        1  [Correct]               
+4-08                sol[OK]    0.531     check[OK]        1  [Correct]               
+4-09                sol[OK]    0.523     check[OK]        1  [Correct]               
+4-10                sol[OK]    0.456     check[OK]        1  [Correct]               
+4-11                sol[OK]    0.535     check[OK]        1  [Correct]               
+4-12                sol[OK]    0.525     check[OK]        1  [Correct]               
+4-13                sol[OK]    0.542     check[OK]        1  [Correct]               
+4-14                sol[OK]    0.527     check[OK]        1  [Correct]               
+4-15                sol[OK]    0.452     check[OK]        1  [Correct]               
+4-16                sol[OK]    0.174     check[OK]        1  [Correct]               
+4-17                sol[OK]    0.088     check[OK]        1  [Correct]               
+4-18                sol[OK]    0.105     check[OK]        1  [Correct]               
+4-19                sol[OK]    0.096     check[OK]        1  [Correct]               
+samples             [1/1 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
+range-dp            [15/15 tests]  [Correct]             [27/27 pts]    [match with expected]             1-01
+cubic               [10/10 tests]  [Correct]             [18/18 pts]    [match with expected]             2-01
+knuth               [15/15 tests]  [Correct]             [41/41 pts]    [match with expected]             3-01
+full                [19/19 tests]  [Correct]             [14/14 pts]    [match with expected]             4-01
+
+Subtask summary
+100/100 pts
+
+Finished.
+
 encode_values.cpp
 solution            compile[OK]
 0-01                sol[OK]    0.021     check[OK]        1  [Correct]               
@@ -1384,4 +1457,3 @@ Subtask summary
 100/100 pts
 
 Finished.
-
