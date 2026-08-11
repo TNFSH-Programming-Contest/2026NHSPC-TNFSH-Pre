@@ -2,6 +2,9 @@
 	"correct.cpp": {
 		"verdict": "model_solution"
 	},
+    "blame_ac.cpp": {
+        "verdict": "correct"
+    },
 	"n.cpp": {
 		"verdict": "correct"
 	},

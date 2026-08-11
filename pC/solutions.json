@@ -2,6 +2,9 @@
 	"correct.cpp": {
 		"verdict": "model_solution"
 	},
+    "blame_ac.cpp": {
+        "verdict": "correct"
+    },
 	"simulate_each.cpp": {
 		"verdict": "time_limit",
 		"except": {

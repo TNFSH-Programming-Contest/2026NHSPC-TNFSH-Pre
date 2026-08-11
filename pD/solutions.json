@@ -2,6 +2,12 @@
 	"correct.cpp": {
 		"verdict": "model_solution"
 	},
+    "blame_1e6.cpp": {
+		"verdict": "correct",
+		"except": {
+			"full": "time_limit"
+		}
+    },
 	"1e6.cpp": {
 		"verdict": "correct",
 		"except": {
