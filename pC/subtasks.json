@@ -30,7 +30,7 @@
         "n2": {
             "index": 4,
             "score": 7,
-            "text": "$1 \\le N \\le 2$",
+            "text": "$N=2$",
             "validators": ["validator.cpp 2 2000 200000 0 0"]
         },
         "all_same_type": {
