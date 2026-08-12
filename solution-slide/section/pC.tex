@@ -1,2 +1,30 @@
-\begin{frame}{}
+\setsubtitle{author : blame}
+\section{C. 撞球}
+
+\begin{frame}{\btitle{題目敘述}}
+    給一張 $N \times M$ 的地圖 (會有外框)，每格會是空格或是`/`或`\`
+
+    給 Q 筆詢問，問從 $a$ 的外框射進去最後會到哪一個外框
+\end{frame}
+
+\begin{frame}{\btitle{子任務}}
+    \begin{enumerate}
+        \item{$NM = 1$}
+        \item{$1 \le Q \le 10$}
+        \item{$N = 2$}
+        \item{$N = 2$}
+        \item{只會有 `.` 與 `/` 或 `\`}
+        \item{所有詢問都從上方進入}
+        \item{每一列最多有一個 `\` 或 `/`}
+        \item{$1 \le N, M \le 10, 1 \le Q \le 10$}
+        \item{$1 \le N, M \le 1000, 1 \le Q \le 100$，輸入的字元僅包含 `.`}
+        \item{$1 \le N, M \le 200, 1 \le Q \le 1000$}
+        \item{無額外限制}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{\btitle{$NM = 1$}}
+    一個格子，直接枚舉所有答案就好
+
+    做不出來可以檢討自己了
 \end{frame}
