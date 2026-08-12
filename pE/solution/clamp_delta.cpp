@@ -7,6 +7,7 @@
 #include <vector>
 
 namespace {
+using Matrix = std::array<std::array<long long, 2000>, 2000>;
 
 int decodedN;
 std::vector<int> decodedCuts;
@@ -24,9 +25,8 @@ long long gcd(long long a, long long b) {
     return a;
 }
 
-std::vector<int> computeCuts(
+std::vector<int> computeCuts(const int n,
     const std::vector<std::vector<long long>>& w) {
-    const int n = static_cast<int>(w.size());
     std::vector<long long> dp(static_cast<std::size_t>(n) * n);
     std::vector<int> opt(static_cast<std::size_t>(n) * n);
     for (int i = 0; i < n; ++i) opt[id(n, i, i)] = i;
@@ -68,7 +68,7 @@ std::string encodeCuts(int n, const std::vector<int>& cuts) {
 
 }  // namespace
 
-std::string encode(int n, std::vector<std::vector<long long>> w) {
+std::string encode(int n, const Matrix& w) {
     long long unit = 0;
     for (int l = 0; l < n; ++l) {
         for (int r = l + 1; r < n; ++r) unit = gcd(unit, w[l][r]);
@@ -96,10 +96,10 @@ std::string encode(int n, std::vector<std::vector<long long>> w) {
             approximate[l][r] = approximate[l][r - 1] + extension;
         }
     }
-    return encodeCuts(n, computeCuts(approximate));
+    return encodeCuts(n, computeCuts(n, approximate));
 }
 
-void decode(int n, std::string s) {
+void decode(int n, const std::string& s) {
     decodedN = n;
     decodedCuts.assign(static_cast<std::size_t>(n) * n, 0);
     std::size_t position = 0;

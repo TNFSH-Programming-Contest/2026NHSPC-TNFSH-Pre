@@ -5,17 +5,18 @@
 #include <vector>
 
 namespace {
+using Matrix = std::array<std::array<long long, 2000>, 2000>;
 
-std::vector<std::vector<long long>> supposedlyShared;
+Matrix supposedlyShared;
 
 }  // namespace
 
-std::string encode(int, std::vector<std::vector<long long>> w) {
+std::string encode(int, const Matrix& w) {
     supposedlyShared = std::move(w);
     return "";
 }
 
-void decode(int, std::string) {
+void decode(int, const std::string&) {
     // Incorrectly assumes encode changed this process's global vector.
 }
 

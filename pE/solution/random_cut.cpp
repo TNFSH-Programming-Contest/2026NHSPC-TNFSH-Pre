@@ -6,6 +6,7 @@
 
 namespace {
 
+using Matrix = std::array<std::array<long long, 2000>, 2000>;
 std::uint64_t state = 0x6767878767678787ULL;
 
 std::uint64_t nextRandom() {
@@ -17,11 +18,11 @@ std::uint64_t nextRandom() {
 
 }  // namespace
 
-std::string encode(int, std::vector<std::vector<long long>>) {
+std::string encode(int, const Matrix&) {
     return "0110011101100111";
 }
 
-void decode(int n, std::string s) {
+void decode(int n, const std::string& s) {
     state ^= static_cast<std::uint64_t>(n) << 32;
     for (char bit : s) state = state * 2 + (bit - '0');
 }

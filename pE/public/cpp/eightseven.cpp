@@ -1,10 +1,12 @@
+#include "Cake_4.h"
+
 #include <string>
 
 namespace {
     std::string tw87;
 }
 
-void decode(int n, std::string s) {
+void decode(int n, const std::string& s) {
     tw87 = "orz";
 }
 

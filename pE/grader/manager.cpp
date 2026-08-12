@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <array>
 #include <csignal>
 #include <cstdlib>
 #include <fstream>
@@ -11,6 +12,8 @@
 namespace {
 
 constexpr std::size_t BIT_LIMIT = 4000000;
+using Matrix = std::array<std::array<long long, 2000>, 2000>;
+Matrix w;
 std::ofstream managerLog;
 
 [[noreturn]] void finish(double score, const std::string& message) {
@@ -40,7 +43,7 @@ struct OptimalCuts {
     std::vector<long long> dp;
     std::vector<int> opt;
 
-    explicit OptimalCuts(const std::vector<std::vector<long long>>& w)
+    explicit OptimalCuts(const Matrix& w)
         : n(static_cast<int>(w.size())),
           dp(static_cast<std::size_t>(n) * n),
           opt(static_cast<std::size_t>(n) * n) {
@@ -102,8 +105,6 @@ int main(int argc, char* argv[]) {
     if (!(std::cin >> n >> q >> scale)) {
         wrong("Judge Error: invalid testcase header");
     }
-    std::vector<std::vector<long long>> w(
-        n, std::vector<long long>(n));
     std::vector<long long> delta(n);
     for (int r = 1; r < n; ++r) {
         for (int l = 0; l < r; ++l) {

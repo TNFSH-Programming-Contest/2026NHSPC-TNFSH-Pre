@@ -31,13 +31,14 @@ $\color{red}\text{本題為互動題，需要實作兩個檔案。}$
 第一個檔案為 `sixseven.cpp`，你必須在該檔案內實作 `encode` 這個函式:
 
 ```cpp
-std::string encode(int n, std::vector<std::vector<long long> > w);
+std::string encode(int n, const std::array<std::array<long long, 2000>, 2000>& w);
 ```
 
  - `n` 是蛋糕的總段數。
- - `w` 是一個 $n\times n$ 的二維陣列。
+ - `w` 是一個 $2000 \times 2000$ 的二維陣列。
  - 對所有 $0\le l\le r<n$，`w[l][r]` 等於 $w_{l,r}$。
  - 當 $l>r$ 時，`w[l][r]` 的內容沒有意義，請勿使用。
+ - 對於所有 $n \le i,\ j < 2000$ 的 `w[i][j]`，其內容沒有意義，請勿使用。
  - 你必須回傳一個只包含字元 `0` 與 `1`、長度不超過 $B$ 的字串。
 
 ### 巴漆
@@ -45,7 +46,7 @@ std::string encode(int n, std::vector<std::vector<long long> > w);
 第二個檔案為 `eightseven.cpp`，你必須在該檔案內實作 `decode` 與 `query` 兩個函式:
 
 ```cpp
-void decode(int n, std::string S);
+void decode(int n, const std::string& S);
 ```
 
  - `n` 是蛋糕的總段數。

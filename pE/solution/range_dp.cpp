@@ -7,6 +7,7 @@
 #include <vector>
 
 namespace {
+using Matrix = std::array<std::array<long long, 2000>, 2000>;
 
 int decodedN;
 std::vector<int> decodedCuts;
@@ -17,7 +18,7 @@ std::size_t id(int n, int l, int r) {
 
 }  // namespace
 
-std::string encode(int n, std::vector<std::vector<long long>> w) {
+std::string encode(int n, const Matrix& w) {
     std::vector<long long> dp(static_cast<std::size_t>(n) * n);
     std::vector<int> opt(static_cast<std::size_t>(n) * n);
     for (int i = 0; i < n; ++i) {
@@ -51,7 +52,7 @@ std::string encode(int n, std::vector<std::vector<long long>> w) {
     return result;
 }
 
-void decode(int n, std::string s) {
+void decode(int n, const std::string& s) {
     decodedN = n;
     decodedCuts.assign(static_cast<std::size_t>(n) * n, 0);
     std::size_t position = 0;

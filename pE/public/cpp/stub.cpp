@@ -2,25 +2,23 @@
 
 #include <iostream>
 #include <string>
-#include <utility>
-#include <vector>
 
 void wrong(const std::string s) {
     std::cerr << "Wrong Answer: " << s << '\n';
     exit(0);
 }
 
+std::array<std::array<long long, 2000>, 2000> w;
+
 int main() {
     const int B = 4e6;
     int n, q;
     std::cin >> n >> q;
-    std::vector<std::vector<long long>> w(
-        n, std::vector<long long>(n));
     for (int l = 0; l < n; l++) {
         for (int r = l; r < n; r++) std::cin >> w[l][r];
     }
 
-    const std::string encoded = encode(n, std::move(w));
+    const std::string encoded = encode(n, w);
     if (encoded.size() > B) {
         wrong("Length limit exceeded");
     }

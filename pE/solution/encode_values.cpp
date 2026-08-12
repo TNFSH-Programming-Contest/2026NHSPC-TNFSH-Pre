@@ -7,6 +7,7 @@
 #include <vector>
 
 namespace {
+using Matrix = std::array<std::array<long long, 2000>, 2000>;
 
 constexpr int DELTA_BITS = 4;
 int decodedN;
@@ -26,8 +27,7 @@ long long gcd(long long a, long long b) {
 }
 
 std::vector<int> computeCuts(
-    const std::vector<std::vector<long long>>& w) {
-    const int n = static_cast<int>(w.size());
+    const int n, const std::vector<std::vector<long long>>& w) {
     std::vector<long long> dp(static_cast<std::size_t>(n) * n);
     std::vector<int> opt(static_cast<std::size_t>(n) * n);
     for (int i = 0; i < n; ++i) opt[id(n, i, i)] = i;
@@ -56,7 +56,7 @@ std::vector<int> computeCuts(
 
 }  // namespace
 
-std::string encode(int n, std::vector<std::vector<long long>> w) {
+std::string encode(int n, const Matrix& w) {
     long long scale = 0;
     for (int l = 0; l < n; ++l) {
         for (int r = l + 1; r < n; ++r) {
@@ -83,7 +83,7 @@ std::string encode(int n, std::vector<std::vector<long long>> w) {
     return result;
 }
 
-void decode(int n, std::string s) {
+void decode(int n, const std::string& s) {
     std::vector<std::vector<long long>> w(
         n, std::vector<long long>(n));
     std::size_t position = 0;
@@ -102,7 +102,7 @@ void decode(int n, std::string s) {
     }
 
     decodedN = n;
-    decodedCuts = computeCuts(w);
+    decodedCuts = computeCuts(n, w);
 }
 
 int query(int l, int r) {

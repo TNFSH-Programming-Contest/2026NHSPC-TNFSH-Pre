@@ -7,6 +7,7 @@
 #include <vector>
 
 namespace {
+using Matrix = std::array<std::array<long long, 2000>, 2000>;
 
 int decodedN;
 std::vector<int> decodedCuts;
@@ -15,9 +16,8 @@ std::size_t index(int n, int l, int r) {
     return static_cast<std::size_t>(l) * n + r;
 }
 
-std::vector<int> computeCuts(
-    const std::vector<std::vector<long long>>& w) {
-    const int n = static_cast<int>(w.size());
+std::vector<int> computeCuts(const int n,
+    const Matrix& w) {
     std::vector<long long> dp(static_cast<std::size_t>(n) * n);
     std::vector<int> opt(static_cast<std::size_t>(n) * n);
     for (int i = 0; i < n; ++i) {
@@ -48,8 +48,8 @@ std::vector<int> computeCuts(
 
 }  // namespace
 
-std::string encode(int n, std::vector<std::vector<long long>> w) {
-    const std::vector<int> cuts = computeCuts(w);
+std::string encode(int n, const Matrix& w) {
+    const std::vector<int> cuts = computeCuts(n, w);
     std::string result;
     result.reserve(static_cast<std::size_t>(n - 1) * (n - 1));
 
@@ -65,7 +65,7 @@ std::string encode(int n, std::vector<std::vector<long long>> w) {
     return result;
 }
 
-void decode(int n, std::string s) {
+void decode(int n, const std::string& s) {
     decodedN = n;
     decodedCuts.assign(static_cast<std::size_t>(n) * n, 0);
     std::size_t position = 0;

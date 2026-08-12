@@ -8,6 +8,7 @@
 #include <vector>
 
 namespace {
+using Matrix = std::array<std::array<long long, 2000>, 2000>;
 
 constexpr int MAGIC = 1024;
 int decodedN;
@@ -24,9 +25,8 @@ std::uint64_t mix(std::uint64_t value) {
     return value ^ (value >> 31);
 }
 
-std::vector<int> approximateCuts(
-    const std::vector<std::vector<long long>>& w) {
-    const int n = static_cast<int>(w.size());
+std::vector<int> approximateCuts(const int n,
+    const Matrix& w) {
     std::vector<long long> dp(static_cast<std::size_t>(n) * n);
     std::vector<int> opt(static_cast<std::size_t>(n) * n);
     for (int i = 0; i < n; ++i) opt[id(n, i, i)] = i;
@@ -90,11 +90,11 @@ std::string encodeCuts(int n, const std::vector<int>& cuts) {
 
 }  // namespace
 
-std::string encode(int n, std::vector<std::vector<long long>> w) {
-    return encodeCuts(n, approximateCuts(w));
+std::string encode(int n, const Matrix& w) {
+    return encodeCuts(n, approximateCuts(n, w));
 }
 
-void decode(int n, std::string s) {
+void decode(int n, const std::string& s) {
     decodedN = n;
     decodedCuts.assign(static_cast<std::size_t>(n) * n, 0);
     std::size_t position = 0;

@@ -8,6 +8,7 @@
 #include <vector>
 
 namespace {
+using Matrix = std::array<std::array<long long, 2000>, 2000>;
 
 int decodedN;
 std::vector<int> decodedCuts;
@@ -21,8 +22,7 @@ std::int32_t wrap(long long value) {
 }
 
 std::vector<int> computeWrongCuts(
-    const std::vector<std::vector<long long>>& w) {
-    const int n = static_cast<int>(w.size());
+    const int n, const Matrix& w) {
     std::vector<std::int32_t> dp(static_cast<std::size_t>(n) * n);
     std::vector<int> opt(static_cast<std::size_t>(n) * n);
     for (int i = 0; i < n; ++i) opt[id(n, i, i)] = i;
@@ -53,8 +53,8 @@ std::vector<int> computeWrongCuts(
 
 }  // namespace
 
-std::string encode(int n, std::vector<std::vector<long long>> w) {
-    const std::vector<int> cuts = computeWrongCuts(w);
+std::string encode(int n, const Matrix& w) {
+    const std::vector<int> cuts = computeWrongCuts(n, w);
     std::string result;
     for (int l = 0; l + 1 < n; ++l) {
         int previous = l;
@@ -68,7 +68,7 @@ std::string encode(int n, std::vector<std::vector<long long>> w) {
     return result;
 }
 
-void decode(int n, std::string s) {
+void decode(int n, const std::string& s) {
     decodedN = n;
     decodedCuts.assign(static_cast<std::size_t>(n) * n, 0);
     std::size_t position = 0;

@@ -4,7 +4,7 @@ namespace {
     vector<vector<int> > opt;
 }
 
-void decode(int n, string s) {
+void decode(int n, const string& s) {
     opt = vector<vector<int> > (n, vector<int> (n));
     int id = 0;
     for(int i = 0; i < n; i++) {
@@ -26,7 +26,7 @@ using namespace std;
 
 #pragma GCC optimize("Ofast")
 
-string encode(int n, vector<vector<long long> > w) {
+string encode(int n, const std::array<std::array<long long, 2000>, 2000>& w) {
     const long long inf = 1e18;
     vector<vector<long long> > dp(n, vector<long long> (n, inf));
     vector<vector<int> > opt(n, vector<int> (n));
