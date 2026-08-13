@@ -53,11 +53,18 @@ int main(int argc, char* argv[]) {
     char magic[sizeof(TESTCASE_MAGIC)];
     std::uint32_t binaryN;
     std::uint32_t binaryQ;
+    std::uint32_t binarySubtaskLength;
     ensuref(readBytes(magic, sizeof(magic)) &&
                 std::memcmp(magic, TESTCASE_MAGIC, sizeof(magic)) == 0,
             "invalid binary testcase magic");
-    ensuref(readBinary(binaryN) && readBinary(binaryQ),
+    ensuref(readBinary(binaryN) && readBinary(binaryQ) && readBinary(binarySubtaskLength),
             "truncated binary testcase header");
+    ensuref(binarySubtaskLength != 0,
+            "binary testcase header has zero subtask length");
+    char *subtaskName = new char[binarySubtaskLength + 1];
+    ensuref(readBytes(subtaskName, binarySubtaskLength),
+            "truncated binary subtask name");
+    delete[] subtaskName;
     ensuref(2 <= binaryN && binaryN <= static_cast<std::uint32_t>(maxN),
             "n is outside this subtask's range");
     ensuref(1 <= binaryQ && binaryQ <= static_cast<std::uint32_t>(maxQ),

@@ -1,69 +1,69 @@
 @subtask samples
-gen 4 3 1 example example
+gen example 4 3 1 example example
 
 @subtask range-dp
-gen 2 1 1 zero all
-gen 3 3 1000000000 same all 15
-gen 8 28 999999937 random all 0 15
-gen 16 120 1 checker all 0 15
-gen 50 1000 1000000000 random mixed 0 15
-gen 50 1000 999999937 same boundary 15
-gen 49 1000 6767 bands nested 1 14 4
-gen 50 1000 1000000000 sparse mixed 15 25
-gen 47 1000 999999937 choice random 5 0 1 3 7 15
-gen 37 666 1 gradient full 15
-gen 10 1 1 ternary-trap fixed 0 7
-gen 10 45 1 random all 0 1000000000
-gen 3 1 1 zero-edge-trap fixed 0 2
-gen 4 1 1 huge-trap fixed 0 3
-gen 3 1 1 double-trap fixed 0 2
+gen range-dp 2 1 1 zero all
+gen range-dp 3 3 1000000000 same all 15
+gen range-dp 8 28 999999937 random all 0 15
+gen range-dp 16 120 1 checker all 0 15
+gen range-dp 50 1000 1000000000 random mixed 0 15
+gen range-dp 50 1000 999999937 same boundary 15
+gen range-dp 49 1000 6767 bands nested 1 14 4
+gen range-dp 50 1000 1000000000 sparse mixed 15 25
+gen range-dp 47 1000 999999937 choice random 5 0 1 3 7 15
+gen range-dp 37 666 1 gradient full 15
+gen range-dp 10 1 1 ternary-trap fixed 0 7
+gen range-dp 10 45 1 random all 0 1000000000
+gen range-dp 3 1 1 zero-edge-trap fixed 0 2
+gen range-dp 4 1 1 huge-trap fixed 0 3
+gen range-dp 3 1 1 double-trap fixed 0 2
 
 @subtask cubic
-gen 51 1275 1000000000 random all 0 15
-gen 100 4950 999999937 same all 15
-gen 127 8001 1 gradient all 15
-gen 160 12720 6767 bands boundary 1 14 7
-gen 199 100000 999999937 sparse random 15 20
-gen 200 100000 1000000000 random mixed 0 15
-gen 101 5050 1 random all 0 1000000000
-gen 51 1 1 zero-edge-trap fixed 0 2
-gen 51 1 1 huge-trap fixed 0 3
-gen 51 1 1 double-trap fixed 0 2
+gen cubic 51 1275 1000000000 random all 0 15
+gen cubic 100 4950 999999937 same all 15
+gen cubic 127 8001 1 gradient all 15
+gen cubic 160 12720 6767 bands boundary 1 14 7
+gen cubic 199 100000 999999937 sparse random 15 20
+gen cubic 200 100000 1000000000 random mixed 0 15
+gen cubic 101 5050 1 random all 0 1000000000
+gen cubic 51 1 1 zero-edge-trap fixed 0 2
+gen cubic 51 1 1 huge-trap fixed 0 3
+gen cubic 51 1 1 double-trap fixed 0 2
 
 @subtask knuth
-gen 257 100000 1000000000 checker mixed 0 15
-gen 400 100000 6767 bands boundary 1 14 13
-gen 511 100000 999999937 sparse random 15 20
-gen 600 100000 1000000000 choice short 6 0 1 2 5 10 15
-gen 799 100000 1 gradient nested 15
-gen 800 100000 1000000000 random mixed 0 15
-gen 800 1 1 wide-trap full 113
-gen 800 1 1 wide-trap full 173
-gen 800 1 1 wide-trap full 277
-gen 800 1 1 wide-trap full 419
-gen 800 1 1 wide-trap full 631
-gen 401 100000 1 random mixed 0 1000000000
-gen 257 1 1 zero-edge-trap fixed 0 2
-gen 257 1 1 huge-trap fixed 0 3
-gen 257 1 1 double-trap fixed 0 2
+gen knuth 257 100000 1000000000 checker mixed 0 15
+gen knuth 400 100000 6767 bands boundary 1 14 13
+gen knuth 511 100000 999999937 sparse random 15 20
+gen knuth 600 100000 1000000000 choice short 6 0 1 2 5 10 15
+gen knuth 799 100000 1 gradient nested 15
+gen knuth 800 100000 1000000000 random mixed 0 15
+gen knuth 800 1 1 wide-trap full 113
+gen knuth 800 1 1 wide-trap full 173
+gen knuth 800 1 1 wide-trap full 277
+gen knuth 800 1 1 wide-trap full 419
+gen knuth 800 1 1 wide-trap full 631
+gen knuth 401 100000 1 random mixed 0 1000000000
+gen knuth 257 1 1 zero-edge-trap fixed 0 2
+gen knuth 257 1 1 huge-trap fixed 0 3
+gen knuth 257 1 1 double-trap fixed 0 2
 
 @subtask full
-gen 801 100000 1000000000 random mixed 0 15
-gen 1000 100000 999999937 checker boundary 0 15
-gen 1414 100000 1 random nested 0 15
-gen 1415 100000 1000000000 random full 0 15
-gen 1800 100000 6767 sparse random 15 35
-gen 1999 100000 999999937 choice mixed 8 0 1 2 3 5 8 13 15
-gen 2000 100000 1000000000 random mixed 0 15
-gen 2000 1 1 wide-trap full 137
-gen 2000 1 1 wide-trap full 263
-gen 2000 1 1 wide-trap full 433
-gen 2000 1 1 wide-trap full 617
-gen 2000 1 1 wide-trap full 829
-gen 2000 1 1 wide-trap full 1103
-gen 2000 1 1 wide-trap full 1379
-gen 2000 1 1 wide-trap full 1667
-gen 801 100000 1 random mixed 0 1000000000
-gen 801 1 1 zero-edge-trap fixed 0 2
-gen 801 1 1 huge-trap fixed 0 3
-gen 801 1 1 double-trap fixed 0 2
+gen full 801 100000 1000000000 random mixed 0 15
+gen full 1000 100000 999999937 checker boundary 0 15
+gen full 1414 100000 1 random nested 0 15
+gen full 1415 100000 1000000000 random full 0 15
+gen full 1800 100000 6767 sparse random 15 35
+gen full 1999 100000 999999937 choice mixed 8 0 1 2 3 5 8 13 15
+gen full 2000 100000 1000000000 random mixed 0 15
+gen full 2000 1 1 wide-trap full 137
+gen full 2000 1 1 wide-trap full 263
+gen full 2000 1 1 wide-trap full 433
+gen full 2000 1 1 wide-trap full 617
+gen full 2000 1 1 wide-trap full 829
+gen full 2000 1 1 wide-trap full 1103
+gen full 2000 1 1 wide-trap full 1379
+gen full 2000 1 1 wide-trap full 1667
+gen full 801 100000 1 random mixed 0 1000000000
+gen full 801 1 1 zero-edge-trap fixed 0 2
+gen full 801 1 1 huge-trap fixed 0 3
+gen full 801 1 1 double-trap fixed 0 2

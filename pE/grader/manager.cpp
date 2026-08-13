@@ -8,6 +8,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <memory>
+#include <cmath>
 
 namespace {
 
@@ -63,6 +65,38 @@ bool writeBinary(std::ostream& output, const T& value) {
     return writeBytes(output, &value, sizeof(value));
 }
 
+const int A = 1999000;
+const int B = BIT_LIMIT;
+const double BRAIN_ROT = 0.67;
+const int YJSP = 114514;
+
+double y(int x) {
+    return (static_cast<double>(B) - static_cast<double>(x)) / (static_cast<double>(B) - static_cast<double>(A));
+}
+
+double z(double y) {
+    if (y <= 0) return 0;
+    if (0 < y && y < 1) return y;
+    if (y >= 1) return 1;
+}
+
+double f_of_q(double q) {
+    double exp = -(q - BRAIN_ROT);
+    return 1 / (1 + std::pow(YJSP, exp));
+}
+
+double score(int x) {
+    if (x <= A) return 1;
+    if (x > B) return 0;
+
+    const double half = 1.0/2.0;
+    const double f_of_0 = f_of_q(0);
+    const double f_of_1 = f_of_q(1);
+    const double f_of_z = f_of_q(z(y(x)));
+    const double tmp = (f_of_z - f_of_0) / (f_of_1 - f_of_0);
+    return half * (1.0 + tmp);
+}
+
 }  // namespace
 
 int main(int argc, char* argv[]) {
@@ -82,13 +116,19 @@ int main(int argc, char* argv[]) {
     }
 
     char magic[sizeof(TESTCASE_MAGIC)];
+    std::uint32_t binarySubtaskLength;
     std::uint32_t binaryN;
     std::uint32_t binaryQ;
     if (!readBytes(std::cin, magic, sizeof(magic)) ||
         std::memcmp(magic, TESTCASE_MAGIC, sizeof(magic)) != 0 ||
         !readBinary(std::cin, binaryN) ||
-        !readBinary(std::cin, binaryQ)) {
+        !readBinary(std::cin, binaryQ) ||
+        !readBinary(std::cin, binarySubtaskLength)) {
         wrong("Judge Error: invalid binary testcase header");
+    }
+    auto subtask = std::make_unique<char[]>(binarySubtaskLength + 1);
+    if (!readBytes(std::cin, subtask.get(), binarySubtaskLength)) {
+        wrong("Judge Error: truncated binary subtask string");
     }
     if (binaryN < 2 || binaryN > MATRIX_SIZE ||
         binaryQ < 1 || binaryQ > 100000) {
@@ -195,5 +235,9 @@ int main(int argc, char* argv[]) {
               " returned a non-optimal cut " +
               std::to_string(firstBadAnswer));
     }
-    finish(1.0, "Correct");
+    if (memcmp(subtask.get(), "full", binarySubtaskLength) == 0) {
+        finish(score(static_cast<int>(encodedLength)), "Correct");
+    } else {
+        finish(1.0, "Correct");
+    }
 }

@@ -55,18 +55,19 @@ int main(int argc, char* argv[]) {
     argumentCount = argc;
     arguments = argv;
 
-    const int n = opt<int>(1);
-    const int q = opt<int>(2);
-    const long long scale = opt<long long>(3);
-    const std::string costMode = opt<std::string>(4);
-    const std::string queryMode = opt<std::string>(5);
+    const std::string subtask = opt<std::string>(1);
+    const int n = opt<int>(2);
+    const int q = opt<int>(3);
+    const long long scale = opt<long long>(4);
+    const std::string costMode = opt<std::string>(5);
+    const std::string queryMode = opt<std::string>(6);
     ensuref(2 <= n && n <= 2000, "n must be in [2, 2000]");
     ensuref(1 <= q && q <= 100000, "q must be in [1, 100000]");
 
     ensuref(1 <= scale && scale <= 1000000000LL,
             "scale must be in [1, 1e9]");
 
-    int nextArgument = 6;
+    int nextArgument = 7;
     std::vector<std::vector<long long>> delta(
         n, std::vector<long long>(n));
     if (costMode == "example") {
@@ -329,6 +330,11 @@ int main(int argc, char* argv[]) {
     const std::uint32_t binaryQ = static_cast<std::uint32_t>(q);
     writeBinary(binaryN);
     writeBinary(binaryQ);
+
+    const std::uint32_t binarySubtaskLength = static_cast<std::uint32_t>(subtask.size());
+    writeBinary(binarySubtaskLength);
+    writeBytes(subtask.data(), subtask.size());
+
     writeBytes(w.data(), static_cast<std::size_t>(n) * sizeof(w[0]));
     writeBytes(dp.data(), dp.size() * sizeof(dp[0]));
     for (const auto& interval : queries) {
