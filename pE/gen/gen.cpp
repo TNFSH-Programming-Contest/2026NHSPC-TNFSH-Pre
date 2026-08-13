@@ -1,7 +1,10 @@
 #include "testlib.h"
 
 #include <algorithm>
+#include <array>
+#include <cstdint>
 #include <iostream>
+#include <limits>
 #include <sstream>
 #include <string>
 #include <utility>
@@ -10,6 +13,11 @@
 namespace {
 
 constexpr long long MAX_DELTA = 3e15;
+constexpr int MATRIX_SIZE = 2000;
+constexpr char TESTCASE_MAGIC[8] = {'C', 'A', 'K', 'E', '4', 'B', 'I', 'N'};
+using Matrix =
+    std::array<std::array<long long, MATRIX_SIZE>, MATRIX_SIZE>;
+Matrix w;
 int argumentCount;
 char** arguments;
 
@@ -28,6 +36,16 @@ void checkDelta(long long value) {
     ensuref(0 <= value && value <= MAX_DELTA,
             "interval-cost difference %lld is outside [0, %lld]",
             value, MAX_DELTA);
+}
+
+template <typename T>
+void writeBinary(const T& value) {
+    std::cout.write(reinterpret_cast<const char*>(&value), sizeof(value));
+}
+
+void writeBytes(const void* data, std::size_t size) {
+    std::cout.write(static_cast<const char*>(data),
+                    static_cast<std::streamsize>(size));
 }
 
 }  // namespace
@@ -51,7 +69,11 @@ int main(int argc, char* argv[]) {
     int nextArgument = 6;
     std::vector<std::vector<long long>> delta(
         n, std::vector<long long>(n));
-    if (costMode == "zero") {
+    if (costMode == "example") {
+        ensuref(n == 4, "example cost mode requires n = 4");
+        delta[1][2] = 1;
+        delta[2][3] = 15;
+    } else if (costMode == "zero") {
         // Already initialized.
     } else if (costMode == "same") {
         const int value = opt<int>(nextArgument++);
@@ -180,7 +202,11 @@ int main(int argc, char* argv[]) {
 
     std::vector<std::pair<int, int>> queries;
     queries.reserve(q);
-    if (queryMode == "all") {
+    if (queryMode == "example") {
+        ensuref(n == 4 && q == 3,
+                "example query mode requires n = 4 and q = 3");
+        queries = {{0, 3}, {0, 1}, {1, 3}};
+    } else if (queryMode == "all") {
         while (static_cast<int>(queries.size()) < q) {
             for (int length = 2;
                  length <= n && static_cast<int>(queries.size()) < q;
@@ -254,15 +280,62 @@ int main(int argc, char* argv[]) {
         quitf(_fail, "unknown query mode: %s", queryMode.c_str());
     }
 
-    std::cout << n << ' ' << q << ' ' << scale << '\n';
     for (int r = 1; r < n; ++r) {
-        for (int l = 0; l < r; ++l) {
-            if (l) std::cout << ' ';
-            std::cout << delta[l][r];
+        long long extensionCost = 1;
+        for (int l = r - 1; l >= 0; --l) {
+            extensionCost += delta[l][r];
+            const __int128 current =
+                static_cast<__int128>(w[l][r - 1]) +
+                static_cast<__int128>(extensionCost) * scale;
+            ensuref(current <= std::numeric_limits<long long>::max(),
+                    "expanded interval cost overflows int64");
+            w[l][r] = static_cast<long long>(current);
         }
-        std::cout << '\n';
     }
+
+    const auto index = [n](int l, int r) {
+        return static_cast<std::size_t>(l) * n + r;
+    };
+    std::vector<long long> dp(static_cast<std::size_t>(n) * n);
+    std::vector<int> optimalCut(static_cast<std::size_t>(n) * n);
+    for (int i = 0; i < n; ++i) optimalCut[index(i, i)] = i;
+    for (int length = 2; length <= n; ++length) {
+        for (int l = 0; l + length <= n; ++l) {
+            const int r = l + length - 1;
+            const int low = std::max(optimalCut[index(l, r - 1)], l);
+            const int high =
+                std::min(optimalCut[index(l + 1, r)], r - 1);
+            long long best = std::numeric_limits<long long>::max();
+            int bestCut = low;
+            for (int k = low; k <= high; ++k) {
+                const long long candidate =
+                    dp[index(l, k)] + dp[index(k + 1, r)];
+                if (candidate < best) {
+                    best = candidate;
+                    bestCut = k;
+                }
+            }
+            ensuref(best <= std::numeric_limits<long long>::max() - w[l][r],
+                    "optimal cost overflows int64");
+            dp[index(l, r)] = best + w[l][r];
+            optimalCut[index(l, r)] = bestCut;
+        }
+    }
+
+    static_assert(sizeof(long long) == sizeof(std::int64_t),
+                  "generator requires 64-bit long long");
+    writeBytes(TESTCASE_MAGIC, sizeof(TESTCASE_MAGIC));
+    const std::uint32_t binaryN = static_cast<std::uint32_t>(n);
+    const std::uint32_t binaryQ = static_cast<std::uint32_t>(q);
+    writeBinary(binaryN);
+    writeBinary(binaryQ);
+    writeBytes(w.data(), static_cast<std::size_t>(n) * sizeof(w[0]));
+    writeBytes(dp.data(), dp.size() * sizeof(dp[0]));
     for (const auto& interval : queries) {
-        std::cout << interval.first << ' ' << interval.second << '\n';
+        const std::int32_t l = interval.first;
+        const std::int32_t r = interval.second;
+        writeBinary(l);
+        writeBinary(r);
     }
+    ensuref(std::cout.good(), "failed to write binary testcase");
 }

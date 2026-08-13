@@ -1,142 +1,61 @@
 #include "Cake_4.h"
 
 #include <array>
-#include <vector>
 #include <csignal>
-#include <fstream>
-#include <limits>
+#include <cstdint>
+#include <cstdio>
 #include <string>
-#include <cstring>
+#include <type_traits>
+#include <vector>
 
 namespace {
+
 constexpr std::size_t BIT_LIMIT = 4000000;
-std::array<std::array<long long, 2000>, 2000> w;
+constexpr int MATRIX_SIZE = 2000;
+using Matrix =
+    std::array<std::array<long long, MATRIX_SIZE>, MATRIX_SIZE>;
 
-class FastInput {
-    static constexpr size_t BUF_SIZE = 1 << 20; // 1 MB
+Matrix w;
 
-    FILE* fp;
-    char buf[BUF_SIZE];
-    size_t pos = 0, len = 0;
+static_assert(sizeof(long long) == sizeof(std::int64_t),
+              "stub requires 64-bit long long");
+static_assert(std::is_standard_layout<Matrix>::value,
+              "Matrix must have standard layout");
+static_assert(sizeof(Matrix) ==
+                  static_cast<std::size_t>(MATRIX_SIZE) * MATRIX_SIZE *
+                      sizeof(long long),
+              "Matrix rows must be contiguous and contain no padding");
 
-    inline char getChar() {
-        if (pos >= len) {
-            len = std::fread(buf, 1, BUF_SIZE, fp);
-            pos = 0;
-            if (len == 0) return '\0';
-        }
-        return buf[pos++];
+bool readBytes(FILE* input, void* destination, std::size_t size) {
+    char* output = static_cast<char*>(destination);
+    while (size != 0) {
+        const std::size_t received = std::fread(output, 1, size, input);
+        if (received == 0) return false;
+        output += received;
+        size -= received;
     }
+    return true;
+}
 
-public:
-    explicit FastInput(const char* filename) {
-        fp = std::fopen(filename, "rb");
+bool writeBytes(FILE* output, const void* source, std::size_t size) {
+    const char* input = static_cast<const char*>(source);
+    while (size != 0) {
+        const std::size_t sent = std::fwrite(input, 1, size, output);
+        if (sent == 0) return false;
+        input += sent;
+        size -= sent;
     }
+    return true;
+}
 
-    ~FastInput() {
-        if (fp) std::fclose(fp);
-    }
+template <typename T>
+bool readBinary(FILE* input, T& value) {
+    return readBytes(input, &value, sizeof(value));
+}
 
-    bool good() const {
-        return fp != nullptr;
-    }
-
-    bool readInt(int& out) {
-        char c;
-        do {
-            c = getChar();
-            if (!c) return false;
-        } while (c <= ' ');
-
-        int sign = 1;
-        if (c == '-') {
-            sign = -1;
-            c = getChar();
-        }
-
-        int x = 0;
-        while (c >= '0' && c <= '9') {
-            x = x * 10 + (c - '0');
-            c = getChar();
-        }
-
-        out = x * sign;
-        return true;
-    }
-
-    bool readLongLong(long long& out) {
-        char c;
-        do {
-            c = getChar();
-            if (!c) return false;
-        } while (c <= ' ');
-
-        long long sign = 1;
-        if (c == '-') {
-            sign = -1;
-            c = getChar();
-        }
-
-        long long x = 0;
-        while (c >= '0' && c <= '9') {
-            x = x * 10LL + (c - '0');
-            c = getChar();
-        }
-
-        out = x * sign;
-        return true;
-    }
-
-    bool readSizeT(size_t& out) {
-        char c;
-        do {
-            c = getChar();
-            if (!c) return false;
-        } while (c <= ' ');
-
-        size_t x = 0;
-        while (c >= '0' && c <= '9') {
-            x = x * 10 + (c - '0');
-            c = getChar();
-        }
-
-        out = x;
-        return true;
-    }
-
-    bool readRawString(size_t n, std::string& out) {
-        out.resize(n);
-
-        size_t copied = 0;
-        while (copied < n) {
-            if (pos >= len) {
-                len = std::fread(buf, 1, BUF_SIZE, fp);
-                pos = 0;
-                if (len == 0) return false;
-            }
-
-            size_t available = len - pos;
-            size_t take = std::min(available, n - copied);
-
-            std::memcpy((void*)(out.data() + copied), buf + pos, take);
-
-            pos += take;
-            copied += take;
-        }
-
-        return true;
-    }
-};
-
-bool readRawString(std::ifstream& input, std::size_t length, std::string& value) {
-    input.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    value.assign(length, '\0');
-    if (length != 0) {
-        input.read(&value[0], static_cast<std::streamsize>(length));
-        if (input.gcount() != static_cast<std::streamsize>(length)) return false;
-    }
-    char newline;
-    return static_cast<bool>(input.get(newline)) && newline == '\n';
+template <typename T>
+bool writeBinary(FILE* output, const T& value) {
+    return writeBytes(output, &value, sizeof(value));
 }
 
 }  // namespace
@@ -145,10 +64,14 @@ int main(int argc, char* argv[]) {
     std::signal(SIGPIPE, SIG_IGN);
     if (argc < 4) return 0;
 
-    std::ofstream toManager(argv[2]);
-    // std::ifstream fromManager(argv[1]);
-    FastInput fromManager(argv[1]);
-    if (!toManager || !fromManager.good()) return 0;
+    /*
+     * These files are named pipes.  Keep the writer-first open order paired
+     * with manager.cpp's reader-first order so opening the FIFOs cannot
+     * deadlock.
+     */
+    FILE* toManager = std::fopen(argv[2], "wb");
+    FILE* fromManager = std::fopen(argv[1], "rb");
+    if (toManager == nullptr || fromManager == nullptr) return 0;
 
     int processIndex;
     try {
@@ -158,56 +81,74 @@ int main(int argc, char* argv[]) {
     }
 
     if (processIndex == 0) {
-        int n;
-        // if (!(fromManager >> n)) return 0;
-        if (!(fromManager.readInt(n))) return 0;
-        for (int l = 0; l < n; ++l) {
-            for (int r = l; r < n; ++r) {
-                // if (!(fromManager >> w[l][r])) return 0;
-                if (!(fromManager.readLongLong(w[l][r]))) return 0;
-            }
+        std::uint32_t binaryN;
+        if (!readBinary(fromManager, binaryN) ||
+            binaryN < 2 || binaryN > MATRIX_SIZE) {
+            return 0;
         }
+        const int n = static_cast<int>(binaryN);
+        const std::size_t matrixBytes =
+            static_cast<std::size_t>(n) * sizeof(w[0]);
+
+        /*
+         * std::array is contiguous.  fread therefore materializes the first n
+         * rows of the 2000 x 2000 matrix directly in w, with no per-cell
+         * parsing or copying.
+         */
+        if (!readBytes(fromManager, w.data(), matrixBytes)) return 0;
+        std::fclose(fromManager);
 
         const std::string encoded = encode(n, w);
-        toManager << encoded.size() << '\n';
-        if (encoded.size() <= BIT_LIMIT) {
-            toManager.write(encoded.data(),
-                            static_cast<std::streamsize>(encoded.size()));
-            toManager << '\n';
+        const std::uint64_t encodedLength = encoded.size();
+        if (!writeBinary(toManager, encodedLength)) return 0;
+        if (encodedLength <= BIT_LIMIT && !encoded.empty() &&
+            !writeBytes(toManager, encoded.data(), encoded.size())) {
+            return 0;
         }
-        toManager.flush();
+        std::fflush(toManager);
+        std::fclose(toManager);
         return 0;
     }
 
     if (processIndex == 1) {
-        int n;
-        std::size_t encodedLength;
-        // if (!(fromManager >> n >> encodedLength)) return 0;
-        if (!fromManager.readInt(n) || !fromManager.readSizeT(encodedLength))
+        std::uint32_t binaryN;
+        std::uint64_t encodedLength;
+        if (!readBinary(fromManager, binaryN) ||
+            binaryN < 2 || binaryN > MATRIX_SIZE ||
+            !readBinary(fromManager, encodedLength) ||
+            encodedLength > BIT_LIMIT) {
             return 0;
-        if (encodedLength > BIT_LIMIT) return 0;
+        }
+        const int n = static_cast<int>(binaryN);
 
-        std::string encoded;
-        // if (!readRawString(fromManager, encodedLength, encoded)) return 0;
-        if (!fromManager.readRawString(encodedLength, encoded))
+        std::string encoded(static_cast<std::size_t>(encodedLength), '\0');
+        if (!encoded.empty() &&
+            !readBytes(fromManager, &encoded[0], encoded.size())) {
             return 0;
-
+        }
         decode(n, encoded);
 
-        int q;
-        // if (!(fromManager >> q)) return 0;
-        if (!fromManager.readInt(q)) return 0;
-        std::vector<int> answers;
-        answers.reserve(q);
+        std::uint32_t binaryQ;
+        if (!readBinary(fromManager, binaryQ) || binaryQ > 100000) return 0;
+        const int q = static_cast<int>(binaryQ);
+        std::vector<std::int32_t> answers(q);
         for (int i = 0; i < q; ++i) {
-            int l, r;
-            // if (!(fromManager >> l >> r)) return 0;
-            if (!(fromManager.readInt(l) && fromManager.readInt(r))) return 0;
-            answers.push_back(query(l, r));
+            std::int32_t l;
+            std::int32_t r;
+            if (!readBinary(fromManager, l) ||
+                !readBinary(fromManager, r)) {
+                return 0;
+            }
+            answers[i] = query(l, r);
         }
+        std::fclose(fromManager);
 
-        for (int answer : answers) toManager << answer << '\n';
-        toManager.flush();
+        if (!writeBytes(toManager, answers.data(),
+                        answers.size() * sizeof(answers[0]))) {
+            return 0;
+        }
+        std::fflush(toManager);
+        std::fclose(toManager);
     }
     return 0;
 }
