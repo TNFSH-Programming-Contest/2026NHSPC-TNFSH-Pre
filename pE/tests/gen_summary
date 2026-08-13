@@ -1,5 +1,5 @@
 # test_name gen_line_number gen_line_content
-0-01	  2	manual example-1.in
+0-01	  2	gen 4 3 1 example example
 1-01	  5	gen 2 1 1 zero all
 1-02	  6	gen 3 3 1000000000 same all 15
 1-03	  7	gen 8 28 999999937 random all 0 15
