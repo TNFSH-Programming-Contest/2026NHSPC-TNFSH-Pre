@@ -8,6 +8,9 @@
     "arithmetic.cpp": {
         "verdict": "correct"
     },
+    "ans.cpp": {
+        "verdict": "correct"
+    },
     "charhao.cpp": {
         "verdict": "correct"
     },
