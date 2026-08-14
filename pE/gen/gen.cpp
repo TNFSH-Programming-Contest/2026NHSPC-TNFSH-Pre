@@ -39,6 +39,21 @@ void checkDelta(long long value) {
             value, MAX_DELTA);
 }
 
+std::uint64_t splitmix64(std::uint64_t value) {
+    value += 0x9e3779b97f4a7c15ULL;
+    value = (value ^ (value >> 30)) * 0xbf58476d1ce4e5b9ULL;
+    value = (value ^ (value >> 27)) * 0x94d049bb133111ebULL;
+    return value ^ (value >> 31);
+}
+
+long double deterministicUnit(int l, int r, int seed) {
+    const std::uint64_t value = splitmix64(
+        static_cast<std::uint64_t>(l) * 2003 + r +
+        static_cast<std::uint64_t>(seed) * 1000000007ULL);
+    return (value >> 11) *
+        (1.0L / (std::uint64_t{1} << 53));
+}
+
 template <typename T>
 void writeBinary(const T& value) {
     std::cout.write(reinterpret_cast<const char*>(&value), sizeof(value));
@@ -204,6 +219,207 @@ int main(int argc, char* argv[]) {
                 delta[l][r] = cross;
             }
         }
+    } else if (costMode == "arithmetic-entropy") {
+        ensuref(n == 2000,
+                "arithmetic-entropy cost mode requires n = 2000");
+        ensuref(scale == 1,
+                "arithmetic-entropy cost mode requires scale = 1");
+
+        // Keep the large, nearly balanced Knuth windows from entropy, but
+        // perturb every nonnegative Monge cross-difference independently.
+        // The perturbation removes the strong correlation between the chosen
+        // digit and the (radix, predicted digit) contexts used by adaptive
+        // arithmetic coders without invalidating the quadrangle inequality.
+        constexpr long double EXPONENT = 1.6L;
+        constexpr long double OFFSET = 2.0L;
+        constexpr long double AMPLITUDE = 2900000000000000.0L;
+        constexpr long double MULTIPLICATIVE_NOISE = 0.0003L;
+        constexpr int HASH_SEED = 7;
+        constexpr int NOISE_BY_SPAN[10] = {
+            2, 10, 30, 30, 30, 30, 3, 6, 4, 4
+        };
+        constexpr int BIAS[8][8] = {
+            {-125, 125, 0, 1250, 2500, -1250, 0, 0},
+            {-4, 0, -1, 0, 2500, 0, 0, 0},
+            {0, 0, 1, 0, 2500, 0, 0, 0},
+            {0, 0, 0, 0, 2500, 0, 0, 0},
+            {0, 4, 0, -75, 0, 0, 0, 0},
+            {0, 6, 0, 0, 0, 0, 0, 0},
+            {0, 50, 0, 0, 0, 0, 0, 0},
+            {75, 0, 0, 0, 0, 0, 0, 0}
+        };
+        std::vector<long double> profile(n);
+        for (int x = 0; x < n; ++x) {
+            profile[x] =
+                std::pow(OFFSET / (static_cast<long double>(x) + OFFSET),
+                         EXPONENT);
+        }
+
+        for (int r = 1; r < n; ++r) {
+            const long double right = profile[n - 1 - r];
+            const long double previousRight = profile[n - r];
+            const long double adjacentBase =
+                AMPLITUDE * right * (profile[r - 1] - profile[r]);
+            const int leftBin = (r - 1) * 8 / n;
+            const long long adjacent = std::max<long long>(
+                0, std::llround(adjacentBase *
+                    (1 + MULTIPLICATIVE_NOISE *
+                        (2 * deterministicUnit(r - 1, r, HASH_SEED) - 1)) +
+                    NOISE_BY_SPAN[0] *
+                        (2 * deterministicUnit(r, r, HASH_SEED) - 1) +
+                    BIAS[leftBin][0]));
+            delta[r - 1][r] = adjacent - 1;
+
+            for (int l = r - 2; l >= 0; --l) {
+                const int span = r - l;
+                const int spanNoiseBin =
+                    std::min(9, span * 10 / n);
+                const int spanBiasBin =
+                    std::min(7, span * 8 / n);
+                const long double crossBase =
+                    AMPLITUDE * (profile[l] - profile[l + 1]) *
+                    (right - previousRight);
+                const long long cross = std::max<long long>(
+                    0, std::llround(crossBase *
+                        (1 + MULTIPLICATIVE_NOISE *
+                            (2 * deterministicUnit(
+                                l + 17, r, HASH_SEED) - 1)) +
+                        NOISE_BY_SPAN[spanNoiseBin] *
+                            (2 * deterministicUnit(l, r, HASH_SEED) - 1) +
+                        BIAS[l * 8 / n][spanBiasBin]));
+                checkDelta(cross);
+                delta[l][r] = cross;
+            }
+        }
+    } else if (costMode == "profile-entropy") {
+        ensuref(n == 2000,
+                "profile-entropy cost mode requires n = 2000");
+        ensuref(scale == 1,
+                "profile-entropy cost mode requires scale = 1");
+        const long double leftExponent = opt<long double>(nextArgument++);
+        const long double leftOffset = opt<long double>(nextArgument++);
+        const long double rightExponent = opt<long double>(nextArgument++);
+        const long double rightOffset = opt<long double>(nextArgument++);
+        const int noise = opt<int>(nextArgument++);
+        const int hashSeed = opt<int>(nextArgument++);
+        ensuref(leftExponent > 0 && rightExponent > 0,
+                "profile exponents must be positive");
+        ensuref(leftOffset > 0 && rightOffset > 0,
+                "profile offsets must be positive");
+        ensuref(0 <= noise && noise <= 1000000,
+                "profile noise must be in [0, 1e6]");
+
+        constexpr long double AMPLITUDE = 2900000000000000.0L;
+        std::vector<long double> left(n), right(n);
+        for (int x = 0; x < n; ++x) {
+            left[x] = std::pow(
+                leftOffset /
+                    (static_cast<long double>(x) + leftOffset),
+                leftExponent);
+            right[x] = std::pow(
+                rightOffset /
+                    (static_cast<long double>(x) + rightOffset),
+                rightExponent);
+        }
+        for (int r = 1; r < n; ++r) {
+            const long double adjacentBase =
+                AMPLITUDE * right[n - 1 - r] *
+                (left[r - 1] - left[r]);
+            const long long adjacent = std::max<long long>(
+                0, std::llround(adjacentBase + noise *
+                    (2 * deterministicUnit(r, r, hashSeed) - 1)));
+            delta[r - 1][r] = adjacent - 1;
+            for (int l = r - 2; l >= 0; --l) {
+                const long double crossBase =
+                    AMPLITUDE * (left[l] - left[l + 1]) *
+                    (right[n - 1 - r] - right[n - r]);
+                const long long cross = std::max<long long>(
+                    0, std::llround(crossBase + noise *
+                        (2 * deterministicUnit(l, r, hashSeed) - 1)));
+                checkDelta(cross);
+                delta[l][r] = cross;
+            }
+        }
+    } else if (costMode == "truncated-entropy") {
+        ensuref(n == 2000,
+                "truncated-entropy cost mode requires n = 2000");
+        ensuref(scale == 1,
+                "truncated-entropy cost mode requires scale = 1");
+
+        // A positive mixture of rank-one Monge arrays.  Unlike entropy,
+        // which balances every gap, these three components deliberately make
+        // the gaps uneven and move the selected digit into the long-code part
+        // of truncated binary coding whenever that does not destroy the next
+        // diagonal's gaps.
+        constexpr int COMPONENTS = 3;
+        constexpr long double AMPLITUDE = 2900000000000000.0L;
+        constexpr long double ALPHA = 0.748454L;
+        constexpr long double BETA = 0.305952L;
+        const long double leftExponent[COMPONENTS] = {
+            1.74433L, 1.95069L, 0.751814L
+        };
+        const long double leftOffset[COMPONENTS] = {
+            126.223L, 1.69341L, 32.6169L
+        };
+        const long double rightExponent[COMPONENTS] = {
+            3.02251L, 1.34474L, 3.00615L
+        };
+        const long double rightOffset[COMPONENTS] = {
+            3.46462L, 11.926L, 1.64061L
+        };
+        const long double weight[COMPONENTS] = {
+            (1 - BETA) * ALPHA,
+            (1 - BETA) * (1 - ALPHA),
+            BETA
+        };
+
+        std::vector<std::vector<long double>> left(
+            COMPONENTS, std::vector<long double>(n));
+        std::vector<std::vector<long double>> right(
+            COMPONENTS, std::vector<long double>(n));
+        for (int component = 0; component < COMPONENTS; ++component) {
+            for (int x = 0; x < n; ++x) {
+                left[component][x] = std::pow(
+                    leftOffset[component] /
+                        (static_cast<long double>(x) +
+                         leftOffset[component]),
+                    leftExponent[component]);
+                right[component][x] = std::pow(
+                    rightOffset[component] /
+                        (static_cast<long double>(x) +
+                         rightOffset[component]),
+                    rightExponent[component]);
+            }
+        }
+
+        for (int r = 1; r < n; ++r) {
+            long double adjacent = 0;
+            for (int component = 0; component < COMPONENTS; ++component) {
+                adjacent += weight[component] *
+                    right[component][n - 1 - r] *
+                    (left[component][r - 1] - left[component][r]);
+            }
+            const long long adjacentCost =
+                std::llround(AMPLITUDE * adjacent);
+            ensuref(adjacentCost >= 0,
+                    "negative truncated-entropy adjacent cost");
+            delta[r - 1][r] = adjacentCost - 1;
+
+            for (int l = r - 2; l >= 0; --l) {
+                long double cross = 0;
+                for (int component = 0; component < COMPONENTS;
+                     ++component) {
+                    cross += weight[component] *
+                        (left[component][l] - left[component][l + 1]) *
+                        (right[component][n - 1 - r] -
+                         right[component][n - r]);
+                }
+                const long long roundedCross =
+                    std::llround(AMPLITUDE * cross);
+                checkDelta(roundedCross);
+                delta[l][r] = roundedCross;
+            }
+        }
     } else if (costMode == "ternary-trap") {
         ensuref(n == 10, "ternary-trap requires n = 10");
         const std::vector<std::vector<int>> rows = {
@@ -367,7 +583,8 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    if (costMode == "entropy") {
+    if (costMode == "entropy" || costMode == "arithmetic-entropy" ||
+        costMode == "profile-entropy") {
         long long encodedBits = 0;
         for (int d = 1; d < n; ++d) {
             long double diagonalBits = 0;
@@ -381,8 +598,33 @@ int main(int argc, char* argv[]) {
             encodedBits += static_cast<long long>(
                 std::ceil(diagonalBits - 1e-12L));
         }
-        ensuref(encodedBits >= 2700000,
-                "entropy construction only produced %lld mixed-radix bits",
+        const long long minimumBits = costMode == "entropy"
+            ? 2700000 : 2600000;
+        ensuref(encodedBits >= minimumBits,
+                "%s construction only produced %lld mixed-radix bits",
+                costMode.c_str(), encodedBits);
+    }
+
+    if (costMode == "truncated-entropy") {
+        long long encodedBits = 0;
+        for (int d = 2; d < n; ++d) {
+            for (int l = 0; l + d < n; ++l) {
+                const int low = optimalCut[index(l, l + d - 1)];
+                const int high = optimalCut[index(l + 1, l + d)];
+                const int radix = high - low + 1;
+                const int symbol = optimalCut[index(l, l + d)] - low;
+                const int shortBits =
+                    31 - __builtin_clz(static_cast<unsigned>(radix));
+                if (radix == (1 << shortBits)) {
+                    encodedBits += shortBits;
+                } else {
+                    const int shortCodes = (1 << (shortBits + 1)) - radix;
+                    encodedBits += shortBits + (symbol >= shortCodes);
+                }
+            }
+        }
+        ensuref(encodedBits >= 2900000,
+                "truncated-entropy construction only produced %lld bits",
                 encodedBits);
     }
 
