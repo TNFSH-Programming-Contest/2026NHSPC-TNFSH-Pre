@@ -2,6 +2,9 @@
 	"correct.cpp": {
 		"verdict": "model_solution"
 	},
+    "mark_min_value.cpp": {
+        "verdict": "correct"
+    },
 	"int32.cpp": {
 		"verdict": "correct",
 		"except": {
