@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <array>
+#include <cmath>
 #include <cstdint>
 #include <iostream>
 #include <limits>
@@ -158,6 +159,49 @@ int main(int argc, char* argv[]) {
             for (int l = 0; l < r; ++l) {
                 if (l == 0) delta[l][r] = r < target ? 2 : 15;
                 if (r == n - 1) delta[l][r] = 10;
+            }
+        }
+    } else if (costMode == "entropy") {
+        ensuref(n == 2000, "entropy cost mode requires n = 2000");
+        ensuref(scale == 1, "entropy cost mode requires scale = 1");
+
+        // Let F(x) = (2 / (x + 2))^1.6 and G(r) = F(n - 1 - r).
+        // The real-valued rank-one Monge array
+        //
+        //   W[l][r] = C * G(r) * (F(l) - F(r))
+        //
+        // makes the optimal-root diagonals spread almost uniformly from 0
+        // to n - 2.  Consequently, the gaps between consecutive roots are
+        // close to the balanced gaps from the mixed-radix upper bound.
+        //
+        // Store rounded nonnegative cross-differences instead of rounding W
+        // itself.  This preserves the Monge inequalities exactly even after
+        // converting the construction to integers.
+        constexpr long double EXPONENT = 1.6L;
+        constexpr long double OFFSET = 2.0L;
+        constexpr long double AMPLITUDE = 2900000000000000.0L;
+        std::vector<long double> profile(n);
+        for (int x = 0; x < n; ++x) {
+            profile[x] =
+                std::pow(OFFSET / (static_cast<long double>(x) + OFFSET),
+                         EXPONENT);
+        }
+
+        for (int r = 1; r < n; ++r) {
+            const long double right = profile[n - 1 - r];
+            const long double previousRight = profile[n - r];
+
+            const long long adjacent = std::llround(
+                AMPLITUDE * right * (profile[r - 1] - profile[r]));
+            ensuref(adjacent >= 0, "negative entropy adjacent cost");
+            delta[r - 1][r] = adjacent - 1;
+
+            for (int l = r - 2; l >= 0; --l) {
+                const long long cross = std::llround(
+                    AMPLITUDE * (profile[l] - profile[l + 1]) *
+                    (right - previousRight));
+                checkDelta(cross);
+                delta[l][r] = cross;
             }
         }
     } else if (costMode == "ternary-trap") {
@@ -321,6 +365,25 @@ int main(int argc, char* argv[]) {
             dp[index(l, r)] = best + w[l][r];
             optimalCut[index(l, r)] = bestCut;
         }
+    }
+
+    if (costMode == "entropy") {
+        long long encodedBits = 0;
+        for (int d = 1; d < n; ++d) {
+            long double diagonalBits = 0;
+            for (int l = 0; l + d < n; ++l) {
+                const int radix =
+                    optimalCut[index(l + 1, l + d)] -
+                    optimalCut[index(l, l + d - 1)] + 1;
+                ensuref(radix >= 1, "entropy construction broke Knuth monotonicity");
+                diagonalBits += std::log2(static_cast<long double>(radix));
+            }
+            encodedBits += static_cast<long long>(
+                std::ceil(diagonalBits - 1e-12L));
+        }
+        ensuref(encodedBits >= 2700000,
+                "entropy construction only produced %lld mixed-radix bits",
+                encodedBits);
     }
 
     static_assert(sizeof(long long) == sizeof(std::int64_t),

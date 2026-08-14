@@ -63,6 +63,7 @@ gen full 2000 1 1 wide-trap full 829
 gen full 2000 1 1 wide-trap full 1103
 gen full 2000 1 1 wide-trap full 1379
 gen full 2000 1 1 wide-trap full 1667
+gen full 2000 100000 1 entropy mixed
 gen full 801 100000 1 random mixed 0 1000000000
 gen full 801 1 1 zero-edge-trap fixed 0 2
 gen full 801 1 1 huge-trap fixed 0 3
