@@ -13,7 +13,8 @@
 
 namespace {
 
-constexpr long long MAX_DELTA = 3e15;
+constexpr long long MAX_DELTA = 3000000000000000LL;
+constexpr long long MAX_COST = 3000000000000000LL;
 constexpr int MATRIX_SIZE = 2000;
 constexpr char TESTCASE_MAGIC[8] = {'C', 'A', 'K', 'E', '4', 'B', 'I', 'N'};
 using Matrix =
@@ -541,15 +542,33 @@ int main(int argc, char* argv[]) {
         quitf(_fail, "unknown query mode: %s", queryMode.c_str());
     }
 
+    // Some high-scale modes can produce a valid Monge array whose entries
+    // exceed the validator's W bound.  Find one global divisor first; applying
+    // it to every extension preserves their ordering and all monotonicity
+    // constraints.  Existing cases already within the bound use divisor 1.
+    std::vector<__int128> rawCost(n);
+    __int128 maximumRawCost = 0;
+    for (int r = 1; r < n; ++r) {
+        long long extensionCost = 1;
+        for (int l = r - 1; l >= 0; --l) {
+            extensionCost += delta[l][r];
+            rawCost[l] +=
+                static_cast<__int128>(extensionCost) * scale;
+            maximumRawCost = std::max(maximumRawCost, rawCost[l]);
+        }
+    }
+    const __int128 costDivisor = std::max<__int128>(
+        1, (maximumRawCost + MAX_COST - 1) / MAX_COST);
+
     for (int r = 1; r < n; ++r) {
         long long extensionCost = 1;
         for (int l = r - 1; l >= 0; --l) {
             extensionCost += delta[l][r];
             const __int128 current =
                 static_cast<__int128>(w[l][r - 1]) +
-                static_cast<__int128>(extensionCost) * scale;
-            ensuref(current <= std::numeric_limits<long long>::max(),
-                    "expanded interval cost overflows int64");
+                static_cast<__int128>(extensionCost) * scale / costDivisor;
+            ensuref(current <= MAX_COST,
+                    "normalized interval cost exceeds W limit");
             w[l][r] = static_cast<long long>(current);
         }
     }

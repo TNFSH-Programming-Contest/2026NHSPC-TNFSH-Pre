@@ -10,7 +10,7 @@
 
 namespace {
 
-constexpr long long MAX_COST = 30000000000000000LL;
+constexpr long long MAX_COST = 3000000000000000LL;
 constexpr int MATRIX_SIZE = 2000;
 constexpr char TESTCASE_MAGIC[8] = {'C', 'A', 'K', 'E', '4', 'B', 'I', 'N'};
 using Matrix =

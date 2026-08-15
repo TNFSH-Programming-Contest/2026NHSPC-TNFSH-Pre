@@ -11,7 +11,7 @@
 namespace {
 
 using Matrix = std::array<std::array<long long, 2000>, 2000>;
-__int128 dp[2000 * 2000];
+long long dp[2000 * 2000];
 uint16_t opt[2000 * 2000];
 
 constexpr std::uint64_t HALF = std::uint64_t{1} << 31;
@@ -134,7 +134,7 @@ struct Mode {
 std::vector<Mode> modes() {
     std::vector<Mode> result;
     for (int rowOrder = 0; rowOrder <= 1; ++rowOrder) {
-        for (int adaptiveLimit : {0, 8, /*16, 32*/}) {
+        for (int adaptiveLimit : {/*0, 8,*/ 16, 32}) {
             result.push_back({rowOrder != 0, adaptiveLimit});
         }
     }
@@ -232,8 +232,6 @@ private:
 
 
 void computeCuts(int n, const Matrix& w) {
-    // std::vector<__int128> dp(static_cast<std::size_t>(n) * n);
-    // std::vector<std::uint16_t> opt(static_cast<std::size_t>(n) * n);
     for (int i = 0; i < n; ++i) opt[index(n, i, i)] = i;
 
     for (int length = 2; length <= n; ++length) {

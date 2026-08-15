@@ -165,7 +165,7 @@ private:
 
 std::vector<std::uint16_t> computeCuts(
     const int n, const Matrix& w) {
-    std::vector<__int128> dp(static_cast<std::size_t>(n) * n);
+    std::vector<long long> dp(static_cast<std::size_t>(n) * n);
     std::vector<std::uint16_t> opt(static_cast<std::size_t>(n) * n);
 
     for (int i = 0; i < n; ++i) {
@@ -178,10 +178,10 @@ std::vector<std::uint16_t> computeCuts(
             const int low = opt[index(n, l, r - 1)];
             const int high = std::min<int>(opt[index(n, l + 1, r)], r - 1);
 
-            __int128 best = -1;
+            long long best = -1;
             int bestCut = low;
             for (int k = low; k <= high; ++k) {
-                const __int128 candidate =
+                const long long candidate =
                     dp[index(n, l, k)] + dp[index(n, k + 1, r)];
                 if (best < 0 || candidate < best) {
                     best = candidate;

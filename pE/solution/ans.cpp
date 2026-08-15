@@ -24,7 +24,7 @@ constexpr std::uint32_t RANS_SCALE_BITS = 15;
 constexpr std::uint32_t RANS_TOTAL = std::uint32_t{1} << RANS_SCALE_BITS;
 constexpr std::uint32_t RANS_MASK = RANS_TOTAL - 1;
 
-__int128 dp[2000 * 2000];
+long long dp[2000 * 2000];
 std::uint16_t optimalCut[2000 * 2000];
 std::uint16_t decodedCut[2000 * 2000];
 int decodedN;
@@ -70,10 +70,10 @@ void computeCuts(int n, const Matrix& w) {
             const int low = optimalCut[index(n, l, r - 1)];
             const int high =
                 std::min<int>(optimalCut[index(n, l + 1, r)], r - 1);
-            __int128 best = -1;
+            long long best = -1;
             int bestCut = low;
             for (int k = low; k <= high; ++k) {
-                const __int128 candidate =
+                const long long candidate =
                     dp[index(n, l, k)] + dp[index(n, k + 1, r)];
                 if (best < 0 || candidate < best) {
                     best = candidate;
