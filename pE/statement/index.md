@@ -31,7 +31,8 @@ $\color{red}\text{本題為互動題，需要實作兩個檔案。}$
 第一個檔案為 `sixseven.cpp`，你必須在該檔案內實作 `encode` 這個函式:
 
 ```cpp
-std::string encode(int n, const std::array<std::array<long long, 2000>, 2000>& w);
+std::string encode(int n, 
+        const std::array<std::array<long long, 2000>, 2000>& w);
 ```
 
  - `n` 是蛋糕的總段數。
@@ -96,7 +97,7 @@ int query(int l, int r);
 $n = 4, Q = 3$
 
 $$
-w=\begin{pmatrix}
+W[0 \sim 3][0 \sim 3]=\begin{pmatrix}
 0&1&3&19\\
  &0&2&18\\
  & &0&16\\
@@ -118,7 +119,6 @@ $$
 |呼叫 `query(1, 3)`||
 ||回傳 $2$|
 
-- $W$ 的值為 `{{0,1,3,19},{87,0,2,18},{87,87,0,16},{87,87,87,0}}`
 - $S$ 的值為 "100010101000010101010101111010100010"(我隨便亂打的)
 
 \clearpage
