@@ -9,7 +9,7 @@ using ull = unsigned long long;
 constexpr int MOD = 1145141;
 constexpr int LIM = 31623;
 
-constexpr int REM[8] = {
+constexpr uint8_t REM[8] = {
     1, 7, 11, 13, 17, 19, 23, 29
 };
 
@@ -96,7 +96,33 @@ constexpr Presieve PRE;
 
 alignas(64) uint8_t seg[SEG_BLOCKS];
 
-uint32_t nxt[4000][8];
+
+struct NxtTable {
+    array<array<uint32_t, 8>, 4000> a{};
+
+    constexpr NxtTable() {
+        for (int z = 0; z < PT.cnt; ++z) {
+            const int p = PT.prime[z];
+
+            for (int t = 0; t < 8; ++t) {
+                const int r = REM[t];
+
+                int m = p + (r - p % 30 + 30) % 30;
+
+                const int bit =
+                    rem_id((p % 30) * r % 30);
+
+                a[z][bit] =
+                    static_cast<uint32_t>(
+                        1LL * p * m / 30
+                    );
+            }
+        }
+    }
+};
+
+constexpr NxtTable NT;
+alignas(64) uint32_t nxt[4000][8];
 
 /*
  * PRE 的 period 是 PRE_BLOCKS，
@@ -159,29 +185,7 @@ int main() {
     /*
      * 初始化每個 p 的 8 條 strike stream。
      */
-    for(int z = 0; z < PT.cnt; ++z) {
-        int p = PT.prime[z];
-        int pr = p % 30;
-
-        for(int t = 0; t < 8; ++t) {
-            int r = REM[t];
-
-            int m = p;
-
-            int d = r - m % 30;
-            if(d < 0)
-                d += 30;
-
-            m += d;
-
-            ll x = 1LL * p * m;
-
-            int bit =
-                rem_id(pr * r % 30);
-
-            nxt[z][bit] = uint32_t(x / 30);
-        }
-    }
+    memcpy(nxt, NT.a.data(), sizeof(nxt));
 
     /*
      * p > sqrt(n)
