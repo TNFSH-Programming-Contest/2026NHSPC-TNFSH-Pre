@@ -3,22 +3,25 @@
         "verdict": "model_solution"
     },
     "codex-1.cpp": {
-        "verdict": "correct"
+        "verdict": "partially_correct"
     },
     "arithmetic.cpp": {
-        "verdict": "correct"
+        "verdict": "partially_correct"
     },
     "ans.cpp": {
-        "verdict": "correct"
+        "verdict": "partially_correct"
     },
     "lz_ans.cpp": {
-        "verdict": "correct"
+        "verdict": "partially_correct"
+    },
+    "gemini-3.cpp": {
+        "verdict": "partially_correct"
     },
     "charhao.cpp": {
-        "verdict": "correct"
+        "verdict": "partially_correct"
     },
     "blame_ac.cpp": {
-        "verdict": "correct"
+        "verdict": "partially_correct"
     },
     "encode_values.cpp": {
         "verdict": "incorrect",
