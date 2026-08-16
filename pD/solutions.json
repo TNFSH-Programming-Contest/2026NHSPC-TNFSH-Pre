@@ -1,71 +1,74 @@
 {
-	"correct.cpp": {
-		"verdict": "model_solution"
-	},
-	"min25.cpp": {
-		"verdict": "correct"
-	},
-    "blame_1e6.cpp": {
-		"verdict": "correct",
-		"except": {
-			"1e8": "time_limit",
-			"full": "time_limit"
-		}
+    "correct.cpp": {
+        "verdict": "model_solution"
     },
-	"blame_n78.cpp": {
-		"verdict": "correct",
-		"except": {
-			"full": "time_limit"
-		}
-	},
-	"1e6.cpp": {
-		"verdict": "correct",
-		"except": {
-			"1e8": "time_limit",
-			"full": "time_limit"
-		}
-	},
-	"handwrite.cpp": {
-		"verdict": "incorrect",
-		"except": {
-			"samples": "correct",
-			"handwrite": "correct"
-		}
-	},
-	"brute_factorial.cpp": {
-		"verdict": "incorrect",
-		"except": {
-			"samples": "correct",
-			"brute": "correct"
-		}
-	},
-	"max_1000.cpp": {
-		"verdict": "incorrect",
-		"except": {
-			"samples": "correct",
-			"brute": "correct",
-			"brute2": "correct"
-		}
-	},
-	"number_divisors.cpp": {
-		"verdict": "incorrect"
-	},
-	"missing_powers.cpp": {
-		"verdict": "incorrect"
-	},
-	"wrong_mod.cpp": {
-		"verdict": "incorrect",
-		"except": {
-			"samples": "correct",
-			"brute": "correct"
-		}
-	},
-	"int_overflow.cpp": {
-		"verdict": "incorrect",
-		"except": {
-			"samples": "correct",
-			"brute": "correct",
-			"brute2": "correct"
-		}
-	}
+    "min25.cpp": {
+        "verdict": "correct"
+    },
+    "compile_time.cpp": {
+        "verdict": "correct"
+    },
+    "blame_1e6.cpp": {
+        "verdict": "correct",
+        "except": {
+            "1e8": "time_limit",
+            "full": "time_limit"
+        }
+    },
+    "blame_n78.cpp": {
+        "verdict": "correct",
+        "except": {
+            "full": "time_limit"
+        }
+    },
+    "1e6.cpp": {
+        "verdict": "correct",
+        "except": {
+            "1e8": "time_limit",
+            "full": "time_limit"
+        }
+    },
+    "handwrite.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "samples": "correct",
+            "handwrite": "correct"
+        }
+    },
+    "brute_factorial.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "samples": "correct",
+            "brute": "correct"
+        }
+    },
+    "max_1000.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "samples": "correct",
+            "brute": "correct",
+            "brute2": "correct"
+        }
+    },
+    "number_divisors.cpp": {
+        "verdict": "incorrect"
+    },
+    "missing_powers.cpp": {
+        "verdict": "incorrect"
+    },
+    "wrong_mod.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "samples": "correct",
+            "brute": "correct"
+        }
+    },
+    "int_overflow.cpp": {
+        "verdict": "incorrect",
+        "except": {
+            "samples": "correct",
+            "brute": "correct",
+            "brute2": "correct"
+        }
+    }
 }

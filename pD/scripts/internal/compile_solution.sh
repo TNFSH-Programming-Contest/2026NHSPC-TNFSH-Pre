@@ -169,7 +169,7 @@ function check_warning {
 		else
 			vecho "Text pattern '${warning_text_pattern}' not found in compiler outputs."
 		fi
-	fi	
+	fi
 }
 
 if variable_exists "WARN_FILE"; then
@@ -189,7 +189,7 @@ fi
 
 
 if [ "${LANG}" == "cpp" ] ; then
-	variable_exists "CPP_STD_OPT" || CPP_STD_OPT="--std=gnu++14"
+	variable_exists "CPP_STD_OPT" || CPP_STD_OPT="--std=gnu++17"
 	vecho "CPP_STD_OPT='${CPP_STD_OPT}'"
 	variable_exists "CPP_WARNING_OPTS" || CPP_WARNING_OPTS="-Wall -Wextra -Wshadow"
 	vecho "CPP_WARNING_OPTS='${CPP_WARNING_OPTS}'"
