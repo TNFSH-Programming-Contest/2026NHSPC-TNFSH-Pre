@@ -48,6 +48,7 @@ gen knuth 257 1 1 huge-trap fixed 0 3
 gen knuth 257 1 1 double-trap fixed 0 2
 
 @subtask full
+@subtask samples range-dp cubic knuth
 gen full 801 100000 1000000000 random mixed 0 15
 gen full 1000 100000 999999937 checker boundary 0 15
 gen full 1414 100000 1 random nested 0 15
