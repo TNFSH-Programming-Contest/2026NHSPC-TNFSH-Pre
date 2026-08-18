@@ -3,25 +3,46 @@
         "verdict": "model_solution"
     },
     "codex-1.cpp": {
-        "verdict": "partially_correct"
+        "verdict": "correct",
+        "except": {
+            "full": "partially_correct"
+        }
     },
     "arithmetic.cpp": {
-        "verdict": "partially_correct"
+        "verdict": "correct",
+        "except": {
+            "full": "partially_correct"
+        }
     },
     "ans.cpp": {
-        "verdict": "partially_correct"
+        "verdict": "correct",
+        "except": {
+            "full": "partially_correct"
+        }
     },
     "lz_ans.cpp": {
-        "verdict": "partially_correct"
+        "verdict": "correct",
+        "except": {
+            "full": "partially_correct"
+        }
     },
     "gemini-3.cpp": {
-        "verdict": "partially_correct"
+        "verdict": "correct",
+        "except": {
+            "full": "partially_correct"
+        }
     },
     "charhao.cpp": {
-        "verdict": "partially_correct"
+        "verdict": "correct",
+        "except": {
+            "full": "partially_correct"
+        }
     },
     "blame_ac.cpp": {
-        "verdict": "partially_correct"
+        "verdict": "correct",
+        "except": {
+            "full": "partially_correct"
+        }
     },
     "encode_values.cpp": {
         "verdict": "incorrect",
