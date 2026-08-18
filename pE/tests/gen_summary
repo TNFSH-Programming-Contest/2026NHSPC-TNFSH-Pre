@@ -40,27 +40,27 @@
 3-13	 46	gen knuth 257 1 1 zero-edge-trap fixed 0 2
 3-14	 47	gen knuth 257 1 1 huge-trap fixed 0 3
 3-15	 48	gen knuth 257 1 1 double-trap fixed 0 2
-4-01	 51	gen full 801 100000 1000000000 random mixed 0 15
-4-02	 52	gen full 1000 100000 999999937 checker boundary 0 15
-4-03	 53	gen full 1414 100000 1 random nested 0 15
-4-04	 54	gen full 1415 100000 1000000000 random full 0 15
-4-05	 55	gen full 1800 100000 6767 sparse random 15 35
-4-06	 56	gen full 1999 100000 999999937 choice mixed 8 0 1 2 3 5 8 13 15
-4-07	 57	gen full 2000 100000 1000000000 random mixed 0 15
-4-08	 58	gen full 2000 1 1 wide-trap full 137
-4-09	 59	gen full 2000 1 1 wide-trap full 263
-4-10	 60	gen full 2000 1 1 wide-trap full 433
-4-11	 61	gen full 2000 1 1 wide-trap full 617
-4-12	 62	gen full 2000 1 1 wide-trap full 829
-4-13	 63	gen full 2000 1 1 wide-trap full 1103
-4-14	 64	gen full 2000 1 1 wide-trap full 1379
-4-15	 65	gen full 2000 1 1 wide-trap full 1667
-4-16	 66	gen full 2000 100000 1 entropy mixed
-4-17	 67	gen full 2000 100000 1 arithmetic-entropy mixed
-4-18	 68	gen full 2000 100000 1 profile-entropy mixed 1.4 1 1.6 3 4 101
-4-19	 69	gen full 2000 100000 1 profile-entropy mixed 1.6 3 1.4 1 4 103
-4-20	 70	gen full 2000 100000 1 truncated-entropy mixed
-4-21	 71	gen full 801 100000 1 random mixed 0 1000000000
-4-22	 72	gen full 801 1 1 zero-edge-trap fixed 0 2
-4-23	 73	gen full 801 1 1 huge-trap fixed 0 3
-4-24	 74	gen full 801 1 1 double-trap fixed 0 2
+5-01	 52	gen full 801 100000 1000000000 random mixed 0 15
+5-02	 53	gen full 1000 100000 999999937 checker boundary 0 15
+5-03	 54	gen full 1414 100000 1 random nested 0 15
+5-04	 55	gen full 1415 100000 1000000000 random full 0 15
+5-05	 56	gen full 1800 100000 6767 sparse random 15 35
+5-06	 57	gen full 1999 100000 999999937 choice mixed 8 0 1 2 3 5 8 13 15
+5-07	 58	gen full 2000 100000 1000000000 random mixed 0 15
+5-08	 59	gen full 2000 1 1 wide-trap full 137
+5-09	 60	gen full 2000 1 1 wide-trap full 263
+5-10	 61	gen full 2000 1 1 wide-trap full 433
+5-11	 62	gen full 2000 1 1 wide-trap full 617
+5-12	 63	gen full 2000 1 1 wide-trap full 829
+5-13	 64	gen full 2000 1 1 wide-trap full 1103
+5-14	 65	gen full 2000 1 1 wide-trap full 1379
+5-15	 66	gen full 2000 1 1 wide-trap full 1667
+5-16	 67	gen full 2000 100000 1 entropy mixed
+5-17	 68	gen full 2000 100000 1 arithmetic-entropy mixed
+5-18	 69	gen full 2000 100000 1 profile-entropy mixed 1.4 1 1.6 3 4 101
+5-19	 70	gen full 2000 100000 1 profile-entropy mixed 1.6 3 1.4 1 4 103
+5-20	 71	gen full 2000 100000 1 truncated-entropy mixed
+5-21	 72	gen full 801 100000 1 random mixed 0 1000000000
+5-22	 73	gen full 801 1 1 zero-edge-trap fixed 0 2
+5-23	 74	gen full 801 1 1 huge-trap fixed 0 3
+5-24	 75	gen full 801 1 1 double-trap fixed 0 2
