@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.11.7)  11 AUG 2026 23:14
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.11.7)  22 AUG 2026 20:31
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1889,18 +1889,39 @@ Overfull \vbox (45.50511pt too high) detected at line 111
 
 ]) (./section/pC.tex [27
 
-]) (./section/pD.tex [28
+] [28
 
-] [29
+]
+Overfull \hbox (0.504pt too wide) detected at line 24
+ []\TU/lmss/m/n/8 10 
+ []
+
+
+Overfull \hbox (0.504pt too wide) detected at line 24
+ []\TU/lmss/m/n/8 11 
+ []
+
+[29
 
 ] [30
 
-]
-[31
+] [31
 
 ] [32
 
 ] [33
+
+]) (./section/pD.tex [34
+
+] [35
+
+] [36
+
+] [37
+
+] [38
+
+] [39
 
 ]
 Overfull \hbox (6.69594pt too wide) detected at line 62
@@ -1909,26 +1930,14 @@ m/n/10.95 + 1)\OML/ccm/m/it/10.95 ; k[]p[]\OMS/ccsy/m/n/10.95 j\OML/ccm/m/it/10
 .95 n\OT1/ccr/m/n/10.95 !
  []
 
-[34
+[40
 
-] [35
+] [41
 
 ]
 File: ./photo/pD-photo.png Graphic file (type bmp)
 <./photo/pD-photo.png>
- [36
-
-] [37
-
-] [38
-
-] [39
-
-] [40
-
-] [41
-
-] [42
+ [42
 
 ] [43
 
@@ -1940,25 +1949,74 @@ File: ./photo/pD-photo.png Graphic file (type bmp)
 
 ] [47
 
+] [48
+
+] [49
+
+] [50
+
+] [51
+
+] [52
+
+] [53
+
 ]
 Overfull \vbox (1.32716pt too high) detected at line 161
  []
 
-[48
+[54
 
 ]
 
 LaTeX Font Warning: Command \Large invalid in math mode on input line 169.
 
-[49
+[55
 
 ]
 
 LaTeX Font Warning: Command \Large invalid in math mode on input line 169.
 
-[50
+[56
 
-] [51
+] [57
+
+]) (./section/pE.tex [58
+
+] [59
+
+] [60
+
+] [61
+
+] [62
+
+] [63
+
+] [64
+
+] [65
+
+] [66
+
+])
+(./section/pF.tex [67
+
+] [68
+
+] [69
+
+] [70
+
+] [71
+
+] [72
+
+] [73
+
+] [74
+
+] [75
 
 ])
 \tf@nav=\write8
@@ -1976,15 +2034,15 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 19DB874CDE714B20F528C6F2407B2961;456.
+(rerunfilecheck)             Checksum: ACD0D7D585D86C73F5C47830C88375CA;716.
  ) 
 Here is how much of TeX's memory you used:
- 53855 strings out of 474878
- 1313357 string characters out of 5762516
+ 53944 strings out of 474878
+ 1314977 string characters out of 5762516
  1931627 words of memory out of 5000000
- 74865 multiletter control sequences out of 15000+600000
+ 74948 multiletter control sequences out of 15000+600000
  568222 words of font info for 100 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 133i,14n,126p,734b,2178s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 133i,14n,126p,734b,2176s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main.pdf (51 pages).
+Output written on build/main.pdf (75 pages).

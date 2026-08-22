@@ -36,7 +36,7 @@
         "all_same_type": {
             "index": 5,
             "score": 7,
-            "text": "只會有 `.` 與 `/` 或 `\\`",
+            "text": "球檯內部只會有 `.` 與 `/` 或 `\\` 其中之一",
             "validators": ["validator.cpp 2000 2000 200000 2 0"]
         },
         "query_upper": {

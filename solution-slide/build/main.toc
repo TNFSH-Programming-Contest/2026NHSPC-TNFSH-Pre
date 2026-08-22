@@ -1,4 +1,7 @@
 \beamer@sectionintoc {1}{Fun Fact}{3}{0}{1}
 \beamer@sectionintoc {2}{A. 大家好我是今年選訓二階結訓選手}{8}{0}{2}
 \beamer@sectionintoc {3}{B. 好多手錶}{13}{0}{3}
-\beamer@sectionintoc {4}{D. 1145141}{28}{0}{4}
+\beamer@sectionintoc {4}{C. 撞球}{27}{0}{4}
+\beamer@sectionintoc {5}{D. 1145141}{34}{0}{5}
+\beamer@sectionintoc {6}{E. 分蛋糕4}{58}{0}{6}
+\beamer@sectionintoc {7}{F. 種馬拉車}{67}{0}{7}

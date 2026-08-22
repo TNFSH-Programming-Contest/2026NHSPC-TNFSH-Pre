@@ -1,0 +1,62 @@
+\setsubtitle{author : blame}
+\section{E. 分蛋糕4}
+
+\begin{frame}{\btitle{題目敘述}}
+    題目太長了
+
+    懶得打，自己去看題目。
+\end{frame}
+
+\begin{frame}{\btitle{子任務}}
+    \begin{enumerate}
+        \item{$2 \le n \le 50, 1 \le Q \le 1000$}
+        \item{$2 \le n \le 200$}
+        \item{$2 \le n \le 800$}
+        \item{無額外限制}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{\btitle{$2 \le n \le 50, 1 \le Q \le 1000$}}
+    你可以把整個陣列原封不動傳給 decoder
+
+    然後讓 decoder 自己算+回答
+\end{frame}
+
+\begin{frame}{\btitle{$2 \le n \le 200$}}
+    區間 DP 做完後，傳給 decoder
+
+    複雜度 $O(n^3)$
+\end{frame}
+
+\begin{frame}{\btitle{$2 \le n \le 800$}}
+    發現這題的 $cost$ 其實有性質
+
+    可以用 knuth 做到 $O(n^2)$ 算
+
+    然後樸實無華的傳給 decoder 回答
+\end{frame}
+
+\begin{frame}{\btitle{無額外限制}}
+    這邊講做到 $\lvert S \rvert$ 為 $2 \times C^{n}_{2}$ 的作法
+
+    先用 knuth 算出答案後
+
+    然後發現對於每一列的 $k$ 其實具有遞增性
+
+    所以你只要用 `0` 作為斷點，計算每個斷點中有多少個 `1`
+
+    代表著 $k$ 相對於之前那個增加多少
+\end{frame}
+
+\begin{frame}{\btitle{無額外限制}}
+    這邊講做到 $\lvert S \rvert$ 為 $2850423$ 的作法
+
+    你發現一列一列傳沒有完整用到 knuth 的性質
+
+    所以你用一個斜線一個斜線的方式傳(傳的過程可以用一個大整數代表著整列的狀態)
+
+    然後數學計算一下發現是好的。\pause
+
+    假如你還要做到更佳，可以去問 brinton
+\end{frame}
+

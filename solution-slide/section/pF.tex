@@ -1,0 +1,71 @@
+\setsubtitle{author : blame}
+\section{F. 種馬拉車}
+
+\begin{frame}{\btitle{題目敘述}}
+    有一個長度為 $2n$ 的陣列 $A$
+
+    上面有著 $0 \sim n-1$ 各兩個
+
+    每個回文區間段會對答案貢獻區間最大值
+\end{frame}
+
+\begin{frame}{\btitle{前言}}
+    題目叫做馬拉車，然後放在 pF
+
+    其實根本在搞人的
+
+    這題的定位在水題，只是問你有沒有勇氣開這題而已omob
+\end{frame}
+
+\begin{frame}{\btitle{子任務}}
+    \begin{enumerate}
+        \item{$1 \le n \le 100$}
+        \item{$1 \le n \le 2000$}
+        \item{無額外限制}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{\btitle{$1 \le n \le 100$}}
+    $O(n^2)$ 枚舉每個區間
+
+    花費 $O(n)$ 檢查是否為回文，且 $O(n)$ 計算最大值
+\end{frame}
+
+\begin{frame}{\btitle{$1 \le n \le 2000$}}
+    $O(n^2)$ 枚舉每個區間
+
+    用 rolling hash 之類的神奇算法 $O(1)$ 檢查是否為回文
+
+    用線段樹、sparse-table 之類的神奇算法 $O(1)$ or $O(\log n)$ 計算最大值
+\end{frame}
+
+\begin{frame}{\btitle{無額外限制}}
+    官解當然不可能叫你做馬拉車
+
+    你發現你剛剛根本沒有用到題目的性質:
+
+    \begin{property}
+        $0 \sim n-1$ 各出現兩次
+    \end{property}
+
+    而回文有性質
+
+    \begin{property}
+        對於區間(長度 $>2$) $[l, r]$ 是回文，區間 $[l+1, r-1]$ 也一定是回文
+    \end{property}
+
+    所以你可以仔細思考一下，發現這題最多也就 $O(3 n)$ 個回文而已
+\end{frame}
+
+\begin{frame}{\btitle{無額外限制}}
+    作法就是由每個回文中心開始往左右擴
+
+    假如擴增遇到左右不相同則停止擴增
+
+    最大值也可以 $O(1)$ 維護
+
+    所以複雜度 $O(n)$
+    \pause
+
+    假如你覺得這是 $O(n^2)$ 但寫完發現過了，那你很幸運
+\end{frame}

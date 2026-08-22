@@ -2,7 +2,7 @@
 \section{C. 撞球}
 
 \begin{frame}{\btitle{題目敘述}}
-    給一張 $N \times M$ 的地圖 (會有外框)，每格會是空格或是`/`或`\`
+    給一張 $N \times M$ 的地圖 (會有外框)，每格會是空格或是`/`或`\textbackslash`
 
     給 Q 筆詢問，問從 $a$ 的外框射進去最後會到哪一個外框
 \end{frame}
@@ -11,11 +11,11 @@
     \begin{enumerate}
         \item{$NM = 1$}
         \item{$1 \le Q \le 10$}
+        \item{$N = 1$}
         \item{$N = 2$}
-        \item{$N = 2$}
-        \item{只會有 `.` 與 `/` 或 `\`}
+        \item{球檯內部只會有 `.` 與 `/` 或 `\textbackslash` 其中之一}
         \item{所有詢問都從上方進入}
-        \item{每一列最多有一個 `\` 或 `/`}
+        \item{每一列最多有一個 `\textbackslash` 或 `/`}
         \item{$1 \le N, M \le 10, 1 \le Q \le 10$}
         \item{$1 \le N, M \le 1000, 1 \le Q \le 100$，輸入的字元僅包含 `.`}
         \item{$1 \le N, M \le 200, 1 \le Q \le 1000$}
@@ -23,8 +23,39 @@
     \end{enumerate}
 \end{frame}
 
-\begin{frame}{\btitle{$NM = 1$}}
-    一個格子，直接枚舉所有答案就好
+\begin{frame}{intro}
+    子任務太多
 
-    做不出來可以檢討自己了
+    所以下面挑幾個子任務講
 \end{frame}
+
+\begin{frame}{$N = 1$}
+    發現地圖長成一列
+
+    所以每個路線最多只會遇到兩次鏡子
+
+    所以可以根據這些特性做出某些神奇的作法
+\end{frame}
+
+\begin{frame}{$1 \le N, M \le 200, 1 \le Q \le 1000$}
+    直接暴力模擬
+
+    複雜度 $O(Q \times (N+M))$
+\end{frame}
+
+\begin{frame}{無額外限制}
+    觀察到 :
+
+    \begin{property}
+        1. 沒有 -1 的情況。
+
+        2. 發現對於每個格子來說，最多只會被兩條路徑走到
+
+        3. 每條路徑的入口跟出口互為對方的答案
+    \end{property}
+
+    所以你發現可以轉成每個格子為四方位的一個四層圖，在上面好好 BFS 會過(不好好做會被卡常)。
+
+    官解沒有像 BFS 一樣開 $O(4NM)$ 的空間，而是運用到第二條性質，所以你每次暴力模擬，然後遇到走過的入口或出口就紀錄答案下來，再次被詢問到就不跑暴力，直接回答。
+\end{frame}
+
