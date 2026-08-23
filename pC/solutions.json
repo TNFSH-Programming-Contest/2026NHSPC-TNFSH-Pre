@@ -110,5 +110,8 @@
 			"straight": "correct",
 			"brute2": "correct"
 		}
-	}
+	},
+    "-1.cpp": {
+        "verdict": "incorrect"
+    }
 }
