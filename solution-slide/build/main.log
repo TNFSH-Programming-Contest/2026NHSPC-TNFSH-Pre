@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.11.7)  22 AUG 2026 20:42
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.8.22)  23 AUG 2026 10:08
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2037,12 +2037,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: ACD0D7D585D86C73F5C47830C88375CA;716.
  ) 
 Here is how much of TeX's memory you used:
- 53944 strings out of 474878
- 1314977 string characters out of 5762516
+ 53943 strings out of 476839
+ 1314952 string characters out of 5803422
  1931627 words of memory out of 5000000
- 74948 multiletter control sequences out of 15000+600000
+ 74824 multiletter control sequences out of 15000+600000
  568222 words of font info for 100 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
+ 14 hyphenation exceptions out of 8191
  133i,14n,126p,734b,2176s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on build/main.pdf (75 pages).
