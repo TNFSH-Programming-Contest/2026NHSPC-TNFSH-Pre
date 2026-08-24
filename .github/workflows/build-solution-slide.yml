@@ -1,0 +1,46 @@
+name: Build solution slide
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - 'solution-slide/photo/*'
+      - 'solution-slide/section/*'
+      - 'solution-slide/header.tex'
+      - 'solution-slide/main.tex'
+  workflow_dispatch:
+
+jobs:
+  compile:
+    runs-on: 'self-hosted'
+    container:
+      image: tobiichi3227/tps-build-pdf-github-runner:latest
+      options: --user root
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Allow Git to access workspace
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+      - name: Install dependencies
+        run: |
+          apt update -y
+          apt install texlive-fonts-extra texlive-science python3-pygments -y
+
+      - name: Compile solution slide
+        run: |
+          cd solution-slide
+          chmod +x compile.sh
+          ./compile.sh
+
+      - name: Commit files
+        run: |
+          git add solution-slide
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git pull
+          git diff-index --quiet HEAD -- || git commit -m "Build solution slide"
+          git push
