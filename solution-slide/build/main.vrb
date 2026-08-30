@@ -1,25 +1,3 @@
-\frametitle{預計解出來的人數}
-TODO: 驗題者難度預測，賽後實際分數與人數
-    預測複賽線: 260 分
-
-    \begin{center}
-        \begin{tikzpicture}
-            \begin{axis} [%
-                ybar,
-                bar width=12pt,
-                xmin=0.5,
-                xmax=6.5,
-                ymin=0,
-                xtick={1, 2, 3, 4, 5, 6},
-                xticklabels={A, B, C, D, E, F}]
-                \addplot coordinates {
-                    (1, 38)
-                    (2, 21)
-                    (3, 5)
-                    (4, 0)
-                    (5, 0)
-                    (6, 9)
-                };
-            \end{axis}
-        \end{tikzpicture}
-    \end{center}
+\frametitle{難度預測}
+yushiuan9499: A < B < C \approx F < D < E
+    tobiichi3227: A < B < C \approx F < D(93分) < E(94分) < D(100分) < E(100分)
