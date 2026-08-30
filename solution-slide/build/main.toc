@@ -1,7 +1,7 @@
-\beamer@sectionintoc {1}{Fun Fact}{3}{0}{1}
-\beamer@sectionintoc {2}{A. 大家好我是今年選訓二階結訓選手}{9}{0}{2}
-\beamer@sectionintoc {3}{B. 好多手錶}{14}{0}{3}
-\beamer@sectionintoc {4}{C. 撞球}{28}{0}{4}
-\beamer@sectionintoc {5}{D. 1145141}{35}{0}{5}
-\beamer@sectionintoc {6}{E. 分蛋糕4}{59}{0}{6}
-\beamer@sectionintoc {7}{F. 種馬拉車}{68}{0}{7}
+\beamer@sectionintoc {1}{Fun Fact}{4}{0}{1}
+\beamer@sectionintoc {2}{A. 大家好我是今年選訓二階結訓選手}{10}{0}{2}
+\beamer@sectionintoc {3}{B. 好多手錶}{15}{0}{3}
+\beamer@sectionintoc {4}{C. 撞球}{29}{0}{4}
+\beamer@sectionintoc {5}{D. 1145141}{36}{0}{5}
+\beamer@sectionintoc {6}{E. 分蛋糕4}{60}{0}{6}
+\beamer@sectionintoc {7}{F. 種馬拉車}{69}{0}{7}
