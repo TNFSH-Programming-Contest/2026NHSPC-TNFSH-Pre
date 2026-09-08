@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.8.30)  30 AUG 2026 16:23
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.9.8)  8 SEP 2026 21:41
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1775,56 +1775,58 @@ your preamble.
 
 (build/main.nav) [1
 
-] (./section/predicted.tex
+] (./section/predicted.tex [2
+
+]
 \openout4 = `main.vrb'.
 
  (build/main.vrb
-LaTeX Font Info:    Trying to load font information for OT1+ccr on input line 2
-3.
+LaTeX Font Info:    Trying to load font information for OT1+ccr on input line 5
+8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/concmath/ot1ccr.fd
 File: ot1ccr.fd 1999/03/10 v2.0b LaTeX font defs for Concrete math fonts
 )
-LaTeX Font Info:    Trying to load font information for OML+ccm on input line 2
-3.
+LaTeX Font Info:    Trying to load font information for OML+ccm on input line 5
+8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/concmath/omlccm.fd
 File: omlccm.fd 1999/03/10 v2.0b LaTeX font defs for Concrete math fonts
 )
 LaTeX Font Info:    Trying to load font information for OMS+ccsy on input line 
-23.
+58.
 
 (/usr/share/texlive/texmf-dist/tex/latex/concmath/omsccsy.fd
 File: omsccsy.fd 1999/03/10 v2.0b LaTeX font defs for Concrete math fonts
 )
 LaTeX Font Info:    Trying to load font information for OMX+ccex on input line 
-23.
+58.
 
 (/usr/share/texlive/texmf-dist/tex/latex/concmath/omxccex.fd
 File: omxccex.fd 1999/03/10 v2.0b LaTeX font defs for Concrete math fonts
 )
 LaTeX Font Info:    External font `xccex10' loaded for size
-(Font)              <10.95> on input line 23.
+(Font)              <10.95> on input line 58.
 LaTeX Font Info:    External font `xccex10' loaded for size
-(Font)              <8> on input line 23.
+(Font)              <8> on input line 58.
 LaTeX Font Info:    External font `xccex10' loaded for size
-(Font)              <6> on input line 23.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 23.
+(Font)              <6> on input line 58.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 23.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
-Overfull \vbox (15.30779pt too high) detected at line 27
+Overfull \vbox (2.37488pt too high) detected at line 69
  []
 
-[2
+[3
 
 ]
 \openout4 = `main.vrb'.
@@ -1834,11 +1836,9 @@ Missing character: There is no 分 ("5206) in font ccr10!
 Missing character: There is no 分 ("5206) in font ccr10!
 Missing character: There is no 分 ("5206) in font ccr10!
 Missing character: There is no 分 ("5206) in font ccr10!
-) [3
+) [4
 
-]) (./section/funfact.tex [4
-
-] [5
+]) (./section/funfact.tex [5
 
 ] [6
 
@@ -1848,27 +1848,27 @@ Missing character: There is no 分 ("5206) in font ccr10!
 
 ] [9
 
-]) (./section/pA.tex
-[10
+] [10
 
-] [11
+]) (./section/pA.tex
+[11
 
 ] [12
 
+] [13
+
 ]
 LaTeX Font Info:    External font `xccex10' loaded for size
-(Font)              <14.4> on input line 21.
+(Font)              <14.4> on input line 24.
 LaTeX Font Info:    External font `xccex10' loaded for size
-(Font)              <10> on input line 21.
+(Font)              <10> on input line 24.
 LaTeX Font Info:    External font `xccex10' loaded for size
-(Font)              <7> on input line 21.
- [13
+(Font)              <7> on input line 24.
+ [14
 
-] [14
+] [15
 
-]) (./section/pB.tex [15
-
-] [16
+]) (./section/pB.tex [16
 
 ] [17
 
@@ -1878,10 +1878,10 @@ LaTeX Font Info:    External font `xccex10' loaded for size
 
 ] [20
 
-]
-[21
+] [21
 
-] [22
+]
+[22
 
 ] [23
 
@@ -1889,33 +1889,33 @@ LaTeX Font Info:    External font `xccex10' loaded for size
 
 ] [25
 
+] [26
+
 ]
-Overfull \vbox (45.50511pt too high) detected at line 111
+Overfull \vbox (45.50511pt too high) detected at line 114
  []
 
-[26
-
-] [27
+[27
 
 ] [28
 
-]) (./section/pC.tex [29
+] [29
 
-] [30
+]) (./section/pC.tex [30
+
+] [31
 
 ]
-Overfull \hbox (0.504pt too wide) detected at line 24
+Overfull \hbox (0.504pt too wide) detected at line 27
  []\TU/lmss/m/n/8 10 
  []
 
 
-Overfull \hbox (0.504pt too wide) detected at line 24
+Overfull \hbox (0.504pt too wide) detected at line 27
  []\TU/lmss/m/n/8 11 
  []
 
-[31
-
-] [32
+[32
 
 ] [33
 
@@ -1923,9 +1923,9 @@ Overfull \hbox (0.504pt too wide) detected at line 24
 
 ] [35
 
-]) (./section/pD.tex [36
+] [36
 
-] [37
+]) (./section/pD.tex [37
 
 ] [38
 
@@ -1935,23 +1935,23 @@ Overfull \hbox (0.504pt too wide) detected at line 24
 
 ] [41
 
+] [42
+
 ]
-Overfull \hbox (6.69594pt too wide) detected at line 62
+Overfull \hbox (6.69594pt too wide) detected at line 65
 \OML/ccm/m/it/10.95 ans \OT1/ccr/m/n/10.95 = [](\OML/ccm/m/it/10.95 k \OT1/ccr/
 m/n/10.95 + 1)\OML/ccm/m/it/10.95 ; k[]p[]\OMS/ccsy/m/n/10.95 j\OML/ccm/m/it/10
 .95 n\OT1/ccr/m/n/10.95 !
  []
 
-[42
+[43
 
-] [43
+] [44
 
 ]
 File: ./photo/pD-photo.png Graphic file (type bmp)
 <./photo/pD-photo.png>
- [44
-
-] [45
+ [45
 
 ] [46
 
@@ -1973,29 +1973,29 @@ File: ./photo/pD-photo.png Graphic file (type bmp)
 
 ] [55
 
+] [56
+
 ]
-Overfull \vbox (1.32716pt too high) detected at line 161
+Overfull \vbox (1.32716pt too high) detected at line 164
  []
-
-[56
-
-]
-
-LaTeX Font Warning: Command \Large invalid in math mode on input line 169.
 
 [57
 
 ]
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 169.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 172.
 
 [58
 
-] [59
+]
 
-]) (./section/pE.tex [60
+LaTeX Font Warning: Command \Large invalid in math mode on input line 172.
 
-] [61
+[59
+
+] [60
+
+]) (./section/pE.tex [61
 
 ] [62
 
@@ -2011,10 +2011,10 @@ LaTeX Font Warning: Command \Large invalid in math mode on input line 169.
 
 ] [68
 
-])
-(./section/pF.tex [69
+] [69
 
-] [70
+])
+(./section/pF.tex [70
 
 ] [71
 
@@ -2029,6 +2029,8 @@ LaTeX Font Warning: Command \Large invalid in math mode on input line 169.
 ] [76
 
 ] [77
+
+] [78
 
 ])
 \tf@nav=\write8
@@ -2046,15 +2048,15 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: ACD0D7D585D86C73F5C47830C88375CA;716.
+(rerunfilecheck)             Checksum: 33754E9B18BB05A0391D01917BEE8EAF;775.
  ) 
 Here is how much of TeX's memory you used:
- 53949 strings out of 476839
- 1315016 string characters out of 5803422
- 1931627 words of memory out of 5000000
- 74828 multiletter control sequences out of 15000+600000
- 568222 words of font info for 100 fonts, out of 8000000 for 9000
+ 53968 strings out of 476839
+ 1316009 string characters out of 5803423
+ 1935627 words of memory out of 5000000
+ 74846 multiletter control sequences out of 15000+600000
+ 568230 words of font info for 101 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 133i,14n,126p,734b,2176s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 133i,16n,126p,734b,2464s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main.pdf (77 pages).
+Output written on build/main.pdf (78 pages).
