@@ -1,33 +1,85 @@
+\section{預測}
+
+% 定義顏色
+\definecolor{guesscolor}{RGB}{77,121,198}
+\definecolor{actualcolor}{RGB}{198,77,77}
+
+
 \begin{frame}[fragile]{預計解出來的人數}
     % 預計 40 人打
-    TODO: 驗題者難度預測，賽後實際分數與人數
-    預測複賽線: 260 分
+    預測複賽線: \textcolor{guesscolor}{260} 分，實際複賽線(rk10)：\textcolor{actualcolor}{TODO} 分
 
     \begin{center}
-        \begin{tikzpicture}
-            \begin{axis} [%
-                ybar,
-                bar width=12pt,
-                xmin=0.5,
-                xmax=6.5,
-                ymin=0,
-                xtick={1, 2, 3, 4, 5, 6},
-                xticklabels={A, B, C, D, E, F}]
-                \addplot coordinates {
-                    (1, 38)
-                    (2, 21)
-                    (3, 5)
-                    (4, 0)
-                    (5, 0)
-                    (6, 9)
-                };
-            \end{axis}
-        \end{tikzpicture}
-    \end{center}
+    \begin{tikzpicture}[scale=0.8]
+        \begin{axis}[
+            title={AC 人數 (預測 40 人打)},
+            ybar,
+            bar width=10pt,
+            xmin=0.5,
+            xmax=8.5,
+            ymin=0,
+            xtick={1,2,3,4,5,6,7,8},
+            xticklabels={A,B,C,D(93),D,E(93),E,F},
+            legend style={
+                at={(0.5,-0.15)},
+                anchor=north,
+                legend columns=2
+            }
+        ]
+
+        % 預測
+        \addplot[
+            fill=guesscolor,
+            draw=guesscolor!80,
+            bar shift=-5pt
+        ] coordinates {
+            (1,38)
+            (2,21)
+            (3,5)
+            (4,5)
+            (5,0)
+            (6,1)
+            (7,0)
+            (8,9)
+        };
+        \addlegendentry{預測}
+
+        % 實際
+        \addplot[
+            fill=actualcolor,
+            draw=actualcolor!80,
+            bar shift=5pt
+        ] coordinates {
+            (1,1)
+            (2,2)
+            (3,3)
+            (4,4)
+            (5,5)
+            (6,6)
+            (7,7)
+            (8,8)
+        };
+        \addlegendentry{實際}
+
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+
+
 \end{frame}
 
 \begin{frame}[fragile]{難度預測}
-    yushiuan9499: $A < B < C \approx F < D < E$
+    \begin{enumerate}
+        \item{yushiuan9499: $A < B < C \approx F < D < E$}
+        \item{tobiichi3227: $A < B < C \approx F < D(93分) < E(93分) < D(100分) < E(100分)$}
+    \end{enumerate}
+\end{frame}
 
-    tobiichi3227: $A < B < C \approx F < D(93分) < E(94分) < D(100分) < E(100分)$
+\begin{frame}[fragile]{tobiichi 的個人分數預測}
+    \begin{enumerate}
+        \item{李柏霆: 579}
+        \item{柯伯亨: 538}
+        \item{謝明吾: 538}
+        \item{黃鼎佑: 493}
+    \end{enumerate}
 \end{frame}
