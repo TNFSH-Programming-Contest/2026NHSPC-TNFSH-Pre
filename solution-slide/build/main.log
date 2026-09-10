@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.9.10)  10 SEP 2026 20:04
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.9.10)  10 SEP 2026 21:58
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2049,21 +2049,14 @@ LaTeX Font Warning: Command \Large invalid in math mode on input line 172.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
  ***********
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 6661EA8074564F82102B4AD45DCE0AAB;145
-(rerunfilecheck)             After:  33754E9B18BB05A0391D01917BEE8EAF;775.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 33754E9B18BB05A0391D01917BEE8EAF;775.
  ) 
 Here is how much of TeX's memory you used:
- 53974 strings out of 476839
- 1316274 string characters out of 5803422
+ 53976 strings out of 476839
+ 1316292 string characters out of 5803422
  1935627 words of memory out of 5000000
- 74852 multiletter control sequences out of 15000+600000
+ 74854 multiletter control sequences out of 15000+600000
  568230 words of font info for 101 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  133i,16n,126p,734b,2464s stack positions out of 10000i,1000n,20000p,200000b,200000s
