@@ -14,7 +14,7 @@
 | name |  [:white_check_mark:](pA/problem.json)<br>TOI2! | [:white_check_mark:](pB/problem.json)<br>Many_Watches | [:white_check_mark:](pC/problem.json)<br>Pool_Ball | [:white_check_mark:](pD/problem.json)<br>1145141 | [:white_check_mark:](pE/problem.json)<br>Cake_4 | [:white_check_mark:](pF/problem.json)<br>Seed_Manacher |
 | title |  [:white_check_mark:](pA/problem.json)<br>大家好我是今年選訓二階結訓選手 | [:white_check_mark:](pB/problem.json)<br>好多手錶 | [:white_check_mark:](pC/problem.json)<br>撞球 | [:white_check_mark:](pD/problem.json)<br>1145141 | [:white_check_mark:](pE/problem.json)<br>分蛋糕 4 | [:white_check_mark:](pF/problem.json)<br>種馬拉車 |
 | memory_limit |  512 | 512 | 512 | 128 | 512 | 512 |
-| time_limit |  2.0 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 |
+| time_limit |  2.0 | 1.0 | 1.0 | 1.0 | 1.5 | 1.0 |
 | has_checker |  False | False | False | False | False | False |
 | gen | [:white_check_mark:](pA/gen) | [:white_check_mark:](pB/gen) | [:white_check_mark:](pC/gen) | [:white_check_mark:](pD/gen) | [:white_check_mark:](pE/gen) | [:white_check_mark:](pF/gen) |
 | solution | [:white_check_mark:](pA/solution) | [:white_check_mark:](pB/solution) | [:white_check_mark:](pC/solution) | [:white_check_mark:](pD/solution) | [:white_check_mark:](pE/solution) | [:white_check_mark:](pF/solution) |
