@@ -4,7 +4,7 @@
 	"name": "Cake_4",
 	"title": "分蛋糕 4",
 	"memory_limit": 512,
-	"time_limit": 1.0,
+	"time_limit": 1.5,
 	"type": "Communication",
 	"description": "",
 	"tps_web_url": "",
