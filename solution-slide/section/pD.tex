@@ -179,4 +179,6 @@
     所以你要改成 top down，然後用unordered\_map 存。
 
     或者跑一次 bottom up (因為神奇的，你在整數分塊中需要的 $\pi(n)$ 的 $n$ 集合剛好等於 min25 中算過的 $n$ 集合) 就可以 AC 了!
+
+    這樣複雜度是 $O(n^{\frac{3}{4}})$，如果考慮質數分佈的話，是 $O(\frac{n^{\frac{3}{4}}}{\log_2{n}})$
 \end{frame}
